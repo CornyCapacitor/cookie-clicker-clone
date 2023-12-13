@@ -1,0 +1,39 @@
+.building {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-bottom: solid 2px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgb(80, 80, 80);
+  }
+}
+
+.building-image {
+  width: 20%;
+}
+
+.building-info {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  align-items: flex-start;
+  font-size: 18px;
+  width: 60%;
+}
+
+.building-price-container {
+  display: flex;
+  gap: 5px;
+}
+
+.building-cookie {
+  width: 15px;
+}
+
+.building-owned {
+  width: 20%;
+}
