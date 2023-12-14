@@ -39,6 +39,7 @@
 }
 
 .big-cookie {
+  margin-top: 10px;
   width: 100%;
   transition: 0.1s;
   border-radius: 50%;
