@@ -2,6 +2,8 @@ import { useCallback, useEffect, useState } from 'react'
 import Swal from 'sweetalert2'
 import { Building } from './components/Building.tsx'
 import { Milk } from './components/Milk.tsx'
+import { AchievementData } from './gamedata/AchievementData.ts'
+import { BuildingData } from './gamedata/BuildingData.ts'
 
 import './App.css'
 
@@ -13,51 +15,20 @@ type Building = {
   cps: number,
 }
 
-function App() {
-  const [buildings] = useState<Building[]>([
-    {
-      name: "Cursor",
-      price: 15,
-      image: "/public/cursor.svg",
-      owned: 0,
-      cps: 0.1,
-    },
-    {
-      name: "Grandma",
-      price: 100,
-      image: "/public/grandma.svg",
-      owned: 0,
-      cps: 1,
-    },
-    {
-      name: "Farm",
-      price: 1100,
-      image: "/public/farm.svg",
-      owned: 0,
-      cps: 8,
+type Achievement = {
+  name: string,
+  requirement: string,
+  achieved: boolean
+}
 
-    },
-    {
-      name: "Mine",
-      price: 12000,
-      image: "/public/mine.svg",
-      owned: 0,
-      cps: 47
-    },
-    {
-      name: "Factory",
-      price: 13000,
-      image: "/public/factory.svg",
-      owned: 0,
-      cps: 260
-    }
-  ])
+function App() {
+  const [buildings] = useState<Building[]>(BuildingData);
+  const [achievement] = useState<Achievement[]>(AchievementData);
 
   const buyBuilding = (name: string) => {
     const findBuildingIndex = (name: string) => {
       return buildings.findIndex(building => building.name === name)
     }
-
 
     const buildingIndex = findBuildingIndex(name)
     const buildingPrice = buildings[buildingIndex].price
