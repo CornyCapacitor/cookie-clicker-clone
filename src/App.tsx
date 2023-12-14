@@ -67,17 +67,18 @@ function App() {
   // Cookies states
   const [cookiesBaked, setCookiesBaked] = useState<number>(0);
   const [cookiesInBank, setCookiesInBank] = useState<number>(0);
+  const [refreshRate] = useState<number>(100);
 
   // Cps states
-  const [cps, setCps] = useState<number>(0.00000000001);
+  const [cps, setCps] = useState<number>(0.000001);
 
   // Click states
   const [cookieClickMultiplier] = useState<number>(1);
 
-  const addCookie = useCallback(() => {
-    setCookiesInBank(cookies => cookies + 1);
-    setCookiesBaked(cookies => cookies + 1)
-  }, [])
+  const addCookies = useCallback(() => {
+    setCookiesInBank(cookies => cookies + cps / refreshRate);
+    setCookiesBaked(cookies => cookies + cps / refreshRate)
+  }, [cps, refreshRate])
 
   const bigCookieClick = () => {
     const clickValue = 1 * cookieClickMultiplier
@@ -87,8 +88,8 @@ function App() {
 
   // Cps interval
   const interval = useCallback(() =>
-    setInterval(addCookie, 1000 / cps),
-    [addCookie, cps])
+    setInterval(addCookies, 1000 / refreshRate),
+    [addCookies, refreshRate])
 
   useEffect(() => {
     const cookieTimer = interval()
@@ -102,7 +103,7 @@ function App() {
       <section className="section-left">
         <header>Player's Bakery</header>
         <div className="cookies-production-info">
-          <span>{cookiesInBank} cookies</span>
+          <span>{cookiesInBank.toFixed(0)} cookies</span>
           <span>{cps.toFixed(2)} cookies per second</span>
         </div>
         <div className="big-cookie-glow">
