@@ -1,15 +1,21 @@
-import './Building.css'
+import './Building.css';
 
 type BuildingProps = {
   name: string,
   price: number,
   image: string,
   owned: number
+  buyBuilding: (name: string) => void;
 }
 
-export const Building = ({ name, price, image, owned }: BuildingProps) => {
+export const Building = ({ name, price, image, owned, buyBuilding }: BuildingProps) => {
+
+  const handleBuildingClick = () => {
+    buyBuilding(name);
+  }
+
   return (
-    <div className="building">
+    <div className="building" onClick={() => handleBuildingClick()}>
       <img className="building-image" src={image} />
       <div className="building-info">
         <span className="building-name">{name}</span>
