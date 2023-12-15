@@ -1,0 +1,15 @@
+.upgrade {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border: solid 2px darkred;
+  background-color: azure;
+  transition: 0.15s;
+
+  &:hover {
+    cursor: pointer;
+    filter: brightness(85%);
+  }
+}

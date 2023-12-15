@@ -15,7 +15,7 @@ export const Building = ({ name, price, image, owned, buyBuilding }: BuildingPro
   }
 
   return (
-    <div className="building" onClick={() => handleBuildingClick()}>
+    <div className="building" id={name} onClick={() => handleBuildingClick()}>
       <img className="building-image" src={image} />
       <div className="building-info">
         <span className="building-name">{name}</span>
