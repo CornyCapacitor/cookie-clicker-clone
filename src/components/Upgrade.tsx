@@ -14,7 +14,7 @@ export const Upgrade = ({ name, image, buyUpgrade }: UpgradeProps) => {
 
   return (
     <div className="upgrade" id={name} onClick={() => handleUpgradeClick()}>
-      <img src={`/public/${image}`} />
+      <img src={`/public/upgrades/${image}`} />
     </div>
   )
 }

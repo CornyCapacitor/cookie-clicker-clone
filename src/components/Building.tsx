@@ -16,7 +16,7 @@ export const Building = ({ name, price, image, owned, buyBuilding }: BuildingPro
 
   return (
     <div className="building" id={name} onClick={() => handleBuildingClick()}>
-      <img className="building-image" src={image} />
+      <img className="building-image" src={`/public/buildings/${image}`} />
       <div className="building-info">
         <span className="building-name">{name}</span>
         <div className="building-price-container">
