@@ -9,6 +9,8 @@
   justify-content: center;
   height: 100vh;
   width: 100vw;
+  background-image: url(/public/background.jpg);
+  background-repeat: repeat;
 }
 
 .section-left {
@@ -155,7 +157,7 @@
 .upgrades {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   width: 100%;
   min-height: 50px;
   border-bottom: solid 2px white;
@@ -174,4 +176,5 @@
   justify-content: center;
   width: 100%;
   min-height: 50px;
+  background-image: url(/public/store-tile.jpg);
 }

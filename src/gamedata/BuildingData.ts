@@ -2,7 +2,7 @@ export const BuildingData = [
   {
     name: "Cursor",
     price: 15,
-    image: "/public/cursor.svg",
+    image: "/public/cursor.webp",
     owned: 0,
     cps: 0.1,
     modifier: 1,
@@ -10,7 +10,7 @@ export const BuildingData = [
   {
     name: "Grandma",
     price: 100,
-    image: "/public/grandma.svg",
+    image: "/public/grandma.webp",
     owned: 0,
     cps: 1,
     modifier: 1,
@@ -18,7 +18,7 @@ export const BuildingData = [
   {
     name: "Farm",
     price: 1100,
-    image: "/public/farm.svg",
+    image: "/public/farm.webp",
     owned: 0,
     cps: 8,
     modifier: 1,
@@ -26,7 +26,7 @@ export const BuildingData = [
   {
     name: "Mine",
     price: 12000,
-    image: "/public/mine.svg",
+    image: "/public/mine.webp",
     owned: 0,
     cps: 47,
     modifier: 1,
@@ -34,7 +34,7 @@ export const BuildingData = [
   {
     name: "Factory",
     price: 13000,
-    image: "/public/factory.svg",
+    image: "/public/factory.webp",
     owned: 0,
     cps: 260,
     modifier: 1,

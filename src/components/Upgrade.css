@@ -2,14 +2,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 56px;
-  height: 56px;
-  border: solid 2px darkred;
-  background-color: azure;
+  width: 60px;
+  height: 60px;
+  background-image: url(/public/upgrade-frame.png);
   transition: 0.15s;
 
   &:hover {
     cursor: pointer;
-    filter: brightness(85%);
+    filter: brightness(70%);
   }
 }

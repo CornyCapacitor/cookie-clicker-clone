@@ -191,9 +191,11 @@ function App() {
 
   // Calculating new cps base
   useEffect(() => {
-    const cursorCps = buildings[0].modifier * buildings[0].owned * buildings[0].cps
-    const grandmaCps = buildings[1].modifier * buildings[1].owned * buildings[1].cps
-    const newCpsBase = cursorCps + grandmaCps;
+    let newCpsBase = 0;
+    for (const building of buildings) {
+      newCpsBase += building.modifier * building.owned * building.cps
+    }
+
     setCpsBase(newCpsBase)
   }, [buildings])
 
