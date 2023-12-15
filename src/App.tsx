@@ -28,9 +28,8 @@ type Upgrade = {
   description: string,
   price: number,
   image: string,
-  modifying: string | { building: string, other?: string },
+  modifying: { building: string, other?: string },
   modifyingValue: number,
-  modifiedBuilding: string,
   unlockCondition: { building: string, amount: number },
   owned: boolean,
 }
@@ -177,16 +176,6 @@ function App() {
 
   // Showing available upgrades
   useEffect(() => {
-    // Reinforced index finger
-    // if (buildings[0].owned === 1 && upgrades[0].owned === false && !availableUpgrades.some((upgrade) => upgrade === upgrades[0])) {
-    //   setAvailableUpgrades((p) => [...p, upgrades[0]])
-    // }
-
-    // // Forwards from grandma
-    // if (buildings[1].owned === 1 && upgrades[1].owned === false && !availableUpgrades.some((upgrade) => upgrade === upgrades[1])) {
-    //   setAvailableUpgrades((p) => [...p, upgrades[1]])
-    // }
-
     const singleUpgrade = (index: number, unlockCondition: { building: string, amount: number }) => {
       const buildingIndex = buildings.findIndex(building => building.name === unlockCondition.building)
 
@@ -241,7 +230,7 @@ function App() {
             <button className="header-button">Restart</button>
           </section>
         </div>
-        <button className="header-button" onClick={() => setCookiesInBank(p => p + 100)}>Cheat 100 cookies</button>
+        <button className="header-button" onClick={() => setCookiesInBank(p => p + 10000)}>Cheat 10000 cookies</button>
         <button className="header-button" onClick={() => console.log(buildings)}>Console log buildings</button>
       </section>
       <section className="section-right">
