@@ -31,7 +31,7 @@ type Upgrade = {
   modifying: string | { building: string, other?: string },
   modifyingValue: number,
   modifiedBuilding: string,
-  unlockCondition: string | { building: string, amount: number },
+  unlockCondition: { building: string, amount: number },
   owned: boolean,
 }
 
@@ -178,14 +178,26 @@ function App() {
   // Showing available upgrades
   useEffect(() => {
     // Reinforced index finger
-    if (buildings[0].owned === 1 && upgrades[0].owned === false && !availableUpgrades.some((upgrade) => upgrade === upgrades[0])) {
-      setAvailableUpgrades((p) => [...p, upgrades[0]])
+    // if (buildings[0].owned === 1 && upgrades[0].owned === false && !availableUpgrades.some((upgrade) => upgrade === upgrades[0])) {
+    //   setAvailableUpgrades((p) => [...p, upgrades[0]])
+    // }
+
+    // // Forwards from grandma
+    // if (buildings[1].owned === 1 && upgrades[1].owned === false && !availableUpgrades.some((upgrade) => upgrade === upgrades[1])) {
+    //   setAvailableUpgrades((p) => [...p, upgrades[1]])
+    // }
+
+    const singleUpgrade = (index: number, unlockCondition: { building: string, amount: number }) => {
+      const buildingIndex = buildings.findIndex(building => building.name === unlockCondition.building)
+
+      if (buildingIndex !== -1 && buildings[buildingIndex].owned === unlockCondition.amount && upgrades[index].owned === false && !availableUpgrades.some((upgrade) => upgrade === upgrades[index])) {
+        setAvailableUpgrades((p) => [...p, upgrades[index]])
+      }
     }
 
-    // Forwards from grandma
-    if (buildings[1].owned === 1 && upgrades[1].owned === false && !availableUpgrades.some((upgrade) => upgrade === upgrades[1])) {
-      setAvailableUpgrades((p) => [...p, upgrades[1]])
-    }
+    upgrades.forEach((upgrade, index) => {
+      singleUpgrade(index, upgrade.unlockCondition)
+    })
   }, [cpsBase])
 
   // Calculating new cps base
