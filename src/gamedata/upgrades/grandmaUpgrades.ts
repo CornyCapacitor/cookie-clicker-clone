@@ -2,7 +2,7 @@ export const GrandmaUpgrades = [
   {
     name: "Forwards from grandma",
     description: "Grandmas are twice as efficient.",
-    price: 1000,
+    price: 1e3,
     image: "grandma/plain_grandma.webp",
     modifying: {
       building: "Grandma",
@@ -17,7 +17,7 @@ export const GrandmaUpgrades = [
   {
     name: "Steel-plated rolling pins",
     description: "Grandmas are twice as efficient.",
-    price: 5000,
+    price: 5e3,
     image: "grandma/beryllium_grandma.webp",
     modifying: {
       building: "Grandma",
@@ -32,7 +32,7 @@ export const GrandmaUpgrades = [
   {
     name: "Lubricated dentures",
     description: "Grandmas are twice as efficient.",
-    price: 50000,
+    price: 5e4,
     image: "grandma/blueberyllium_grandma.webp",
     modifying: {
       building: "Grandma",
@@ -47,7 +47,7 @@ export const GrandmaUpgrades = [
   {
     name: "Prune juice",
     description: "Grandmas are twice as efficient.",
-    price: 5000000,
+    price: 5e6,
     image: "grandma/chalcedhoney_grandma.webp",
     modifying: {
       building: "Grandma",
@@ -62,7 +62,7 @@ export const GrandmaUpgrades = [
   {
     name: "Double tick glasses",
     description: "Grandmas are twice as efficient.",
-    price: 500000000,
+    price: 5e8,
     image: "grandma/buttergold_grandma.webp",
     modifying: {
       building: "Grandma",
@@ -77,7 +77,7 @@ export const GrandmaUpgrades = [
   {
     name: "Aging agents",
     description: "Grandmas are twice as efficient.",
-    price: 50000000000,
+    price: 5e10,
     image: "grandma/buttergold_grandma.webp",
     modifying: {
       building: "Grandma",
@@ -92,7 +92,7 @@ export const GrandmaUpgrades = [
   {
     name: "Xtreme walkers",
     description: "Grandmas are twice as efficient.",
-    price: 50000000000000,
+    price: 5e13,
     image: "grandma/sugarmuck_grandma.webp",
     modifying: {
       building: "Grandma",
@@ -107,7 +107,7 @@ export const GrandmaUpgrades = [
   {
     name: "The Unbridling",
     description: "Grandmas are twice as efficient.",
-    price: 50000000000000000,
+    price: 5e16,
     image: "grandma/jetmint_grandma.webp",
     modifying: {
       building: "Grandma",
@@ -122,7 +122,7 @@ export const GrandmaUpgrades = [
   {
     name: "Reverse dementia",
     description: "Grandmas are twice as efficient.",
-    price: 50000000000000000000,
+    price: 5e19,
     image: "grandma/hazelrald_grandma.webp",
     modifying: {
       building: "Grandma",
@@ -137,7 +137,7 @@ export const GrandmaUpgrades = [
   {
     name: "Timeproof hair dyes",
     description: "Grandmas are twice as efficient.",
-    price: 50000000000000000000,
+    price: 5e22,
     image: "grandma/mooncandy_grandma.webp",
     modifying: {
       building: "Grandma",
@@ -152,7 +152,7 @@ export const GrandmaUpgrades = [
   {
     name: "Good manners",
     description: "Grandmas are twice as efficient.",
-    price: 500000000000000000000000,
+    price: 5e26,
     image: "grandma/astrofudge_grandma.webp",
     modifying: {
       building: "Grandma",
@@ -167,7 +167,7 @@ export const GrandmaUpgrades = [
   {
     name: "Generation degeneration",
     description: "Grandmas are twice as efficient.",
-    price: 5000000000000000000000000000,
+    price: 5e30,
     image: "grandma/alabascream_grandma.webp",
     modifying: {
       building: "Grandma",
@@ -182,7 +182,7 @@ export const GrandmaUpgrades = [
   {
     name: "Visits",
     description: "Grandmas are twice as efficient.",
-    price: 50000000000000000000000000000000,
+    price: 5e34,
     image: "grandma/iridyum_grandma.webp",
     modifying: {
       building: "Grandma",
@@ -197,7 +197,7 @@ export const GrandmaUpgrades = [
   {
     name: "Kitchen cabinets",
     description: "Grandmas are twice as efficient.",
-    price: 500000000000000000000000000000000000,
+    price: 5e38,
     image: "grandma/glucosmium_grandma.webp",
     modifying: {
       building: "Grandma",
@@ -212,7 +212,7 @@ export const GrandmaUpgrades = [
   {
     name: "Foam-tipped canes",
     description: "Grandmas are twice as efficient.",
-    price: 5000000000000000000000000000000000000000,
+    price: 5e42,
     image: "grandma/glimmeringue_grandma.webp",
     modifying: {
       building: "Grandma",
