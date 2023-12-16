@@ -185,7 +185,7 @@ export const CursorUpgrades = [
     name: "Nonillion fingers",
     description: "Multiplies the gain from Thousand fingers by 20",
     price: 10000000000000000000000000000,
-    image: "cursor/iridyum_cursor.webp",
+    image: "cursor/irydium_cursor.webp",
     modifying: {
       other: "Thousand fingers",
     },
