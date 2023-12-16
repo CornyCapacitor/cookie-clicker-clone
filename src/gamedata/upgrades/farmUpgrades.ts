@@ -1,6 +1,6 @@
 export const FarmUpgrades = [
   {
-    name: "Reinforced index finger",
+    name: "Cheap hoes",
     description: "Farms are twice as efficient.",
     price: 11000,
     image: "farm/plain_farm.webp",
