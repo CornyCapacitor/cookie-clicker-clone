@@ -62,6 +62,7 @@ function App() {
     setCookiesBaked(cookiesBaked + clickValue)
   }
 
+  // Buying buildings
   const buyBuilding = (name: string) => {
     const findBuildingIndex = (name: string) => {
       return buildings.findIndex(building => building.name === name)
@@ -104,6 +105,7 @@ function App() {
     }
   }
 
+  // Buying upgrades
   const buyUpgrade = (name: string) => {
     const findUpgradeIndex = (name: string) => {
       return upgrades.findIndex(upgrade => upgrade.name === name)
@@ -210,12 +212,14 @@ function App() {
     setCps(newCps);
   }, [cpsBase, cpsModifier])
 
+  // Converting long numbers to numbers with verbal replacement
   useEffect(() => {
     setCpsString(formatNumber(cps))
     setCookiesInBankString(formatNumber(cookiesInBank))
     setCookiesBakedString(formatNumber(cookiesBaked))
   }, [cps, cookiesInBank, cookiesBaked])
 
+  // Available upgrades sorting by price
   useEffect(() => {
     const sortAvailableUpgradesByPrice = () => {
       setAvailableUpgrades((p) => {
