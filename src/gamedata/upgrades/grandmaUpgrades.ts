@@ -3,7 +3,7 @@ export const GrandmaUpgrades = [
     name: "Forwards from grandma",
     description: "Grandmas are twice as efficient.",
     price: 1000,
-    image: "forwards-from-grandma.webp",
+    image: "grandma/plain_grandma.webp",
     modifying: {
       building: "Grandma",
     },
@@ -18,7 +18,7 @@ export const GrandmaUpgrades = [
     name: "Steel-plated rolling pins",
     description: "Grandmas are twice as efficient.",
     price: 5000,
-    image: "steel-plated-rolling-pins.webp",
+    image: "grandma/beryllium_grandma.webp",
     modifying: {
       building: "Grandma",
     },

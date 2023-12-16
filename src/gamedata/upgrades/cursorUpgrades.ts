@@ -3,7 +3,7 @@ export const CursorUpgrades = [
     name: "Reinforced index finger",
     description: "The mouse and cursors are twice as efficient.",
     price: 100,
-    image: "reinforced-index-finger.webp",
+    image: "cursor/plain_cursor.webp",
     modifying: {
       building: "Cursor",
       other: "Clicks",
@@ -19,7 +19,7 @@ export const CursorUpgrades = [
     name: "Carpal tunnel prevention cream",
     description: "The mouse and cursors are twice as efficient.",
     price: 500,
-    image: "carapal-tunnel-prevention-cream.webp",
+    image: "cursor/beryllium_cursor.webp",
     modifying: {
       building: "Cursor",
     },
