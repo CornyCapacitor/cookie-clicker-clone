@@ -4,6 +4,7 @@ import { FactoryUpgrades } from "./upgrades/factoryUpgrades"
 import { FarmUpgrades } from "./upgrades/farmUpgrades"
 import { GrandmaUpgrades } from "./upgrades/grandmaUpgrades"
 import { MineUpgrades } from "./upgrades/mineUpgrades"
+import { TempleUpgrades } from "./upgrades/templeUpgrades"
 
 type Upgrade = {
   name: string,
@@ -16,4 +17,4 @@ type Upgrade = {
   owned: boolean,
 }
 
-export const UpgradesData: Upgrade[] = [...CursorUpgrades, ...GrandmaUpgrades, ...FarmUpgrades, ...MineUpgrades, ...FactoryUpgrades, ...BankUpgrades]
+export const UpgradesData: Upgrade[] = [...CursorUpgrades, ...GrandmaUpgrades, ...FarmUpgrades, ...MineUpgrades, ...FactoryUpgrades, ...BankUpgrades, ...TempleUpgrades]
