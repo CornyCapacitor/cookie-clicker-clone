@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import Swal from 'sweetalert2'
 import { Building } from './components/Building.tsx'
+import { formatNumber } from './components/FormatNumber.ts'
 import { Milk } from './components/Milk.tsx'
 import { Upgrade } from './components/Upgrade.tsx'
 import { BuildingData } from './gamedata/BuildingData.ts'
@@ -37,17 +38,20 @@ type Upgrade = {
 function App() {
   // Arrays
   const [buildings, setBuildings] = useState<Building[]>(BuildingData);
-  const [upgrades, setUpgrades] = useState<Upgrade[]>(UpgradesData)
+  const [upgrades, setUpgrades] = useState<Upgrade[]>(UpgradesData);
   const [availableUpgrades, setAvailableUpgrades] = useState<Upgrade[]>([]);
 
   // Cookies states
   const [cookiesBaked, setCookiesBaked] = useState<number>(0);
+  const [, setCookiesBakedString] = useState<string>("0");
   const [cookiesInBank, setCookiesInBank] = useState<number>(0);
+  const [cookiesInBankString, setCookiesInBankString] = useState<string>("0");
   const [refreshRate] = useState<number>(100);
 
   // Cps states
-  const [cpsBase, setCpsBase] = useState<number>(0.000001)
+  const [cpsBase, setCpsBase] = useState<number>(0.000001);
   const [cps, setCps] = useState<number>(0.000001);
+  const [cpsString, setCpsString] = useState<string>("0");
   const [cpsModifier] = useState<number>(1);
 
   // Click states & functions
@@ -187,6 +191,7 @@ function App() {
     upgrades.forEach((upgrade, index) => {
       singleUpgrade(index, upgrade.unlockCondition)
     })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cpsBase])
 
   // Calculating new cps base
@@ -205,13 +210,20 @@ function App() {
     setCps(newCps);
   }, [cpsBase, cpsModifier])
 
+  useEffect(() => {
+    setCpsString(formatNumber(cps))
+    setCookiesInBankString(formatNumber(cookiesInBank))
+    setCookiesBakedString(formatNumber(cookiesBaked))
+  }, [cps, cookiesInBank, cookiesBaked])
+
+
   return (
     <div className="app">
       <section className="section-left">
         <header>Player's Bakery</header>
         <div className="cookies-production-info">
-          <span>{cookiesInBank.toFixed(0)} cookies</span>
-          <span>{cps.toFixed(2)} cookies per second</span>
+          <span>{`${cookiesInBankString} cookies`}</span>
+          <span>{`${cpsString} cookies per second`}</span>
         </div>
         <div className="big-cookie-glow">
           <img className="big-cookie" src="/big-cookie.svg" onClick={() => bigCookieClick()} />
@@ -232,7 +244,7 @@ function App() {
             <button className="header-button">Restart</button>
           </section>
         </div>
-        <button className="header-button" onClick={() => setCookiesInBank(p => p + 10000)}>Cheat 10000 cookies</button>
+        <button className="header-button" onClick={() => setCookiesInBank(p => p + 1000000)}>Cheat 1000000 cookies</button>
         <button className="header-button" onClick={() => console.log(buildings)}>Console log buildings</button>
       </section>
       <section className="section-right">

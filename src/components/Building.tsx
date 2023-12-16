@@ -1,3 +1,6 @@
+import { useEffect, useState } from 'react';
+import { formatNumber } from './FormatNumber';
+
 import './Building.css';
 
 type BuildingProps = {
@@ -9,19 +12,26 @@ type BuildingProps = {
 }
 
 export const Building = ({ name, price, image, owned, buyBuilding }: BuildingProps) => {
+  const [priceString, setPriceString] = useState<string>("");
 
   const handleBuildingClick = () => {
     buyBuilding(name);
   }
 
+  useEffect(() => {
+    setPriceString(formatNumber(price))
+  }, [price])
+
   return (
     <div className="building" id={name} onClick={() => handleBuildingClick()}>
-      <img className="building-image" src={`/public/buildings/${image}`} />
-      <div className="building-info">
-        <span className="building-name">{name}</span>
-        <div className="building-price-container">
-          <img className="building-cookie" src="/public/big-cookie.svg" />
-          <span className="building-price">{price}</span>
+      <div className="left-section">
+        <img className="building-image" src={`/public/buildings/${image}`} />
+        <div className="building-info">
+          <span className="building-name">{name}</span>
+          <div className="building-price-container">
+            <img className="building-cookie" src="/public/big-cookie.svg" />
+            <span className="building-price">{priceString}</span>
+          </div>
         </div>
       </div>
       <span className="building-owned">{owned}</span>

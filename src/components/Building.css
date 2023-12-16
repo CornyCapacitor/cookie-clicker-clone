@@ -3,14 +3,19 @@
   height: 65px;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  border-bottom: solid 2px;
+  justify-content: space-between;
+  border-bottom: solid 4px rgb(39, 39, 39);
   background-image: url(/public/store-tile.jpg);
 
   &:hover {
     cursor: pointer;
     filter: brightness(85%);
   }
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
 }
 
 .building-image {
@@ -20,10 +25,9 @@
 .building-info {
   display: flex;
   flex-direction: column;
-  padding-left: 20px;
+  padding-left: 5px;
   align-items: flex-start;
   font-size: 18px;
-  width: 60%;
 }
 
 .building-price-container {
