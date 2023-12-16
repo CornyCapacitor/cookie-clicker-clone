@@ -213,7 +213,7 @@ export const GrandmaUpgrades = [
     name: "Foam-tipped canes",
     description: "Grandmas are twice as efficient.",
     price: 5000000000000000000000000000000000000000,
-    image: "grandma/glimmerinque_grandma.webp",
+    image: "grandma/glimmeringue_grandma.webp",
     modifying: {
       building: "Grandma",
     },

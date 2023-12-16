@@ -247,6 +247,7 @@ function App() {
         <button className="header-button" onClick={() => setCookiesInBank(p => p + 1000000)}>Cheat 1000000 cookies</button>
         <button className="header-button" onClick={() => console.log(buildings)}>Console log buildings</button>
         <button className="header-button" onClick={() => setBuildings((p) => p.map((building, index) => index === 0 ? { ...building, owned: building.owned + 550 } : building))}>Add 550 cursors</button>
+        <button className="header-button" onClick={() => setBuildings((p) => p.map((building, index) => index === 1 ? { ...building, owned: building.owned + 550 } : building))}>Add 550 grandmas</button>
       </section>
       <section className="section-right">
         <header className="store-header">Store</header>
