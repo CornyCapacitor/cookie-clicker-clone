@@ -6,7 +6,7 @@ type Upgrade = {
   description: string,
   price: number,
   image: string,
-  modifying: { building: string, other?: string },
+  modifying: { building?: string, other?: string },
   modifyingValue: number,
   unlockCondition: { building: string, amount: number },
   owned: boolean,
