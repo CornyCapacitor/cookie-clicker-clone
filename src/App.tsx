@@ -193,7 +193,6 @@ function App() {
     upgrades.forEach((upgrade, index) => {
       singleUpgrade(index, upgrade.unlockCondition)
     })
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cpsBase])
 
   // Calculating new cps base
@@ -221,13 +220,9 @@ function App() {
 
   // Available upgrades sorting by price
   useEffect(() => {
-    const sortAvailableUpgradesByPrice = () => {
-      setAvailableUpgrades((p) => {
-        return [...p].sort((a, b) => a.price - b.price)
-      })
-    }
-    sortAvailableUpgradesByPrice();
-  }, [availableUpgrades])
+    setAvailableUpgrades((p) => [...p].sort((a, b) => a.price - b.price));
+  }, [cps]);
+
 
   return (
     <div className="app">
