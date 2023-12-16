@@ -223,7 +223,6 @@ function App() {
     setAvailableUpgrades((p) => [...p].sort((a, b) => a.price - b.price));
   }, [cps]);
 
-
   return (
     <div className="app">
       <section className="section-left">
@@ -267,7 +266,7 @@ function App() {
         <header className="buildings-header">Buildings</header>
         <div className="buildings">
           {buildings.map((building, index) => (
-            <Building key={index} name={building.name} price={building.price} image={building.image} owned={building.owned} buyBuilding={buyBuilding} />
+            <Building cookiesInBank={cookiesInBank} key={index} name={building.name} price={building.price} image={building.image} owned={building.owned} buyBuilding={buyBuilding} />
           ))}
         </div>
       </section>
