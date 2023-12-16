@@ -5,11 +5,11 @@ export const WizardTowerUpgrades = [
     price: 3300000000,
     image: "wizard_tower/plain_wizard_tower.webp",
     modifying: {
-      building: "Farm",
+      building: "Wizard Tower",
     },
     modifyingValue: 2.0,
     unlockCondition: {
-      building: "Farm",
+      building: "Wizard Tower",
       amount: 1,
     },
     owned: false,
