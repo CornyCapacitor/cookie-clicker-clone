@@ -216,6 +216,15 @@ function App() {
     setCookiesBakedString(formatNumber(cookiesBaked))
   }, [cps, cookiesInBank, cookiesBaked])
 
+  useEffect(() => {
+    const sortAvailableUpgradesByPrice = () => {
+      setAvailableUpgrades((p) => {
+        return [...p].sort((a, b) => a.price - b.price)
+      })
+    }
+    sortAvailableUpgradesByPrice();
+  }, [availableUpgrades])
+
   return (
     <div className="app">
       <section className="section-left">
