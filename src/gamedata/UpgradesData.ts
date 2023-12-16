@@ -1,3 +1,4 @@
+import { AlchemyLabUpgrades } from "./upgrades/alchemy_labUpgrades"
 import { BankUpgrades } from "./upgrades/bankUpgrades"
 import { CursorUpgrades } from "./upgrades/cursorUpgrades"
 import { FactoryUpgrades } from "./upgrades/factoryUpgrades"
@@ -19,4 +20,4 @@ type Upgrade = {
   owned: boolean,
 }
 
-export const UpgradesData: Upgrade[] = [...CursorUpgrades, ...GrandmaUpgrades, ...FarmUpgrades, ...MineUpgrades, ...FactoryUpgrades, ...BankUpgrades, ...TempleUpgrades, ...WizardTowerUpgrades, ...ShipmentUpgrades]
+export const UpgradesData: Upgrade[] = [...CursorUpgrades, ...GrandmaUpgrades, ...FarmUpgrades, ...MineUpgrades, ...FactoryUpgrades, ...BankUpgrades, ...TempleUpgrades, ...WizardTowerUpgrades, ...ShipmentUpgrades, ...AlchemyLabUpgrades]
