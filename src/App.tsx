@@ -183,7 +183,7 @@ function App() {
     const singleUpgrade = (index: number, unlockCondition: { building: string, amount: number }) => {
       const buildingIndex = buildings.findIndex(building => building.name === unlockCondition.building)
 
-      if (buildingIndex !== -1 && buildings[buildingIndex].owned === unlockCondition.amount && upgrades[index].owned === false && !availableUpgrades.some((upgrade) => upgrade === upgrades[index])) {
+      if (buildingIndex !== -1 && buildings[buildingIndex].owned >= unlockCondition.amount && upgrades[index].owned === false && !availableUpgrades.some((upgrade) => upgrade === upgrades[index])) {
         setAvailableUpgrades((p) => [...p, upgrades[index]])
       }
     }
