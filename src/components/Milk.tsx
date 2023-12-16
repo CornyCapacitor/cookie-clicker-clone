@@ -1,4 +1,4 @@
-import './milk.css'
+import './Milk.css'
 
 type MilkProps = {
   color: string,
