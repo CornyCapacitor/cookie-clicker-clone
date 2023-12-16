@@ -1,7 +1,19 @@
 export const formatNumber = (num: number) => {
   const absNum = Math.abs(num);
 
-  if (absNum >= 1e45) {
+  if (absNum >= 1e63) {
+    return (num / 1e63).toFixed(2) + " vigintillion";
+  } else if (absNum >= 1e60) {
+    return (num / 1e60).toFixed(2) + " novemdecillion";
+  } else if (absNum >= 1e57) {
+    return (num / 1e57).toFixed(2) + " octodecillion";
+  } else if (absNum >= 1e54) {
+    return (num / 1e54).toFixed(2) + " septendecillion";
+  } else if (absNum >= 1e51) {
+    return (num / 1e51).toFixed(2) + " sexdecillion";
+  } else if (absNum >= 1e48) {
+    return (num / 1e48).toFixed(2) + " quindecillion";
+  } else if (absNum >= 1e45) {
     return (num / 1e45).toFixed(2) + " quattuordecillion";
   } else if (absNum >= 1e42) {
     return (num / 1e42).toFixed(2) + " tredecillion";
