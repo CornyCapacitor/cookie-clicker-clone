@@ -216,7 +216,6 @@ function App() {
     setCookiesBakedString(formatNumber(cookiesBaked))
   }, [cps, cookiesInBank, cookiesBaked])
 
-
   return (
     <div className="app">
       <section className="section-left">
@@ -244,7 +243,7 @@ function App() {
             <button className="header-button">Restart</button>
           </section>
         </div>
-        <button className="header-button" onClick={() => setCookiesInBank(p => p + 1000000)}>Cheat 1000000 cookies</button>
+        <button className="header-button" onClick={() => setCookiesInBank(p => p + 1e21)}>Cheat {1e21} cookies</button>
         <button className="header-button" onClick={() => console.log(buildings)}>Console log buildings</button>
         <button className="header-button" onClick={() => setBuildings((p) => p.map((building, index) => index === 0 ? { ...building, owned: building.owned + 550 } : building))}>Add 550 cursors</button>
         <button className="header-button" onClick={() => setBuildings((p) => p.map((building, index) => index === 1 ? { ...building, owned: building.owned + 550 } : building))}>Add 550 grandmas</button>
