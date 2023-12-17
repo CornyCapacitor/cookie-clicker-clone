@@ -66,6 +66,7 @@ export const BuildingTooltip = ({ cookiesInBank, cps, name, price, owned, buildi
 
 
     setTimeWorth(timeDuration)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [price])
 
   return (
@@ -81,7 +82,7 @@ export const BuildingTooltip = ({ cookiesInBank, cps, name, price, owned, buildi
         <div className="right">
           <div className="price-affordable">
             <img className="tooltip-cookie" src="/public/big-cookie.svg" />
-            <span style={{ color: `${affordable ? "#00ff00" : "#ff0000"}` }}>{formatNumber(price)}</span>
+            <span style={{ color: `${affordable ? "#00ff00" : "#ff0000"}` }}>{formatNumber(price, 0)}</span>
           </div>
           <div className="price-worth">
             <span className="price-worth-element">{timeWorth} worth</span>
@@ -90,9 +91,9 @@ export const BuildingTooltip = ({ cookiesInBank, cps, name, price, owned, buildi
         </div>
       </section>
       <section>
-        <span>Each {name.toLowerCase()} produces {formatNumber(singleBuildingCps)} cookies per second</span>
+        <span>Each {name.toLowerCase()} produces {formatNumber(singleBuildingCps, 2)} cookies per second</span>
         <br />
-        <span>{owned} {name.toLowerCase()}s producing {formatNumber(ownedBuildingsCps)} cookies per second ({((ownedBuildingsCps / cps) * 100).toFixed(2)}% of total cps)</span>
+        <span>{owned} {name.toLowerCase()}s producing {formatNumber(ownedBuildingsCps, 2)} cookies per second ({((ownedBuildingsCps / cps) * 100).toFixed(2)}% of total cps)</span>
         <br />
         <span></span>
       </section>

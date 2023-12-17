@@ -193,6 +193,7 @@ function App() {
     upgrades.forEach((upgrade, index) => {
       singleUpgrade(index, upgrade.unlockCondition)
     })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cpsBase])
 
   // Calculating new cps base
@@ -213,9 +214,9 @@ function App() {
 
   // Converting long numbers to numbers with verbal replacement
   useEffect(() => {
-    setCpsString(formatNumber(cps))
-    setCookiesInBankString(formatNumber(cookiesInBank))
-    setCookiesBakedString(formatNumber(cookiesBaked))
+    setCpsString(formatNumber(cps, 2))
+    setCookiesInBankString(formatNumber(cookiesInBank, 0))
+    setCookiesBakedString(formatNumber(cookiesBaked, 0))
   }, [cps, cookiesInBank, cookiesBaked])
 
   // Available upgrades sorting by price
@@ -260,7 +261,7 @@ function App() {
         <header className="upgrades-header">Upgrades</header>
         <div className="upgrades">
           {availableUpgrades.map((upgrade, index) => (
-            <Upgrade cookiesInBank={cookiesInBank} cps={cps} key={index} name={upgrade.name} price={upgrade.price} image={upgrade.image} buyUpgrade={buyUpgrade} />
+            <Upgrade cookiesInBank={cookiesInBank} key={index} name={upgrade.name} price={upgrade.price} image={upgrade.image} buyUpgrade={buyUpgrade} />
           ))}
         </div>
         <header className="buildings-header">Buildings</header>

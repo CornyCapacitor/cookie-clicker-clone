@@ -1,4 +1,4 @@
-export const formatNumber = (num: number) => {
+export const formatNumber = (num: number, fixedValue: number) => {
   const absNum = Math.abs(num);
 
   if (absNum >= 1e63) {
@@ -41,7 +41,9 @@ export const formatNumber = (num: number) => {
     return (num / 1e9).toFixed(2) + " billion";
   } else if (absNum >= 1e6) {
     return (num / 1e6).toFixed(2) + " million";
+  } else if (absNum >= 1e3) {
+    return num.toFixed(0).toString();
   } else {
-    return num.toFixed().toString();
+    return num.toFixed(fixedValue).toString();
   }
 };

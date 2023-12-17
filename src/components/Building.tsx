@@ -28,7 +28,7 @@ export const Building = ({ cookiesInBank, cps, name, price, image, owned, buildi
 
   // Handler for price string
   useEffect(() => {
-    setPriceString(formatNumber(price))
+    setPriceString(formatNumber(price, 0))
   }, [price])
 
   // Checking if building is affordable
@@ -53,7 +53,7 @@ export const Building = ({ cookiesInBank, cps, name, price, image, owned, buildi
         </div>
       </div>
       <span className="building-owned">{owned}</span>
-      {isTooltipVisible && owned >= 1 && (
+      {isTooltipVisible && (affordable || (isTooltipVisible && owned >= 1)) && (
         <BuildingTooltip cookiesInBank={cookiesInBank} cps={cps} name={name} price={price} image={image} owned={owned} buildingCps={buildingCps} modifier={modifier}></BuildingTooltip>
       )}
     </div>
