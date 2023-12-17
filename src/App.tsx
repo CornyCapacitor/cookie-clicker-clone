@@ -260,13 +260,13 @@ function App() {
         <header className="upgrades-header">Upgrades</header>
         <div className="upgrades">
           {availableUpgrades.map((upgrade, index) => (
-            <Upgrade cookiesInBank={cookiesInBank} key={index} name={upgrade.name} price={upgrade.price} image={upgrade.image} buyUpgrade={buyUpgrade} />
+            <Upgrade cookiesInBank={cookiesInBank} cps={cps} key={index} name={upgrade.name} price={upgrade.price} image={upgrade.image} buyUpgrade={buyUpgrade} />
           ))}
         </div>
         <header className="buildings-header">Buildings</header>
         <div className="buildings">
           {buildings.map((building, index) => (
-            <Building cookiesInBank={cookiesInBank} key={index} name={building.name} price={building.price} image={building.image} owned={building.owned} buyBuilding={buyBuilding} />
+            <Building cookiesInBank={cookiesInBank} cps={cps} key={index} name={building.name} price={building.price} image={building.image} owned={building.owned} buildingCps={building.cps} modifier={building.modifier} buyBuilding={buyBuilding} />
           ))}
         </div>
       </section>

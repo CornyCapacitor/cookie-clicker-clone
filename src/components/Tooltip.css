@@ -1,11 +1,89 @@
 .tooltip {
   position: absolute;
-  top: top;
-  left: left;
-  border: 1px solid;
-  padding: 8px;
-  background-color: blue;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  z-index: 11;
+  padding: 5px;
+  z-index: 999;
+  width: 350px;
+  top: 0;
+  right: 302px;
+  height: auto;
+  border: solid 2px;
+  border: outset;
+  border-color: rgb(255, 153, 0);
+  background-color: rgb(39, 39, 39);
+  color: white;
+  text-align: start;
+}
+
+.upper-section {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  width: 100%;
+  border-bottom: solid 1px white;
+}
+
+.upper-section .left {
+  display: flex;
+}
+
+.upper-section .right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-width: 150px;
+}
+
+.tooltip-image {
+  width: 50px;
+  height: 50px;
+}
+
+.tooltip-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: 10px;
+  height: 50px;
+  width: 100px;
+  font-size: 15px;
+}
+
+.tooltip-owned {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  padding: 1px 8px;
+  border-radius: 8px;
+  background-color: gray;
+  font-size: 12px;
+}
+
+.tooltip-price-info {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.tooltip-cookie {
+  width: 15px;
+}
+
+.price-affordable {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15px;
+}
+
+.price-worth {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.price-worth-element {
+  font-size: 10px;
 }

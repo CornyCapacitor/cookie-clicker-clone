@@ -1,20 +1,25 @@
 import { useEffect, useState } from 'react';
 import { formatNumber } from './FormatNumber';
+import { BuildingTooltip } from './Tooltip';
 
 import './Building.css';
 
 type BuildingProps = {
   cookiesInBank: number,
+  cps: number,
   name: string,
   price: number,
   image: string,
   owned: number
+  buildingCps: number,
+  modifier: number,
   buyBuilding: (name: string) => void;
 }
 
-export const Building = ({ cookiesInBank, name, price, image, owned, buyBuilding }: BuildingProps) => {
+export const Building = ({ cookiesInBank, cps, name, price, image, owned, buildingCps, modifier, buyBuilding }: BuildingProps) => {
   const [priceString, setPriceString] = useState<string>("");
   const [affordable, setAffordable] = useState<boolean | undefined>(undefined);
+  const [isTooltipVisible, setIsTooltipVisible] = useState<boolean>(false);
 
   // Handler for buyBuilding function
   const handleBuildingClick = () => {
@@ -36,7 +41,7 @@ export const Building = ({ cookiesInBank, name, price, image, owned, buyBuilding
   }, [cookiesInBank, price])
 
   return (
-    <div className={`building ${affordable ? "affordable" : "not-affordable"}`} id={name} onClick={() => handleBuildingClick()}>
+    <div onMouseEnter={() => setIsTooltipVisible(true)} onMouseLeave={() => setIsTooltipVisible(false)} className={`building ${affordable ? "affordable" : "not-affordable"}`} id={name} onClick={() => handleBuildingClick()}>
       <div className="left-section">
         <img className="building-image" src={`/public/buildings/${image}`} />
         <div className="building-info">
@@ -48,6 +53,9 @@ export const Building = ({ cookiesInBank, name, price, image, owned, buyBuilding
         </div>
       </div>
       <span className="building-owned">{owned}</span>
+      {isTooltipVisible && owned >= 1 && (
+        <BuildingTooltip cookiesInBank={cookiesInBank} cps={cps} name={name} price={price} image={image} owned={owned} buildingCps={buildingCps} modifier={modifier}></BuildingTooltip>
+      )}
     </div>
   )
 }
