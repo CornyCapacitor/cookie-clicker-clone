@@ -197,3 +197,28 @@
   /* overflow-y: auto; */
   background-image: url(/public/store-tile.jpg);
 }
+
+.click-message {
+  position: absolute;
+  user-select: none;
+  animation: moveUp 3s ease-out;
+  font-size: 25px;
+}
+
+@keyframes moveUp {
+  0% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-50%, -600%);
+    opacity: 0;
+  }
+}
+
+.big-cookie-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

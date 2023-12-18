@@ -36,6 +36,11 @@ type Upgrade = {
   tier: string,
 }
 
+type ClickMessage = {
+  id: number,
+  text: string,
+}
+
 function App() {
   // Arrays
   const [buildings, setBuildings] = useState<Building[]>(BuildingData);
@@ -60,11 +65,23 @@ function App() {
   const [thousandFingersEnabled, setThousandFingersEnabled] = useState<boolean>(false);
   const [thousandFingersValue, setThousandFingersValue] = useState<number>(0);
   const [thousandFingersMultiplier, setThousandFingersMultiplier] = useState<number>(1);
+  const [clickMessages, setClickMessages] = useState<ClickMessage[]>([])
+
+  // Clicking the BIG COOKIE
   const bigCookieClick = () => {
+    // Add cookies to the bank
     const clickValue = 1 * cookieClickMultiplier + thousandFingersValue * thousandFingersMultiplier
     setCookiesInBank(cookiesInBank + clickValue);
     setCookiesBaked(cookiesBaked + clickValue)
-    console.log(clickValue)
+
+    // Create cookie message
+    const newMessage = { id: new Date().getTime(), text: `+${clickValue}` }
+    setClickMessages((p) => [...p, newMessage])
+
+    // Remove the message
+    setTimeout(() => {
+      setClickMessages((p) => p.filter((msg) => msg.id !== newMessage.id))
+    }, 3000)
   }
 
   // Buying buildings
@@ -258,8 +275,13 @@ function App() {
           <span>{`${cookiesInBankString} cookies`}</span>
           <span>{`${cpsString} cookies per second`}</span>
         </div>
-        <div className="big-cookie-glow">
-          <img className="big-cookie" src="/big-cookie.svg" onClick={() => bigCookieClick()} />
+        <div className="big-cookie-container">
+          <div className="big-cookie-glow">
+            <img className="big-cookie" src="/big-cookie.svg" onClick={() => bigCookieClick()} />
+          </div>
+          {clickMessages.map((message) => (
+            <div className="click-message" key={message.id}>{formatNumber(Number(message.text), 2)}</div>
+          ))}
         </div>
         <Milk color="white" />
       </section>
