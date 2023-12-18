@@ -82,13 +82,69 @@ function App() {
     const { pageX, pageY } = event
 
     // Create cookie message
-    const newMessage = { id: new Date().getTime(), text: `${clickValue}`, position: { top: pageY - 20, left: pageX } }
+    const newMessage = { id: new Date().getTime(), text: `${clickValue}`, position: { top: pageY - 20, left: pageX + (Math.round((Math.random() * 10 - 5))) } }
     setClickMessages((p) => [...p, newMessage])
 
     // Remove the message
     setTimeout(() => {
       setClickMessages((p) => p.filter((msg) => msg.id !== newMessage.id))
     }, 3000)
+  }
+
+  // Golden cookie states & functions
+  const [goldenCookie, setGoldenCookie] = useState<{ position: { pageX: number, pageY: number } } | null>(null);
+  const [goldenCookieMessage, setGoldenCookieMessage] = useState<ClickMessage | null>(null)
+
+  // Show golden cookie
+  const showGoldenCookie = () => {
+    // Create it's coordinates
+    const pageX = Math.round(Math.random() * 70);
+    const pageY = Math.round(Math.random() * 90);
+
+    // Set golden cookie position
+    setGoldenCookie({ position: { pageX: pageX, pageY: pageY } })
+
+    // Set timeout for removing golden cookie 
+    setTimeout(() => {
+      setGoldenCookie(null)
+    }, 13000)
+
+    const chimeSound = new Audio('/public/sounds/chime.mp3');
+    chimeSound.play();
+  }
+
+  // Clicking the Golden Cookie
+  const goldenCookieClick = (event: { pageX: number; pageY: number }) => {
+    setGoldenCookie(null);
+    const variant1 = 0.15 * cookiesInBank + 13
+    const variant2 = 60 * 15 * (cps * 900) + 13
+    let cookiesToAdd
+
+    // Instantly gain cookies, whichever gives less
+    if (variant1 > variant2) {
+      cookiesToAdd = variant2;
+    } else {
+      cookiesToAdd = variant1;
+    }
+
+    // Real value of golden cookie
+    const goldenCookieValue = cookiesToAdd
+    setCookiesInBank(cookiesInBank + goldenCookieValue)
+
+    // Coordinates of click
+    const { pageX, pageY } = event
+
+    // Create golden cookie message
+    const goldenCookieMessage = { id: new Date().getTime(), text: "Lucky!", position: { top: pageY - 20, left: pageX + (Math.round((Math.random() * 10 - 5))) } }
+    setGoldenCookieMessage(goldenCookieMessage)
+
+    // Remove the cookie message
+    setTimeout(() => {
+      setGoldenCookieMessage(null)
+    }, 3000)
+
+    const shimmerClickSound = new Audio('/public/sounds/shimmerClick.mp3')
+    shimmerClickSound.play()
   }
 
   // Buying buildings
@@ -310,6 +366,8 @@ function App() {
         <button className="header-button" onClick={() => console.log(buildings)}>Console log buildings</button>
         <button className="header-button" onClick={() => setBuildings((p) => p.map((building, index) => index === 0 ? { ...building, owned: building.owned + 550 } : building))}>Add 550 cursors</button>
         <button className="header-button" onClick={() => setBuildings((p) => p.map((building, index) => index === 1 ? { ...building, owned: building.owned + 550 } : building))}>Add 550 grandmas</button>
+        <button className="header-button" onClick={() => showGoldenCookie()}>Show golden cookie</button>
+        <button className="header-button" onClick={() => console.log(goldenCookieMessage)}>Show golden cookie message coords</button>
       </section>
       <section className="section-right">
         <header className="store-header">Store</header>
@@ -326,6 +384,12 @@ function App() {
           ))}
         </div>
       </section>
+      {goldenCookie && (
+        <img style={{ top: `${goldenCookie.position.pageY}%`, left: `${goldenCookie.position.pageX}%` }} className="golden-cookie" src="/public/golden-cookie.webp" onClick={(event) => goldenCookieClick(event)} onContextMenu={(event) => event.preventDefault()} onDragStart={(event) => event.preventDefault()} draggable="false" />
+      )}
+      {goldenCookieMessage && (
+        <div style={{ top: goldenCookieMessage.position.top, left: goldenCookieMessage.position.left }} className="click-message">{goldenCookieMessage.text}</div>
+      )}
     </div>
   )
 }

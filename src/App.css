@@ -228,3 +228,38 @@
   align-items: center;
   justify-content: center;
 }
+
+.golden-cookie {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  animation: goldenCookie 13s ease;
+  z-index: 999;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@keyframes goldenCookie {
+  0% {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+
+  40% {
+    opacity: 1;
+    transform: scale(1.0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale(1.0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+}
