@@ -12,6 +12,7 @@ export const TempleUpgrades = [
       building: "Temple",
       amount: 1,
     },
+    tier: "plain",
     owned: false,
   },
 ]

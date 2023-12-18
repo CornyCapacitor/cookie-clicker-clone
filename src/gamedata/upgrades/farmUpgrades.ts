@@ -12,6 +12,7 @@ export const FarmUpgrades = [
       building: "Farm",
       amount: 1,
     },
+    tier: "plain",
     owned: false,
   },
 ]

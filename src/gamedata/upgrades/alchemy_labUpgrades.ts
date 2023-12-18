@@ -12,6 +12,7 @@ export const AlchemyLabUpgrades = [
       building: "Alchemy Lab",
       amount: 1,
     },
+    tier: "plain",
     owned: false,
   },
 ]

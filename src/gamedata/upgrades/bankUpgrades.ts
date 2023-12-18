@@ -12,6 +12,7 @@ export const BankUpgrades = [
       building: "Bank",
       amount: 1,
     },
+    tier: "plain",
     owned: false,
   },
 ]

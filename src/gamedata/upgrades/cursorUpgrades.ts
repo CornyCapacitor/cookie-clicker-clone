@@ -13,6 +13,7 @@ export const CursorUpgrades = [
       building: "Cursor",
       amount: 1,
     },
+    tier: "plain",
     owned: false,
   },
   {
@@ -28,6 +29,7 @@ export const CursorUpgrades = [
       building: "Cursor",
       amount: 1,
     },
+    tier: "beryllium",
     owned: false,
   },
   {
@@ -44,6 +46,7 @@ export const CursorUpgrades = [
       building: "Cursor",
       amount: 10,
     },
+    tier: "blueberyllium",
     owned: false,
   },
   {
@@ -59,6 +62,7 @@ export const CursorUpgrades = [
       building: "Cursor",
       amount: 25,
     },
+    tier: "chalcedhoney",
     owned: false,
   },
   {
@@ -74,6 +78,7 @@ export const CursorUpgrades = [
       building: "Cursor",
       amount: 50,
     },
+    tier: "buttergold",
     owned: false,
   },
   {
@@ -89,6 +94,7 @@ export const CursorUpgrades = [
       building: "Cursor",
       amount: 100,
     },
+    tier: "sugarmuck",
     owned: false,
   },
   {
@@ -104,6 +110,7 @@ export const CursorUpgrades = [
       building: "Cursor",
       amount: 150,
     },
+    tier: "jetmint",
     owned: false,
   },
   {
@@ -119,6 +126,7 @@ export const CursorUpgrades = [
       building: "Cursor",
       amount: 200,
     },
+    tier: "cherrysilver",
     owned: false,
   },
   {
@@ -134,6 +142,7 @@ export const CursorUpgrades = [
       building: "Cursor",
       amount: 250,
     },
+    tier: "hazelrald",
     owned: false,
   },
   {
@@ -149,6 +158,7 @@ export const CursorUpgrades = [
       building: "Cursor",
       amount: 300,
     },
+    tier: "mooncandy",
     owned: false,
   },
   {
@@ -164,6 +174,7 @@ export const CursorUpgrades = [
       building: "Cursor",
       amount: 350,
     },
+    tier: "astrofudge",
     owned: false,
   },
   {
@@ -179,6 +190,7 @@ export const CursorUpgrades = [
       building: "Cursor",
       amount: 400,
     },
+    tier: "alabascream",
     owned: false,
   },
   {
@@ -194,6 +206,7 @@ export const CursorUpgrades = [
       building: "Cursor",
       amount: 450,
     },
+    tier: "iridyum",
     owned: false,
   },
   {
@@ -209,6 +222,7 @@ export const CursorUpgrades = [
       building: "Cursor",
       amount: 500,
     },
+    tier: "glucosmium",
     owned: false,
   },
   {
@@ -224,6 +238,7 @@ export const CursorUpgrades = [
       building: "Cursor",
       amount: 550,
     },
+    tier: "glimmeringue",
     owned: false,
   },
 ]

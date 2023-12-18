@@ -12,6 +12,7 @@ export const FactoryUpgrades = [
       building: "Factory",
       amount: 1,
     },
+    tier: "plain",
     owned: false,
   },
 ]

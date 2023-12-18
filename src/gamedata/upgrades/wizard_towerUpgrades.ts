@@ -12,6 +12,7 @@ export const WizardTowerUpgrades = [
       building: "Wizard Tower",
       amount: 1,
     },
+    tier: "plain",
     owned: false,
   },
 ]

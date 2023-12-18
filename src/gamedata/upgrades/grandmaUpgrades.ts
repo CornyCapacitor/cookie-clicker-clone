@@ -12,6 +12,7 @@ export const GrandmaUpgrades = [
       building: "Grandma",
       amount: 1,
     },
+    tier: "plain",
     owned: false,
   },
   {
@@ -27,6 +28,7 @@ export const GrandmaUpgrades = [
       building: "Grandma",
       amount: 5,
     },
+    tier: "beryllium",
     owned: false,
   },
   {
@@ -42,6 +44,7 @@ export const GrandmaUpgrades = [
       building: "Grandma",
       amount: 25,
     },
+    tier: "blueberyllium",
     owned: false,
   },
   {
@@ -57,6 +60,7 @@ export const GrandmaUpgrades = [
       building: "Grandma",
       amount: 50,
     },
+    tier: "chalcedhoney",
     owned: false,
   },
   {
@@ -72,13 +76,14 @@ export const GrandmaUpgrades = [
       building: "Grandma",
       amount: 100,
     },
+    tier: "buttergold",
     owned: false,
   },
   {
     name: "Aging agents",
     description: "Grandmas are twice as efficient.",
     price: 5e10,
-    image: "grandma/buttergold_grandma.webp",
+    image: "grandma/sugarmuck_grandma.webp",
     modifying: {
       building: "Grandma",
     },
@@ -87,13 +92,14 @@ export const GrandmaUpgrades = [
       building: "Grandma",
       amount: 150,
     },
+    tier: "sugarmuck",
     owned: false,
   },
   {
     name: "Xtreme walkers",
     description: "Grandmas are twice as efficient.",
     price: 5e13,
-    image: "grandma/sugarmuck_grandma.webp",
+    image: "grandma/jetmint_grandma.webp",
     modifying: {
       building: "Grandma",
     },
@@ -102,13 +108,14 @@ export const GrandmaUpgrades = [
       building: "Grandma",
       amount: 200,
     },
+    tier: "jetmint",
     owned: false,
   },
   {
     name: "The Unbridling",
     description: "Grandmas are twice as efficient.",
     price: 5e16,
-    image: "grandma/jetmint_grandma.webp",
+    image: "grandma/cherrysilver_grandma.webp",
     modifying: {
       building: "Grandma",
     },
@@ -117,6 +124,7 @@ export const GrandmaUpgrades = [
       building: "Grandma",
       amount: 250,
     },
+    tier: "cherrysilver",
     owned: false,
   },
   {
@@ -132,6 +140,7 @@ export const GrandmaUpgrades = [
       building: "Grandma",
       amount: 300,
     },
+    tier: "hazelrald",
     owned: false,
   },
   {
@@ -147,6 +156,7 @@ export const GrandmaUpgrades = [
       building: "Grandma",
       amount: 350,
     },
+    tier: "mooncandy",
     owned: false,
   },
   {
@@ -162,6 +172,7 @@ export const GrandmaUpgrades = [
       building: "Grandma",
       amount: 400,
     },
+    tier: "astrofudge",
     owned: false,
   },
   {
@@ -177,6 +188,7 @@ export const GrandmaUpgrades = [
       building: "Grandma",
       amount: 450,
     },
+    tier: "alabascream",
     owned: false,
   },
   {
@@ -192,6 +204,7 @@ export const GrandmaUpgrades = [
       building: "Grandma",
       amount: 500,
     },
+    tier: "iridyum",
     owned: false,
   },
   {
@@ -207,6 +220,7 @@ export const GrandmaUpgrades = [
       building: "Grandma",
       amount: 550,
     },
+    tier: "glucosmium",
     owned: false,
   },
   {
@@ -222,6 +236,7 @@ export const GrandmaUpgrades = [
       building: "Grandma",
       amount: 600,
     },
+    tier: "glimmeringue",
     owned: false,
   },
 ]

@@ -12,6 +12,7 @@ export const MineUpgrades = [
       building: "Mine",
       amount: 1,
     },
+    tier: "plain",
     owned: false,
   },
 ]

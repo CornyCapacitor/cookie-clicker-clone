@@ -12,6 +12,7 @@ export const PortalUpgrades = [
       building: "Portal",
       amount: 1,
     },
+    tier: "plain",
     owned: false,
   },
 ]

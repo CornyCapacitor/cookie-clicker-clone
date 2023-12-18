@@ -12,6 +12,7 @@ export const ShipmentUpgrades = [
       building: "Shipment",
       amount: 1,
     },
+    tier: "plain",
     owned: false,
   },
 ]
