@@ -39,6 +39,10 @@ type Upgrade = {
 type ClickMessage = {
   id: number,
   text: string,
+  position: {
+    top: number,
+    left: number,
+  }
 }
 
 function App() {
@@ -68,14 +72,17 @@ function App() {
   const [clickMessages, setClickMessages] = useState<ClickMessage[]>([])
 
   // Clicking the BIG COOKIE
-  const bigCookieClick = () => {
+  const bigCookieClick = (event: { pageX: number; pageY: number }) => {
     // Add cookies to the bank
     const clickValue = 1 * cookieClickMultiplier + thousandFingersValue * thousandFingersMultiplier
     setCookiesInBank(cookiesInBank + clickValue);
     setCookiesBaked(cookiesBaked + clickValue)
 
+    // Coordinates of click
+    const { pageX, pageY } = event
+
     // Create cookie message
-    const newMessage = { id: new Date().getTime(), text: `${clickValue}` }
+    const newMessage = { id: new Date().getTime(), text: `${clickValue}`, position: { top: pageY - 20, left: pageX } }
     setClickMessages((p) => [...p, newMessage])
 
     // Remove the message
@@ -277,10 +284,10 @@ function App() {
         </div>
         <div className="big-cookie-container">
           <div className="big-cookie-glow">
-            <img className="big-cookie" src="/big-cookie.svg" onClick={() => bigCookieClick()} />
+            <img className="big-cookie" src="/big-cookie.svg" onClick={(event) => bigCookieClick(event)} onContextMenu={(event) => event.preventDefault()} onDragStart={(event) => event.preventDefault()} draggable="false" />
           </div>
           {clickMessages.map((message) => (
-            <div className="click-message" key={message.id}>+{formatNumber(Number(message.text), 2)}</div>
+            <div style={{ top: message.position.top, left: message.position.left }} className="click-message" key={message.id}>+{formatNumber(Number(message.text), 2)}</div>
           ))}
         </div>
         <Milk color="white" />

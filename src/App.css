@@ -208,6 +208,7 @@
   user-select: none;
   animation: moveUp 3s linear;
   font-size: 25px;
+  pointer-events: none;
 }
 
 @keyframes moveUp {
