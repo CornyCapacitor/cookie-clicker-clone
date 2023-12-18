@@ -7,6 +7,7 @@
   background-image: url(/public/upgrade-frame.png);
   background-color: rgb(39, 39, 39);
   transition: 0.15s;
+  user-select: none;
 
   &:hover {
     cursor: pointer;
