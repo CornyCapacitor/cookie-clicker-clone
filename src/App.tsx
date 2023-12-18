@@ -356,7 +356,7 @@ function App() {
   useEffect(() => {
     setInterval(() => {
       showGoldenCookie();
-    }, 133000)
+    }, 300000)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
