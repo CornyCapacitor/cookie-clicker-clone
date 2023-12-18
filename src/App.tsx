@@ -75,7 +75,7 @@ function App() {
     setCookiesBaked(cookiesBaked + clickValue)
 
     // Create cookie message
-    const newMessage = { id: new Date().getTime(), text: `+${clickValue}` }
+    const newMessage = { id: new Date().getTime(), text: `${clickValue}` }
     setClickMessages((p) => [...p, newMessage])
 
     // Remove the message
@@ -280,7 +280,7 @@ function App() {
             <img className="big-cookie" src="/big-cookie.svg" onClick={() => bigCookieClick()} />
           </div>
           {clickMessages.map((message) => (
-            <div className="click-message" key={message.id}>{formatNumber(Number(message.text), 2)}</div>
+            <div className="click-message" key={message.id}>+{formatNumber(Number(message.text), 2)}</div>
           ))}
         </div>
         <Milk color="white" />

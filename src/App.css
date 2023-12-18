@@ -25,6 +25,7 @@
   gap: 50px;
   width: 500px;
   height: 100vh;
+  box-shadow: inset 0 0 20px 15px rgba(0, 0, 0, 0.5);
 }
 
 .section-left header {
@@ -87,6 +88,7 @@
   border-right: solid 10px #965425;
   border-left: solid 10px #965425;
   height: 100vh;
+  box-shadow: inset 0 0 20px 15px rgba(0, 0, 0, 0.5);
 }
 
 .header {
@@ -94,6 +96,7 @@
   justify-content: center;
   height: 100px;
   border-bottom: 10px solid #965425;
+  box-shadow: inset 0 0 20px 15px rgba(0, 0, 0, 0.5);
 }
 
 .header-left {
@@ -141,6 +144,7 @@
 .section-right {
   width: 300px;
   height: 100vh;
+  box-shadow: inset 0 0 20px 15px rgba(0, 0, 0, 0.5);
 }
 
 .store-header {
