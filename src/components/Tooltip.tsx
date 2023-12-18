@@ -60,10 +60,13 @@ export const BuildingTooltip = ({ cookiesInBank, cps, name, price, owned, buildi
       timeDuration = `${Math.floor(seconds / 60)} minutes`;
     } else if (seconds < 86400) {
       timeDuration = `${Math.floor(seconds / 3600)} hours`;
-    } else {
+    } else if (seconds < 2628000) {
       timeDuration = `${Math.floor(seconds / 86400)} days`;
+    } else if (seconds < 31536000) {
+      timeDuration = `${Math.floor(seconds / 2628000)} months`;
+    } else {
+      timeDuration = `${Math.floor(seconds / 31536000)} years`;
     }
-
 
     setTimeWorth(timeDuration)
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -103,7 +106,7 @@ export const BuildingTooltip = ({ cookiesInBank, cps, name, price, owned, buildi
 
 export const UpgradeTooltip = ({ name, price }: TooltipProps) => {
   return (
-    <div className="tooltip">
+    <div style={{ top: "90px" }} className="tooltip">
       <span>{name}</span>
       <span>{price}</span>
     </div>
