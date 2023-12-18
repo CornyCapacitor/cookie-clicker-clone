@@ -1,17 +1,21 @@
 import { useEffect, useState } from 'react';
+import { UpgradeTooltip } from './Tooltip';
 
 import './Upgrade.css';
 
 type UpgradeProps = {
   cookiesInBank: number,
+  cps: number,
   name: string,
+  description: string,
   price: number,
   image: string,
   buyUpgrade: (name: string) => void;
 }
 
-export const Upgrade = ({ cookiesInBank, name, price, image, buyUpgrade }: UpgradeProps) => {
+export const Upgrade = ({ cookiesInBank, cps, name, description, price, image, buyUpgrade }: UpgradeProps) => {
   const [affordable, setAffordable] = useState<boolean | undefined>(undefined);
+  const [isTooltipVisible, setIsTooltipVisible] = useState<boolean>(false);
 
   const handleUpgradeClick = () => {
     buyUpgrade(name)
@@ -27,8 +31,13 @@ export const Upgrade = ({ cookiesInBank, name, price, image, buyUpgrade }: Upgra
   }, [cookiesInBank, price])
 
   return (
-    <div className={`upgrade ${affordable ? "affordable" : "not-affordable"}`} id={name} onClick={() => handleUpgradeClick()}>
-      <img src={`/public/upgrades/${image}`} />
-    </div>
+    <>
+      <div onMouseEnter={() => setIsTooltipVisible(true)} onMouseLeave={() => setIsTooltipVisible(false)} className={`upgrade ${affordable ? "affordable" : "not-affordable"}`} id={name} onClick={() => handleUpgradeClick()}>
+        <img src={`/public/upgrades/${image}`} />
+      </div>
+      {isTooltipVisible && (
+        <UpgradeTooltip cookiesInBank={cookiesInBank} cps={cps} name={name} description={description} price={price} image={image} />
+      )}
+    </>
   )
 }

@@ -7,14 +7,20 @@ type TooltipProps = {
   cookiesInBank: number,
   cps: number,
   name: string,
+  description?: string,
   price: number,
   image: string,
+}
+
+type BuildingProps = TooltipProps & {
   owned: number
   buildingCps: number,
   modifier: number,
 }
 
-export const BuildingTooltip = ({ cookiesInBank, cps, name, price, owned, buildingCps, modifier }: TooltipProps) => {
+type UpgradeProps = TooltipProps
+
+export const BuildingTooltip = ({ cookiesInBank, cps, name, price, owned, buildingCps, modifier }: BuildingProps) => {
   const [bankWorth, setBankWorth] = useState<string>("");
   const [timeWorth, setTimeWorth] = useState<string>("");
   const [affordable, setAffordable] = useState<boolean>(false);
@@ -104,11 +110,76 @@ export const BuildingTooltip = ({ cookiesInBank, cps, name, price, owned, buildi
   )
 }
 
-export const UpgradeTooltip = ({ name, price }: TooltipProps) => {
+export const UpgradeTooltip = ({ cookiesInBank, cps, name, description, price, image }: UpgradeProps) => {
+  const [bankWorth, setBankWorth] = useState<string>("");
+  const [timeWorth, setTimeWorth] = useState<string>("");
+  const [affordable, setAffordable] = useState<boolean>(false);
+
+  // Checking if building is affordable
+  useEffect(() => {
+    if (cookiesInBank >= price) {
+      setAffordable(true);
+    } else if (cookiesInBank < price) {
+      setAffordable(false);
+    }
+  }, [cookiesInBank, price])
+
+  // Setting bank worth
+  useEffect(() => {
+    const calculatedWorth = (price / cookiesInBank) * 100;
+    const formattedWorth = calculatedWorth.toFixed(2) + "%";
+
+    setBankWorth(formattedWorth)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [price])
+
+  // Setting time worth
+  useEffect(() => {
+    const calculatedWorth = price / cps
+    const seconds = calculatedWorth > 0 ? calculatedWorth : 0;
+    let timeDuration;
+    if (seconds < 60) {
+      timeDuration = `${Math.floor(seconds)} seconds`;
+    } else if (seconds < 3600) {
+      timeDuration = `${Math.floor(seconds / 60)} minutes`;
+    } else if (seconds < 86400) {
+      timeDuration = `${Math.floor(seconds / 3600)} hours`;
+    } else if (seconds < 2628000) {
+      timeDuration = `${Math.floor(seconds / 86400)} days`;
+    } else if (seconds < 31536000) {
+      timeDuration = `${Math.floor(seconds / 2628000)} months`;
+    } else {
+      timeDuration = `${Math.floor(seconds / 31536000)} years`;
+    }
+
+    setTimeWorth(timeDuration)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [price])
+
   return (
     <div style={{ top: "90px" }} className="tooltip">
-      <span>{name}</span>
-      <span>{price}</span>
+      <section className="upper-section">
+        <div className="left">
+          <img className="tooltip-image" src={`/public/upgrades/${image}`} />
+          <div className="tooltip-info">
+            <span className="tooltip-name">{name}</span>
+            <span className="tooltip-owned" style={{ marginBottom: "7px" }}>Tier: Glucosmium</span>
+          </div>
+        </div>
+        <div className="right">
+          <div className="price-affordable">
+            <img className="tooltip-cookie" src="/public/big-cookie.svg" />
+            <span style={{ color: `${affordable ? "#00ff00" : "#ff0000"}` }}>{formatNumber(price, 0)}</span>
+          </div>
+          <div className="price-worth">
+            <span className="price-worth-element">{timeWorth} worth</span>
+            <span className="price-worth-element">{bankWorth} of bank</span>
+          </div>
+        </div>
+      </section>
+      <section>
+        <span>{description}</span>
+      </section>
     </div>
   )
 }
