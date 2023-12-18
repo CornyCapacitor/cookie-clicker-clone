@@ -23,6 +23,7 @@ export const CursorUpgrades = [
     image: "cursor/beryllium_cursor.webp",
     modifying: {
       building: "Cursor",
+      other: "Clicks",
     },
     modifyingValue: 2.0,
     unlockCondition: {

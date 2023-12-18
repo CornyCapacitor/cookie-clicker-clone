@@ -57,10 +57,14 @@ function App() {
 
   // Click states & functions
   const [cookieClickMultiplier, setCookieClickMultiplier] = useState<number>(1);
+  const [thousandFingersEnabled, setThousandFingersEnabled] = useState<boolean>(false);
+  const [thousandFingersValue, setThousandFingersValue] = useState<number>(0);
+  const [thousandFingersMultiplier, setThousandFingersMultiplier] = useState<number>(1);
   const bigCookieClick = () => {
-    const clickValue = 1 * cookieClickMultiplier
+    const clickValue = 1 * cookieClickMultiplier + thousandFingersValue * thousandFingersMultiplier
     setCookiesInBank(cookiesInBank + clickValue);
     setCookiesBaked(cookiesBaked + clickValue)
+    console.log(clickValue)
   }
 
   // Buying buildings
@@ -125,6 +129,13 @@ function App() {
     // Checking others parameters to change
     if (modifying.other === "Clicks") {
       setCookieClickMultiplier(cookieClickMultiplier * upgrades[upgradeIndex].modifyingValue)
+    } else if (modifying.other === "Thousand fingers") {
+      if (upgrades[upgradeIndex].modifyingValue === 0.0) {
+        // setThousandFingers(p => ({ ...p, multiplier: p.multiplier + 1 }))
+        setThousandFingersEnabled(true);
+      } else {
+        setThousandFingersMultiplier(thousandFingersMultiplier * upgrades[upgradeIndex].modifyingValue)
+      }
     }
 
     const Toast = Swal.mixin({
@@ -197,15 +208,29 @@ function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cpsBase])
 
-  // Calculating new cps base
+  // Calculating new cps base and thousand fingers
   useEffect(() => {
     let newCpsBase = 0;
+    let otherBuildings = 0;
+    let thousandFingersValue = 0;
+
     for (const building of buildings) {
       newCpsBase += building.modifier * building.owned * building.cps
     }
 
-    setCpsBase(newCpsBase)
-  }, [buildings])
+    if (thousandFingersEnabled) {
+      for (const building of buildings) {
+        if (building.name !== "Cursor") {
+          otherBuildings += building.owned
+        }
+      }
+    }
+
+    thousandFingersValue = +(otherBuildings * 0.1).toFixed(2)
+    setThousandFingersValue(thousandFingersValue)
+
+    setCpsBase(newCpsBase + thousandFingersValue * thousandFingersMultiplier)
+  }, [buildings, thousandFingersMultiplier, thousandFingersEnabled])
 
   // Calculating new cps
   useEffect(() => {
@@ -252,7 +277,7 @@ function App() {
             <button className="header-button">Restart</button>
           </section>
         </div>
-        <button className="header-button" onClick={() => setCookiesInBank(p => p + 1e12)}>Cheat {1e12} cookies</button>
+        <button className="header-button" onClick={() => setCookiesInBank(p => p + 1e5)}>Cheat {1e5} cookies</button>
         <button className="header-button" onClick={() => console.log(buildings)}>Console log buildings</button>
         <button className="header-button" onClick={() => setBuildings((p) => p.map((building, index) => index === 0 ? { ...building, owned: building.owned + 550 } : building))}>Add 550 cursors</button>
         <button className="header-button" onClick={() => setBuildings((p) => p.map((building, index) => index === 1 ? { ...building, owned: building.owned + 550 } : building))}>Add 550 grandmas</button>
