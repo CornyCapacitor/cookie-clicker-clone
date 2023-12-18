@@ -10,10 +10,11 @@ type UpgradeProps = {
   description: string,
   price: number,
   image: string,
+  tier: string,
   buyUpgrade: (name: string) => void;
 }
 
-export const Upgrade = ({ cookiesInBank, cps, name, description, price, image, buyUpgrade }: UpgradeProps) => {
+export const Upgrade = ({ cookiesInBank, cps, name, description, price, image, tier, buyUpgrade }: UpgradeProps) => {
   const [affordable, setAffordable] = useState<boolean | undefined>(undefined);
   const [isTooltipVisible, setIsTooltipVisible] = useState<boolean>(false);
 
@@ -36,7 +37,7 @@ export const Upgrade = ({ cookiesInBank, cps, name, description, price, image, b
         <img src={`/public/upgrades/${image}`} />
       </div>
       {isTooltipVisible && (
-        <UpgradeTooltip cookiesInBank={cookiesInBank} cps={cps} name={name} description={description} price={price} image={image} />
+        <UpgradeTooltip cookiesInBank={cookiesInBank} cps={cps} name={name} description={description} price={price} image={image} tier={tier} />
       )}
     </>
   )

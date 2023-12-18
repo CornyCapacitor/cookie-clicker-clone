@@ -19,6 +19,7 @@ type Upgrade = {
   modifyingValue: number,
   unlockCondition: { building: string, amount: number },
   owned: boolean,
+  tier: string,
 }
 
 export const UpgradesData: Upgrade[] = [...CursorUpgrades, ...GrandmaUpgrades, ...FarmUpgrades, ...MineUpgrades, ...FactoryUpgrades, ...BankUpgrades, ...TempleUpgrades, ...WizardTowerUpgrades, ...ShipmentUpgrades, ...AlchemyLabUpgrades, ...PortalUpgrades]

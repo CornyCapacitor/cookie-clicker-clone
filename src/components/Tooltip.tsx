@@ -18,7 +18,9 @@ type BuildingProps = TooltipProps & {
   modifier: number,
 }
 
-type UpgradeProps = TooltipProps
+type UpgradeProps = TooltipProps & {
+  tier: string,
+}
 
 export const BuildingTooltip = ({ cookiesInBank, cps, name, price, owned, buildingCps, modifier }: BuildingProps) => {
   const [bankWorth, setBankWorth] = useState<string>("");
@@ -110,10 +112,11 @@ export const BuildingTooltip = ({ cookiesInBank, cps, name, price, owned, buildi
   )
 }
 
-export const UpgradeTooltip = ({ cookiesInBank, cps, name, description, price, image }: UpgradeProps) => {
+export const UpgradeTooltip = ({ cookiesInBank, cps, name, description, price, image, tier }: UpgradeProps) => {
   const [bankWorth, setBankWorth] = useState<string>("");
   const [timeWorth, setTimeWorth] = useState<string>("");
   const [affordable, setAffordable] = useState<boolean>(false);
+  const [tierTheme, setTierTheme] = useState<string>("");
 
   // Checking if building is affordable
   useEffect(() => {
@@ -156,6 +159,61 @@ export const UpgradeTooltip = ({ cookiesInBank, cps, name, description, price, i
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [price])
 
+  // Setting tier theme
+  useEffect(() => {
+    let theme: string;
+
+    switch (tier) {
+      case "beryllium":
+        theme = "#cc3fc7";
+        break;
+      case "blueberyllium":
+        theme = "#099ad9";
+        break;
+      case "chalcedhoney":
+        theme = "#d98609";
+        break;
+      case "buttergold":
+        theme = "#d9ac09";
+        break;
+      case "sugarmuck":
+        theme = "#4a9e88";
+        break;
+      case "jetmint":
+        theme = "#06c449";
+        break;
+      case "cherrysilver":
+        theme = "#b50707";
+        break;
+      case "hazelrald":
+        theme = "#127d01";
+        break;
+      case "mooncandy":
+        theme = "#0269d6";
+        break;
+      case "astrofudge":
+        theme = "#851313";
+        break;
+      case "alabascream":
+        theme = "#fff9c2";
+        break;
+      case "iridyum":
+        theme = "#2b2b2b";
+        break;
+      case "glucosmium":
+        theme = "#00a2ff";
+        break;
+      case "glimmeringue":
+        theme = "#fff86e";
+        break;
+      default:
+        theme = "";
+        break;
+    }
+
+    setTierTheme(theme)
+  }, [tier])
+
   return (
     <div style={{ top: "90px" }} className="tooltip">
       <section className="upper-section">
@@ -163,7 +221,7 @@ export const UpgradeTooltip = ({ cookiesInBank, cps, name, description, price, i
           <img className="tooltip-image" src={`/public/upgrades/${image}`} />
           <div className="tooltip-info">
             <span className="tooltip-name">{name}</span>
-            <span className="tooltip-owned" style={{ marginBottom: "7px" }}>Tier: Glucosmium</span>
+            <span className="tooltip-owned" style={{ marginBottom: "7px", backgroundColor: `${tierTheme}` }}>Tier: {tier}</span>
           </div>
         </div>
         <div className="right">
