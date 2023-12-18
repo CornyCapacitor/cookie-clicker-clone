@@ -45,6 +45,10 @@ type ClickMessage = {
   }
 }
 
+type GoldenCookieMessage = ClickMessage & {
+  value: number,
+}
+
 function App() {
   // Arrays
   const [buildings, setBuildings] = useState<Building[]>(BuildingData);
@@ -93,7 +97,8 @@ function App() {
 
   // Golden cookie states & functions
   const [goldenCookie, setGoldenCookie] = useState<{ position: { pageX: number, pageY: number } } | null>(null);
-  const [goldenCookieMessage, setGoldenCookieMessage] = useState<ClickMessage | null>(null)
+  const [goldenCookieMessage, setGoldenCookieMessage] = useState<GoldenCookieMessage | null>(null)
+  const [goldenCookieTimeout, setGoldenCookieTimeout] = useState<number | null>(null)
 
   // Show golden cookie
   const showGoldenCookie = () => {
@@ -104,18 +109,35 @@ function App() {
     // Set golden cookie position
     setGoldenCookie({ position: { pageX: pageX, pageY: pageY } })
 
-    // Set timeout for removing golden cookie 
-    setTimeout(() => {
+    // Set timeout for removing golden cookie
+    if (goldenCookieTimeout !== null) {
+      clearTimeout(goldenCookieTimeout);
+      setGoldenCookieTimeout(null)
+    }
+    const goldenTimeout = setTimeout(() => {
       setGoldenCookie(null)
     }, 13000)
 
+    // Save the timeout in the state
+    setGoldenCookieTimeout(goldenTimeout)
+
     const chimeSound = new Audio('/public/sounds/chime.mp3');
+    chimeSound.volume = 0.2;
     chimeSound.play();
   }
 
   // Clicking the Golden Cookie
   const goldenCookieClick = (event: { pageX: number; pageY: number }) => {
+    // Hide golden cookie
     setGoldenCookie(null);
+
+    // Clear the timeout
+    if (goldenCookieTimeout !== null) {
+      clearTimeout(goldenCookieTimeout);
+      setGoldenCookieTimeout(null)
+    }
+
+    // Calculate variants
     const variant1 = 0.15 * cookiesInBank + 13
     const variant2 = 60 * 15 * (cps * 900) + 13
     let cookiesToAdd
@@ -135,7 +157,7 @@ function App() {
     const { pageX, pageY } = event
 
     // Create golden cookie message
-    const goldenCookieMessage = { id: new Date().getTime(), text: "Lucky!", position: { top: pageY - 20, left: pageX + (Math.round((Math.random() * 10 - 5))) } }
+    const goldenCookieMessage = { id: new Date().getTime(), text: "Lucky!", value: goldenCookieValue, position: { top: pageY - 20, left: pageX + (Math.round((Math.random() * 10 - 5))) } }
     setGoldenCookieMessage(goldenCookieMessage)
 
     // Remove the cookie message
@@ -330,6 +352,14 @@ function App() {
     setAvailableUpgrades((p) => [...p].sort((a, b) => a.price - b.price));
   }, [cps]);
 
+  // Run golden cookie interval
+  useEffect(() => {
+    setInterval(() => {
+      showGoldenCookie();
+    }, 133000)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   return (
     <div className="app">
       <section className="section-left">
@@ -388,7 +418,11 @@ function App() {
         <img style={{ top: `${goldenCookie.position.pageY}%`, left: `${goldenCookie.position.pageX}%` }} className="golden-cookie" src="/public/golden-cookie.webp" onClick={(event) => goldenCookieClick(event)} onContextMenu={(event) => event.preventDefault()} onDragStart={(event) => event.preventDefault()} draggable="false" />
       )}
       {goldenCookieMessage && (
-        <div style={{ top: goldenCookieMessage.position.top, left: goldenCookieMessage.position.left }} className="click-message">{goldenCookieMessage.text}</div>
+        <div style={{ top: goldenCookieMessage.position.top, left: goldenCookieMessage.position.left }} className="golden-cookie-message">
+          <span>{goldenCookieMessage.text}</span>
+          <br />
+          <span>+{formatNumber(goldenCookieMessage.value, 0)} cookies!</span>
+        </div>
       )}
     </div>
   )

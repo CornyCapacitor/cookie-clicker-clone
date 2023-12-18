@@ -211,6 +211,14 @@
   pointer-events: none;
 }
 
+.golden-cookie-message {
+  position: absolute;
+  user-select: none;
+  animation: moveUpGc 3s linear;
+  font-size: 25px;
+  pointer-events: none;
+}
+
 @keyframes moveUp {
   0% {
     transform: translate(-50%, -50%);
@@ -219,6 +227,18 @@
 
   100% {
     transform: translate(-50%, -500%);
+    opacity: 0;
+  }
+}
+
+@keyframes moveUpGc {
+  0% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-50%, -250%);
     opacity: 0;
   }
 }
