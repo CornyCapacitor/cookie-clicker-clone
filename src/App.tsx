@@ -93,6 +93,10 @@ function App() {
     setTimeout(() => {
       setClickMessages((p) => p.filter((msg) => msg.id !== newMessage.id))
     }, 3000)
+
+    // It's here cause it was laggin when out of the scope of invoking that sound
+    const cookieClickSound = new Audio(`/public/sounds/clickb${Math.floor(Math.random() * 7) + 1}.mp3`)
+    cookieClickSound.play()
   }
 
   // Golden cookie states & functions
@@ -204,11 +208,16 @@ function App() {
         icon: "success",
         title: `Bought 1 ${name}!`
       })
+      const randomSoundNumber = Math.floor(Math.random() * 4 + 1)
+      const buyClick = new Audio(`/public/sounds/buy${randomSoundNumber}.mp3`)
+      buyClick.play()
     } else {
       Toast.fire({
         icon: "error",
         title: "Not enough cookies!"
       })
+      const buyClick = new Audio(`/public/sounds/clickOff1.mp3`)
+      buyClick.play()
     }
   }
 
@@ -269,11 +278,16 @@ function App() {
         icon: "success",
         title: `Bought ${name} upgrade!`
       })
+      const randomSoundNumber = Math.floor(Math.random() * 4 + 1)
+      const buyClick = new Audio(`/public/sounds/buy${randomSoundNumber}.mp3`)
+      buyClick.play()
     } else {
       Toast.fire({
         icon: "error",
         title: "Not enough cookies!"
       })
+      const buyClick = new Audio(`/public/sounds/clickOff1.mp3`)
+      buyClick.play()
     }
   }
 
