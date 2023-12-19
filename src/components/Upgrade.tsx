@@ -7,6 +7,7 @@ type UpgradeProps = {
   cookiesInBank: number,
   cps: number,
   name: string,
+  building?: string,
   description: string,
   price: number,
   image: string,
@@ -14,13 +15,26 @@ type UpgradeProps = {
   buyUpgrade: (name: string) => void;
 }
 
-export const Upgrade = ({ cookiesInBank, cps, name, description, price, image, tier, buyUpgrade }: UpgradeProps) => {
+export const Upgrade = ({ cookiesInBank, cps, name, building, description, price, image, tier, buyUpgrade }: UpgradeProps) => {
   const [affordable, setAffordable] = useState<boolean | undefined>(undefined);
   const [isTooltipVisible, setIsTooltipVisible] = useState<boolean>(false);
+  const [upgradeImageSrc, setUpgradeImageSrc] = useState<string>(image);
 
+  // Handler for buying upgrades
   const handleUpgradeClick = () => {
     buyUpgrade(name)
   }
+
+  // Handling the upgrade image source
+  useEffect(() => {
+    if (building) {
+      const buildingName = building.toLowerCase().replace(/\s/g, '_');
+      setUpgradeImageSrc(`${buildingName}/${tier}_${buildingName}.webp`)
+    }
+    else {
+      setUpgradeImageSrc(image)
+    }
+  }, [name, building, tier, image])
 
   // Checking if upgrade is affordable
   useEffect(() => {
@@ -34,10 +48,10 @@ export const Upgrade = ({ cookiesInBank, cps, name, description, price, image, t
   return (
     <>
       <div onMouseEnter={() => setIsTooltipVisible(true)} onMouseLeave={() => setIsTooltipVisible(false)} className={`upgrade ${affordable ? "affordable" : "not-affordable"}`} id={name} onClick={() => handleUpgradeClick()}>
-        <img src={`/public/upgrades/${image}`} />
+        <img src={`/public/upgrades/${upgradeImageSrc}`} />
       </div>
       {isTooltipVisible && (
-        <UpgradeTooltip cookiesInBank={cookiesInBank} cps={cps} name={name} description={description} price={price} image={image} tier={tier} />
+        <UpgradeTooltip cookiesInBank={cookiesInBank} cps={cps} name={name} building={building} description={description} price={price} image={image} tier={tier} />
       )}
     </>
   )

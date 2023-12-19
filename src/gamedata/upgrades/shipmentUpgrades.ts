@@ -1,8 +1,8 @@
 export const ShipmentUpgrades = [
   {
     name: "Vanilla nebulae",
-    description: "Shipment are twice as efficient.",
-    price: 51000000000,
+    description: "Shipments are twice as efficient.",
+    price: 51e9,
     image: "shipment/plain_shipment.webp",
     modifying: {
       building: "Shipment",
@@ -13,6 +13,230 @@ export const ShipmentUpgrades = [
       amount: 1,
     },
     tier: "plain",
+    owned: false,
+  },
+  {
+    name: "Wormholes",
+    description: "Shipments are twice as efficient.",
+    price: 255e9,
+    image: "beryllium_.webp",
+    modifying: {
+      building: "Shipment",
+    },
+    modifyingValue: 2.0,
+    unlockCondition: {
+      building: "Shipment",
+      amount: 5,
+    },
+    tier: "beryllium",
+    owned: false,
+  },
+  {
+    name: "Frequent flyer",
+    description: "Shipments are twice as efficient.",
+    price: 2.55e12,
+    image: "blueberyllium_.webp",
+    modifying: {
+      building: "Shipment",
+    },
+    modifyingValue: 2.0,
+    unlockCondition: {
+      building: "Shipment",
+      amount: 25,
+    },
+    tier: "blueberyllium",
+    owned: false,
+  },
+  {
+    name: "Warp drive",
+    description: "Shipments are twice as efficient.",
+    price: 255e12,
+    image: "chalcedhoney_.webp",
+    modifying: {
+      building: "Shipment",
+    },
+    modifyingValue: 2.0,
+    unlockCondition: {
+      building: "Shipment",
+      amount: 50,
+    },
+    tier: "chalcedhoney",
+    owned: false,
+  },
+  {
+    name: "Chocolate monoliths",
+    description: "Shipments are twice as efficient.",
+    price: 25.5e15,
+    image: "buttergold_.webp",
+    modifying: {
+      building: "Shipment",
+    },
+    modifyingValue: 2.0,
+    unlockCondition: {
+      building: "Shipment",
+      amount: 100,
+    },
+    tier: "buttergold",
+    owned: false,
+  },
+  {
+    name: "Generation ship",
+    description: "Shipments are twice as efficient.",
+    price: 2.55e18,
+    image: "sugarmuck_.webp",
+    modifying: {
+      building: "Shipment",
+    },
+    modifyingValue: 2.0,
+    unlockCondition: {
+      building: "Shipment",
+      amount: 150,
+    },
+    tier: "sugarmuck",
+    owned: false,
+  },
+  {
+    name: "Dysok sphere",
+    description: "Shipments are twice as efficient.",
+    price: 2.55e21,
+    image: "jetmint_.webp",
+    modifying: {
+      building: "Shipment",
+    },
+    modifyingValue: 2.0,
+    unlockCondition: {
+      building: "Shipment",
+      amount: 200,
+    },
+    tier: "jetmint",
+    owned: false,
+  },
+  {
+    name: "The final frontier",
+    description: "Shipments are twice as efficient.",
+    price: 2.55e24,
+    image: "cherrysilver_.webp",
+    modifying: {
+      building: "Shipment",
+    },
+    modifyingValue: 2.0,
+    unlockCondition: {
+      building: "Shipment",
+      amount: 250,
+    },
+    tier: "cherrysilver",
+    owned: false,
+  },
+  {
+    name: "Autopilot",
+    description: "Shipments are twice as efficient.",
+    price: 2.55e27,
+    image: "hazelrald_.webp",
+    modifying: {
+      building: "Shipment",
+    },
+    modifyingValue: 2.0,
+    unlockCondition: {
+      building: "Shipment",
+      amount: 300,
+    },
+    tier: "hazelrald",
+    owned: false,
+  },
+  {
+    name: "Restaurants at the end of the universe",
+    description: "Shipments are twice as efficient.",
+    price: 2.55e30,
+    image: "mooncandy_.webp",
+    modifying: {
+      building: "Shipment",
+    },
+    modifyingValue: 2.0,
+    unlockCondition: {
+      building: "Shipment",
+      amount: 350,
+    },
+    tier: "mooncandy",
+    owned: false,
+  },
+  {
+    name: "Universal alphabet",
+    description: "Shipments are twice as efficient.",
+    price: 25.5e33,
+    image: "astrofudge_.webp",
+    modifying: {
+      building: "Shipment",
+    },
+    modifyingValue: 2.0,
+    unlockCondition: {
+      building: "Shipment",
+      amount: 400,
+    },
+    tier: "astrofudge",
+    owned: false,
+  },
+  {
+    name: "Toroid universe",
+    description: "Shipments are twice as efficient.",
+    price: 255e36,
+    image: "alabascream_.webp",
+    modifying: {
+      building: "Shipment",
+    },
+    modifyingValue: 2.0,
+    unlockCondition: {
+      building: "Shipment",
+      amount: 450,
+    },
+    tier: "alabascream",
+    owned: false,
+  },
+  {
+    name: "Prime directive",
+    description: "Shipments are twice as efficient.",
+    price: 2.55e42,
+    image: "iridyum_.webp",
+    modifying: {
+      building: "Shipment",
+    },
+    modifyingValue: 2.0,
+    unlockCondition: {
+      building: "Shipment",
+      amount: 500,
+    },
+    tier: "iridyum",
+    owned: false,
+  },
+  {
+    name: "Cosmic foreground radiation",
+    description: "Shipments are twice as efficient.",
+    price: 25.5e45,
+    image: "glucosmium_.webp",
+    modifying: {
+      building: "Shipment",
+    },
+    modifyingValue: 2.0,
+    unlockCondition: {
+      building: "Shipment",
+      amount: 550,
+    },
+    tier: "glucosmium",
+    owned: false,
+  },
+  {
+    name: "At your doorstep in 30 minutes or your money back",
+    description: "Shipments are twice as efficient.",
+    price: 255e48,
+    image: "glimmeringue_.webp",
+    modifying: {
+      building: "Shipment",
+    },
+    modifyingValue: 2.0,
+    unlockCondition: {
+      building: "Shipment",
+      amount: 600,
+    },
+    tier: "glimmeringue",
     owned: false,
   },
 ]

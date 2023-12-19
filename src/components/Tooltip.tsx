@@ -21,6 +21,7 @@ type BuildingProps = TooltipProps & {
 
 type UpgradeProps = TooltipProps & {
   tier: string,
+  building?: string,
 }
 
 export const BuildingTooltip = ({ cookiesInBank, cps, name, description, price, owned, buildingCps, modifier, y }: BuildingProps) => {
@@ -31,12 +32,12 @@ export const BuildingTooltip = ({ cookiesInBank, cps, name, description, price, 
   const [ownedBuildingsCps, setOwnedBuildingsCps] = useState<number>(singleBuildingCps * owned)
 
   // Handling the upgrade image source
-  const getUpgradeImage = (name: string) => {
+  const getBuildingImage = (name: string) => {
     const imageName = name.toLowerCase().replace(/\s/g, '_');
     return `/public/upgrades/${imageName}/plain_${imageName}.webp`;
   };
 
-  const tooltipImageSrc = getUpgradeImage(name)
+  const tooltipImageSrc = getBuildingImage(name)
 
   // Checking if building is affordable
   useEffect(() => {
@@ -121,11 +122,20 @@ export const BuildingTooltip = ({ cookiesInBank, cps, name, description, price, 
   )
 }
 
-export const UpgradeTooltip = ({ cookiesInBank, cps, name, description, price, image, tier }: UpgradeProps) => {
+export const UpgradeTooltip = ({ cookiesInBank, cps, name, building, description, price, image, tier }: UpgradeProps) => {
   const [bankWorth, setBankWorth] = useState<string>("");
   const [timeWorth, setTimeWorth] = useState<string>("");
   const [affordable, setAffordable] = useState<boolean>(false);
   const [tierTheme, setTierTheme] = useState<string>("");
+  const [upgradeImageSrc, setUpgradeImageSrc] = useState<string>(image);
+
+  // Handling the upgrade image source
+  useEffect(() => {
+    if (building) {
+      const buildingName = building.toLowerCase().replace(/\s/g, '_');
+      setUpgradeImageSrc(`${buildingName}/${tier}_${buildingName}.webp`)
+    }
+  }, [name, building, tier])
 
   // Checking if building is affordable
   useEffect(() => {
@@ -227,7 +237,7 @@ export const UpgradeTooltip = ({ cookiesInBank, cps, name, description, price, i
     <div style={{ top: "90px" }} className="tooltip">
       <section className="upper-section">
         <div className="left">
-          <img className="tooltip-image" src={`/public/upgrades/${image}`} />
+          <img className="tooltip-image" src={`/public/upgrades/${upgradeImageSrc}`} />
           <div className="tooltip-info">
             <span className="tooltip-name">{name}</span>
             <span className="tooltip-owned" style={{ marginBottom: "7px", backgroundColor: `${tierTheme}` }}>Tier: {tier}</span>

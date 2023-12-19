@@ -142,7 +142,7 @@
 }
 
 .section-right {
-  width: 300px;
+  width: 317px;
   max-height: 100%;
   box-shadow: inset 0 0 20px 15px rgba(0, 0, 0, 0.5);
   overflow: auto;
@@ -172,12 +172,14 @@
   width: 100%;
   overflow: hidden;
   min-height: 60px;
+  max-height: 240px;
+  flex-wrap: wrap;
   border-bottom: solid 10px #965425;
   transition: max-height 0.3s ease;
 
   &:hover {
-    max-height: 200px;
-    flex-wrap: wrap;
+    max-height: none;
+    overflow: auto;
   }
 }
 

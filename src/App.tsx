@@ -362,9 +362,9 @@ function App() {
     setCookiesBakedString(formatNumber(cookiesBaked, 0))
   }, [cps, cookiesInBank, cookiesBaked])
 
-  // Available upgrades sorting by price
+  // // Available upgrades sorting by price
   useEffect(() => {
-    setAvailableUpgrades((p) => [...p].sort((a, b) => a.price - b.price));
+    setAvailableUpgrades((p) => p.toSorted((a, b) => a.price - b.price));
   }, [cps]);
 
   // Run golden cookie interval
@@ -374,6 +374,14 @@ function App() {
     }, 300000)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
+  const addBuildings = () => {
+    const updatedBuildings = buildings.map((building) => {
+      return { ...building, owned: 700 }
+    })
+
+    setBuildings(updatedBuildings)
+  }
 
   return (
     <div className="app">
@@ -409,13 +417,14 @@ function App() {
         </div>
         <button className="header-button" onClick={() => setCookiesInBank(p => p + 1e30)}>Cheat {1e30} cookies</button>
         <button className="header-button" onClick={() => showGoldenCookie()}>Show golden cookie</button>
+        <button className="header-button" onClick={() => addBuildings()}>Add 700 buildings for ecah building</button>
       </section>
       <section className="section-right">
         <header className="store-header">Store</header>
         <header className="upgrades-header">Upgrades</header>
         <div className="upgrades">
           {availableUpgrades.map((upgrade, index) => (
-            <Upgrade cookiesInBank={cookiesInBank} cps={cps} key={index} name={upgrade.name} description={upgrade.description} price={upgrade.price} image={upgrade.image} tier={upgrade.tier} buyUpgrade={buyUpgrade} />
+            <Upgrade cookiesInBank={cookiesInBank} cps={cps} key={index} name={upgrade.name} building={upgrade.modifying.building} description={upgrade.description} price={upgrade.price} image={upgrade.image} tier={upgrade.tier} buyUpgrade={buyUpgrade} />
           ))}
         </div>
         <header className="buildings-header">Buildings</header>

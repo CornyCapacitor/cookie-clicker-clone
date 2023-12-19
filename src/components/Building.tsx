@@ -32,7 +32,6 @@ export const Building = ({ cookiesInBank, cps, name, description, price, image, 
       const divPosition = divRef.current.getBoundingClientRect();
       const newY = divPosition.top;
       setY(newY)
-      console.log(newY)
     }
   }
 
