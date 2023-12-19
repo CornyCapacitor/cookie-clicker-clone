@@ -22,6 +22,24 @@
   border-bottom: solid 1px white;
 }
 
+.middle-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: lightgrey;
+  width: 100%;
+  border-bottom: solid 1px white;
+  text-align: center;
+  padding: 10px 0px;
+}
+
+.lower-section {
+  display: flex;
+  flex-direction: column;
+  min-height: 50px;
+  width: 100%;
+}
+
 .upper-section .left {
   display: flex;
   flex-direction: row;

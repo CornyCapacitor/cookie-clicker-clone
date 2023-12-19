@@ -7,7 +7,7 @@ type TooltipProps = {
   cookiesInBank: number,
   cps: number,
   name: string,
-  description?: string,
+  description: string,
   price: number,
   image: string,
 }
@@ -22,7 +22,7 @@ type UpgradeProps = TooltipProps & {
   tier: string,
 }
 
-export const BuildingTooltip = ({ cookiesInBank, cps, name, price, owned, buildingCps, modifier }: BuildingProps) => {
+export const BuildingTooltip = ({ cookiesInBank, cps, name, description, price, owned, buildingCps, modifier }: BuildingProps) => {
   const [bankWorth, setBankWorth] = useState<string>("");
   const [timeWorth, setTimeWorth] = useState<string>("");
   const [affordable, setAffordable] = useState<boolean>(false);
@@ -101,12 +101,12 @@ export const BuildingTooltip = ({ cookiesInBank, cps, name, price, owned, buildi
           </div>
         </div>
       </section>
-      <section>
+      <section className="middle-section">
+        <span>"{description}"</span>
+      </section>
+      <section className="lower-section">
         <span>Each {name.toLowerCase()} produces {formatNumber(singleBuildingCps, 2)} cookies per second</span>
-        <br />
         <span>{owned} {name.toLowerCase()}s producing {formatNumber(ownedBuildingsCps, 2)} cookies per second ({((ownedBuildingsCps / cps) * 100).toFixed(2)}% of total cps)</span>
-        <br />
-        <span></span>
       </section>
     </div >
   )

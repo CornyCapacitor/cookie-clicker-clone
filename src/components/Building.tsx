@@ -8,6 +8,7 @@ type BuildingProps = {
   cookiesInBank: number,
   cps: number,
   name: string,
+  description: string,
   price: number,
   image: string,
   owned: number
@@ -16,7 +17,7 @@ type BuildingProps = {
   buyBuilding: (name: string) => void;
 }
 
-export const Building = ({ cookiesInBank, cps, name, price, image, owned, buildingCps, modifier, buyBuilding }: BuildingProps) => {
+export const Building = ({ cookiesInBank, cps, name, description, price, image, owned, buildingCps, modifier, buyBuilding }: BuildingProps) => {
   const [priceString, setPriceString] = useState<string>("");
   const [affordable, setAffordable] = useState<boolean | undefined>(undefined);
   const [isTooltipVisible, setIsTooltipVisible] = useState<boolean>(false);
@@ -54,7 +55,7 @@ export const Building = ({ cookiesInBank, cps, name, price, image, owned, buildi
       </div>
       <span className="building-owned">{owned}</span>
       {isTooltipVisible && (affordable || (isTooltipVisible && owned >= 1)) && (
-        <BuildingTooltip cookiesInBank={cookiesInBank} cps={cps} name={name} price={price} image={image} owned={owned} buildingCps={buildingCps} modifier={modifier}></BuildingTooltip>
+        <BuildingTooltip cookiesInBank={cookiesInBank} cps={cps} name={name} description={description} price={price} image={image} owned={owned} buildingCps={buildingCps} modifier={modifier}></BuildingTooltip>
       )}
     </div>
   )

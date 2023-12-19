@@ -11,6 +11,7 @@ import './App.css'
 
 type Building = {
   name: string,
+  description: string,
   price: number,
   image: string,
   owned: number
@@ -424,7 +425,7 @@ function App() {
         <header className="buildings-header">Buildings</header>
         <div className="buildings">
           {buildings.map((building, index) => (
-            <Building cookiesInBank={cookiesInBank} cps={cps} key={index} name={building.name} price={building.price} image={building.image} owned={building.owned} buildingCps={building.cps} modifier={building.modifier} buyBuilding={buyBuilding} />
+            <Building cookiesInBank={cookiesInBank} cps={cps} key={index} name={building.name} description={building.description} price={building.price} image={building.image} owned={building.owned} buildingCps={building.cps} modifier={building.modifier} buyBuilding={buyBuilding} />
           ))}
         </div>
       </section>
