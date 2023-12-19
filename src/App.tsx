@@ -407,7 +407,7 @@ function App() {
             <button className="header-button">Restart</button>
           </section>
         </div>
-        <button className="header-button" onClick={() => setCookiesInBank(p => p + 1e5)}>Cheat {1e5} cookies</button>
+        <button className="header-button" onClick={() => setCookiesInBank(p => p + 1e30)}>Cheat {1e30} cookies</button>
         <button className="header-button" onClick={() => console.log(buildings)}>Console log buildings</button>
         <button className="header-button" onClick={() => setBuildings((p) => p.map((building, index) => index === 0 ? { ...building, owned: building.owned + 550 } : building))}>Add 550 cursors</button>
         <button className="header-button" onClick={() => setBuildings((p) => p.map((building, index) => index === 1 ? { ...building, owned: building.owned + 550 } : building))}>Add 550 grandmas</button>
