@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { formatNumber } from './FormatNumber';
 import { BuildingTooltip } from './Tooltip';
 
@@ -21,6 +21,20 @@ export const Building = ({ cookiesInBank, cps, name, description, price, image, 
   const [priceString, setPriceString] = useState<string>("");
   const [affordable, setAffordable] = useState<boolean | undefined>(undefined);
   const [isTooltipVisible, setIsTooltipVisible] = useState<boolean>(false);
+  const [y, setY] = useState<number>(0);
+
+  const divRef = useRef<HTMLDivElement | null>(null)
+
+  const mouseEnterHandler = () => {
+    setIsTooltipVisible(true)
+
+    if (divRef.current) {
+      const divPosition = divRef.current.getBoundingClientRect();
+      const newY = divPosition.top;
+      setY(newY)
+      console.log(newY)
+    }
+  }
 
   // Handler for buyBuilding function
   const handleBuildingClick = () => {
@@ -42,21 +56,23 @@ export const Building = ({ cookiesInBank, cps, name, description, price, image, 
   }, [cookiesInBank, price])
 
   return (
-    <div onMouseEnter={() => setIsTooltipVisible(true)} onMouseLeave={() => setIsTooltipVisible(false)} className={`building ${affordable ? "affordable" : "not-affordable"}`} id={name} onClick={() => handleBuildingClick()}>
-      <div className="left-section">
-        <img className="building-image" src={`/public/buildings/${image}`} />
-        <div className="building-info">
-          <span className="building-name">{name}</span>
-          <div className="building-price-container">
-            <img className="building-cookie" src="/public/big-cookie.svg" />
-            <span className="building-price" style={{ color: `${affordable ? "#00ff00" : "#ff0000"}` }}>{priceString}</span>
+    <>
+      <div ref={divRef} onMouseEnter={() => mouseEnterHandler()} onMouseLeave={() => setIsTooltipVisible(false)} className={`building ${affordable ? "affordable" : "not-affordable"}`} id={name} onClick={() => handleBuildingClick()}>
+        <div className="left-section">
+          <img className="building-image" src={`/public/buildings/${image}`} />
+          <div className="building-info">
+            <span className="building-name">{name === "Antimatter Condenser" ? "Antim. Condenser" : name}</span>
+            <div className="building-price-container">
+              <img className="building-cookie" src="/public/big-cookie.svg" />
+              <span className="building-price" style={{ color: `${affordable ? "#00ff00" : "#ff0000"}` }}>{priceString}</span>
+            </div>
           </div>
         </div>
+        <span className="building-owned">{owned}</span>
       </div>
-      <span className="building-owned">{owned}</span>
       {isTooltipVisible && (affordable || (isTooltipVisible && owned >= 1)) && (
-        <BuildingTooltip cookiesInBank={cookiesInBank} cps={cps} name={name} description={description} price={price} image={image} owned={owned} buildingCps={buildingCps} modifier={modifier}></BuildingTooltip>
+        <BuildingTooltip cookiesInBank={cookiesInBank} cps={cps} name={name} description={description} price={price} image={image} owned={owned} buildingCps={buildingCps} modifier={modifier} y={y}></BuildingTooltip>
       )}
-    </div>
+    </>
   )
 }

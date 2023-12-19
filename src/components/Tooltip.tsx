@@ -16,13 +16,14 @@ type BuildingProps = TooltipProps & {
   owned: number
   buildingCps: number,
   modifier: number,
+  y: number,
 }
 
 type UpgradeProps = TooltipProps & {
   tier: string,
 }
 
-export const BuildingTooltip = ({ cookiesInBank, cps, name, description, price, owned, buildingCps, modifier }: BuildingProps) => {
+export const BuildingTooltip = ({ cookiesInBank, cps, name, description, price, owned, buildingCps, modifier, y }: BuildingProps) => {
   const [bankWorth, setBankWorth] = useState<string>("");
   const [timeWorth, setTimeWorth] = useState<string>("");
   const [affordable, setAffordable] = useState<boolean>(false);
@@ -81,7 +82,7 @@ export const BuildingTooltip = ({ cookiesInBank, cps, name, description, price, 
   }, [price])
 
   return (
-    <div className="tooltip">
+    <div className="tooltip" style={{ top: y }}>
       <section className="upper-section">
         <div className="left">
           <img className="tooltip-image" src={name === "Wizard Tower" ? "/public/upgrades/wizard_tower/plain_wizard_tower.webp" : name === "Alchemy Lab" ? "/public/upgrades/alchemy_lab/plain_alchemy_lab.webp" : `/public/upgrades/${name.toLowerCase()}/plain_${name.toLowerCase()}.webp`} />
