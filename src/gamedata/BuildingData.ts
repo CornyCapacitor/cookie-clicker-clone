@@ -99,7 +99,7 @@ export const BuildingData = [
     modifier: 1,
   },
   {
-    name: "Time machine",
+    name: "Time Machine",
     description: "Brings cookies from the past, before they were even eaten.",
     price: 14e12,
     image: "time_machine.webp",
@@ -135,7 +135,7 @@ export const BuildingData = [
     modifier: 1,
   },
   {
-    name: "Fractal engine",
+    name: "Fractal Engine",
     description: "Turns cookies into even more cookies.",
     price: 310e15,
     image: "fractal_engine.webp",
@@ -144,7 +144,7 @@ export const BuildingData = [
     modifier: 1,
   },
   {
-    name: "Javascript console",
+    name: "Javascript Console",
     description: "Creates cookies from the very code this game was written in.",
     price: 71e18,
     image: "javascript_console.webp",
@@ -162,7 +162,7 @@ export const BuildingData = [
     modifier: 1,
   },
   {
-    name: "Cortex baker",
+    name: "Cortex Baker",
     description: "These artificial brains the size of planets are capable of simply dreaming up cookies into existence. Time and space are inconsequential. Reality is arbitraray.",
     price: 1.9e24,
     image: "cortex_baker.webp",

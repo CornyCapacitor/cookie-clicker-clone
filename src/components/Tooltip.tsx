@@ -30,6 +30,14 @@ export const BuildingTooltip = ({ cookiesInBank, cps, name, description, price, 
   const [singleBuildingCps, setSingleBuildingCps] = useState<number>(buildingCps * modifier)
   const [ownedBuildingsCps, setOwnedBuildingsCps] = useState<number>(singleBuildingCps * owned)
 
+  // Handling the upgrade image source
+  const getUpgradeImage = (name: string) => {
+    const imageName = name.toLowerCase().replace(/\s/g, '_');
+    return `/public/upgrades/${imageName}/plain_${imageName}.webp`;
+  };
+
+  const tooltipImageSrc = getUpgradeImage(name)
+
   // Checking if building is affordable
   useEffect(() => {
     if (cookiesInBank >= price) {
@@ -85,7 +93,7 @@ export const BuildingTooltip = ({ cookiesInBank, cps, name, description, price, 
     <div className="tooltip" style={{ top: y }}>
       <section className="upper-section">
         <div className="left">
-          <img className="tooltip-image" src={name === "Wizard Tower" ? "/public/upgrades/wizard_tower/plain_wizard_tower.webp" : name === "Alchemy Lab" ? "/public/upgrades/alchemy_lab/plain_alchemy_lab.webp" : `/public/upgrades/${name.toLowerCase()}/plain_${name.toLowerCase()}.webp`} />
+          <img className="tooltip-image" src={tooltipImageSrc} />
           <div className="tooltip-info">
             <span className="tooltip-building-name">{name}</span>
             <span className="tooltip-owned">Owned: {owned}</span>
