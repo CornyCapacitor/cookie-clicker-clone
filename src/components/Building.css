@@ -23,6 +23,10 @@
 .not-affordable {
   transition: 0.2s;
   filter: brightness(50%);
+
+  &:hover {
+    filter: brightness(60%);
+  }
 }
 
 .left-section {
