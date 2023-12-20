@@ -96,7 +96,7 @@ function App() {
     }, 3000)
 
     // It's here cause it was laggin when out of the scope of invoking that sound
-    const cookieClickSound = new Audio(`/public/sounds/clickb${Math.floor(Math.random() * 7) + 1}.mp3`)
+    const cookieClickSound = new Audio(`/sounds/clickb${Math.floor(Math.random() * 7) + 1}.mp3`)
     cookieClickSound.play()
   }
 
@@ -126,7 +126,7 @@ function App() {
     // Save the timeout in the state
     setGoldenCookieTimeout(goldenTimeout)
 
-    const chimeSound = new Audio('/public/sounds/chime.mp3');
+    const chimeSound = new Audio('/sounds/chime.mp3');
     chimeSound.volume = 0.2;
     chimeSound.play();
   }
@@ -170,7 +170,7 @@ function App() {
       setGoldenCookieMessage(null)
     }, 3000)
 
-    const shimmerClickSound = new Audio('/public/sounds/shimmerClick.mp3')
+    const shimmerClickSound = new Audio('/sounds/shimmerClick.mp3')
     shimmerClickSound.play()
   }
 
@@ -210,14 +210,14 @@ function App() {
         title: `Bought 1 ${name}!`
       })
       const randomSoundNumber = Math.floor(Math.random() * 4 + 1)
-      const buyClick = new Audio(`/public/sounds/buy${randomSoundNumber}.mp3`)
+      const buyClick = new Audio(`/sounds/buy${randomSoundNumber}.mp3`)
       buyClick.play()
     } else {
       Toast.fire({
         icon: "error",
         title: "Not enough cookies!"
       })
-      const buyClick = new Audio(`/public/sounds/clickOff1.mp3`)
+      const buyClick = new Audio(`/sounds/clickOff1.mp3`)
       buyClick.play()
     }
   }
@@ -280,14 +280,14 @@ function App() {
         title: `Bought ${name} upgrade!`
       })
       const randomSoundNumber = Math.floor(Math.random() * 4 + 1)
-      const buyClick = new Audio(`/public/sounds/buy${randomSoundNumber}.mp3`)
+      const buyClick = new Audio(`/sounds/buy${randomSoundNumber}.mp3`)
       buyClick.play()
     } else {
       Toast.fire({
         icon: "error",
         title: "Not enough cookies!"
       })
-      const buyClick = new Audio(`/public/sounds/clickOff1.mp3`)
+      const buyClick = new Audio(`/sounds/clickOff1.mp3`)
       buyClick.play()
     }
   }
@@ -435,7 +435,7 @@ function App() {
         </div>
       </section>
       {goldenCookie && (
-        <img style={{ top: `${goldenCookie.position.pageY}%`, left: `${goldenCookie.position.pageX}%` }} className="golden-cookie" src="/public/golden-cookie.webp" onClick={(event) => goldenCookieClick(event)} onContextMenu={(event) => event.preventDefault()} onDragStart={(event) => event.preventDefault()} draggable="false" />
+        <img style={{ top: `${goldenCookie.position.pageY}%`, left: `${goldenCookie.position.pageX}%` }} className="golden-cookie" src="/golden-cookie.webp" onClick={(event) => goldenCookieClick(event)} onContextMenu={(event) => event.preventDefault()} onDragStart={(event) => event.preventDefault()} draggable="false" />
       )}
       {goldenCookieMessage && (
         <div style={{ top: goldenCookieMessage.position.top, left: goldenCookieMessage.position.left }} className="golden-cookie-message">

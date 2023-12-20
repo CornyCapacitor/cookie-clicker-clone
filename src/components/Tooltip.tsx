@@ -34,7 +34,7 @@ export const BuildingTooltip = ({ cookiesInBank, cps, name, description, price, 
   // Handling the upgrade image source
   const getBuildingImage = (name: string) => {
     const imageName = name.toLowerCase().replace(/\s/g, '_');
-    return `/public/upgrades/${imageName}/plain_${imageName}.webp`;
+    return `/upgrades/${imageName}/plain_${imageName}.webp`;
   };
 
   const tooltipImageSrc = getBuildingImage(name)
@@ -102,7 +102,7 @@ export const BuildingTooltip = ({ cookiesInBank, cps, name, description, price, 
         </div>
         <div className="right">
           <div className="price-affordable">
-            <img className="tooltip-cookie" src="/public/big-cookie.svg" />
+            <img className="tooltip-cookie" src="/big-cookie.svg" />
             <span style={{ color: `${affordable ? "#00ff00" : "#ff0000"}` }}>{formatNumber(price, 0)}</span>
           </div>
           <div className="price-worth">
@@ -237,7 +237,7 @@ export const UpgradeTooltip = ({ cookiesInBank, cps, name, building, description
     <div style={{ top: "90px" }} className="tooltip">
       <section className="upper-section">
         <div className="left">
-          <img className="tooltip-image" src={`/public/upgrades/${upgradeImageSrc}`} />
+          <img className="tooltip-image" src={`/upgrades/${upgradeImageSrc}`} />
           <div className="tooltip-info">
             <span className="tooltip-name">{name}</span>
             <span className="tooltip-owned" style={{ marginBottom: "7px", backgroundColor: `${tierTheme}` }}>Tier: {tier}</span>
@@ -245,7 +245,7 @@ export const UpgradeTooltip = ({ cookiesInBank, cps, name, building, description
         </div>
         <div className="right">
           <div className="price-affordable">
-            <img className="tooltip-cookie" src="/public/big-cookie.svg" />
+            <img className="tooltip-cookie" src="/big-cookie.svg" />
             <span style={{ color: `${affordable ? "#00ff00" : "#ff0000"}` }}>{formatNumber(price, 0)}</span>
           </div>
           <div className="price-worth">

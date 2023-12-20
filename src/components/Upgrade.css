@@ -4,7 +4,7 @@
   justify-content: center;
   width: 60px;
   height: 60px;
-  background-image: url(/public/upgrade-frame.png);
+  background-image: url(/upgrade-frame.png);
   background-color: rgb(39, 39, 39);
   transition: 0.15s;
   user-select: none;

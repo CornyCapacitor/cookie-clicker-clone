@@ -48,7 +48,7 @@ export const Upgrade = ({ cookiesInBank, cps, name, building, description, price
   return (
     <>
       <div onMouseEnter={() => setIsTooltipVisible(true)} onMouseLeave={() => setIsTooltipVisible(false)} className={`upgrade ${affordable ? "affordable" : "not-affordable"}`} id={name} onClick={() => handleUpgradeClick()}>
-        <img src={`/public/upgrades/${upgradeImageSrc}`} />
+        <img src={`/upgrades/${upgradeImageSrc}`} />
       </div>
       {isTooltipVisible && (
         <UpgradeTooltip cookiesInBank={cookiesInBank} cps={cps} name={name} building={building} description={description} price={price} image={image} tier={tier} />

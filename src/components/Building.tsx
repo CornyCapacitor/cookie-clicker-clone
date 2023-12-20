@@ -58,11 +58,11 @@ export const Building = ({ cookiesInBank, cps, name, description, price, image, 
     <>
       <div ref={divRef} onMouseEnter={() => mouseEnterHandler()} onMouseLeave={() => setIsTooltipVisible(false)} className={`building ${affordable ? "affordable" : "not-affordable"}`} id={name} onClick={() => handleBuildingClick()}>
         <div className="left-section">
-          <img className="building-image" src={`/public/buildings/${image}`} />
+          <img className="building-image" src={`/buildings/${image}`} />
           <div className="building-info">
             <span className="building-name">{name === "Antimatter Condenser" ? "Antim. Condenser" : name}</span>
             <div className="building-price-container">
-              <img className="building-cookie" src="/public/big-cookie.svg" />
+              <img className="building-cookie" src="/big-cookie.svg" />
               <span className="building-price" style={{ color: `${affordable ? "#00ff00" : "#ff0000"}` }}>{priceString}</span>
             </div>
           </div>
