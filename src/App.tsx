@@ -25,6 +25,9 @@ type Building = {
 //   achieved: boolean,
 // }
 
+type BuildingUpgradeCondition = { building: string, amount: number };
+type OtherUpgradeCondition = { other: string, amount: number };
+
 type Upgrade = {
   name: string,
   description: string,
@@ -32,7 +35,7 @@ type Upgrade = {
   image: string,
   modifying: { building?: string, other?: string },
   modifyingValue: number,
-  unlockCondition: { building: string, amount: number },
+  unlockCondition: BuildingUpgradeCondition | OtherUpgradeCondition,
   owned: boolean,
   tier: string,
 }
@@ -58,9 +61,9 @@ function App() {
 
   // Cookies states
   const [cookiesBaked, setCookiesBaked] = useState<number>(0);
-  const [, setCookiesBakedString] = useState<string>("0");
+  const [cookiesBakedString, setCookiesBakedString] = useState<string>("0");
   const [handMadeCookies, setHandMadeCookies] = useState<number>(0);
-  const [, setHandMadeCookiesString] = useState<string>("0");
+  const [handMadeCookiesString, setHandMadeCookiesString] = useState<string>("0");
   const [cookiesInBank, setCookiesInBank] = useState<number>(0);
   const [cookiesInBankString, setCookiesInBankString] = useState<string>("0");
   const [refreshRate] = useState<number>(100);
@@ -315,21 +318,27 @@ function App() {
     }
   }, [interval])
 
-  // Showing available upgrades
+  // Showing available building upgrades
   useEffect(() => {
-    const singleUpgrade = (index: number, unlockCondition: { building: string, amount: number }) => {
-      const buildingIndex = buildings.findIndex(building => building.name === unlockCondition.building)
+    const singleUpgrade = (index: number, unlockCondition: BuildingUpgradeCondition | OtherUpgradeCondition) => {
+      if ('building' in unlockCondition) {
+        const buildingIndex = buildings.findIndex(building => building.name === unlockCondition.building);
 
-      if (buildingIndex !== -1 && buildings[buildingIndex].owned >= unlockCondition.amount && upgrades[index].owned === false && !availableUpgrades.some((upgrade) => upgrade === upgrades[index])) {
-        setAvailableUpgrades((p) => [...p, upgrades[index]])
+        if (buildingIndex !== -1 && buildings[buildingIndex].owned >= unlockCondition.amount && upgrades[index].owned === false && !availableUpgrades.some((upgrade) => upgrade === upgrades[index])) {
+          setAvailableUpgrades((p) => [...p, upgrades[index]]);
+        }
+      } else if ('other' in unlockCondition) {
+        if (handMadeCookies >= unlockCondition.amount && upgrades[index].owned === false && !availableUpgrades.some((upgrade) => upgrade === upgrades[index])) {
+          setAvailableUpgrades((p) => [...p, upgrades[index]]);
+        }
       }
-    }
+    };
 
     upgrades.forEach((upgrade, index) => {
       singleUpgrade(index, upgrade.unlockCondition)
     })
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [cpsBase])
+  }, [cpsBase, handMadeCookies])
 
   // Calculating new cps base and thousand fingers
   useEffect(() => {
@@ -369,10 +378,10 @@ function App() {
     setHandMadeCookiesString(formatNumber(handMadeCookies, 0))
   }, [cps, cookiesInBank, cookiesBaked, handMadeCookies])
 
-  // // Available upgrades sorting by price
+  // Available upgrades sorting by price
   useEffect(() => {
     setAvailableUpgrades((p) => p.toSorted((a, b) => a.price - b.price));
-  }, [cps]);
+  }, [cps, handMadeCookies]);
 
   // Run golden cookie interval
   useEffect(() => {
@@ -425,6 +434,9 @@ function App() {
         <button className="header-button" onClick={() => setCookiesInBank(p => p + 1e30)}>Cheat {1e30} cookies</button>
         <button className="header-button" onClick={() => showGoldenCookie()}>Show golden cookie</button>
         <button className="header-button" onClick={() => addBuildings()}>Add 700 buildings for ecah building</button>
+        <button className="header-button" onClick={() => setHandMadeCookies(p => p + 999)}>Cheat 999 hand made cookies</button>
+        <span>Baked cookies: {cookiesBakedString}</span>
+        <span>Hand made cookies: {handMadeCookiesString}</span>
       </section>
       <section className="section-right">
         <header className="store-header">Store</header>

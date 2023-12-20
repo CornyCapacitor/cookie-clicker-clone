@@ -2,6 +2,7 @@ import { AlchemyLabUpgrades } from "./upgrades/alchemy_labUpgrades"
 import { AntimatterCondenserUpgrades } from "./upgrades/antimatter_condenserUpgrades"
 import { BankUpgrades } from "./upgrades/bankUpgrades"
 import { ChancemakerUpgrades } from "./upgrades/chancemakerUpgrades"
+import { ClickingUpgrades } from "./upgrades/clickingUpgrades"
 import { CortexBakerUpgrades } from "./upgrades/cortex_bakerUpgrades"
 import { CursorUpgrades } from "./upgrades/cursorUpgrades"
 import { FactoryUpgrades } from "./upgrades/factoryUpgrades"
@@ -19,6 +20,9 @@ import { TimeMachineUpgrades } from "./upgrades/time_machineUpgrades"
 import { WizardTowerUpgrades } from "./upgrades/wizard_towerUpgrades"
 import { YouUpgrades } from "./upgrades/youUpgrades"
 
+type BuildingUpgradeCondition = { building: string, amount: number };
+type OtherUpgradeCondition = { other: string, amount: number };
+
 type Upgrade = {
   name: string,
   description: string,
@@ -26,9 +30,9 @@ type Upgrade = {
   image: string,
   modifying: { building?: string, other?: string },
   modifyingValue: number,
-  unlockCondition: { building: string, amount: number },
+  unlockCondition: BuildingUpgradeCondition | OtherUpgradeCondition,
   owned: boolean,
   tier: string,
 }
 
-export const UpgradesData: Upgrade[] = [...CursorUpgrades, ...GrandmaUpgrades, ...FarmUpgrades, ...MineUpgrades, ...FactoryUpgrades, ...BankUpgrades, ...TempleUpgrades, ...WizardTowerUpgrades, ...ShipmentUpgrades, ...AlchemyLabUpgrades, ...PortalUpgrades, ...TimeMachineUpgrades, ...AntimatterCondenserUpgrades, ...PrismUpgrades, ...ChancemakerUpgrades, ...FractalEngineUpgrades, ...JavascriptConsoleUpgrades, ...IdleverseUpgrades, ...CortexBakerUpgrades, ...YouUpgrades]
+export const UpgradesData: Upgrade[] = [...CursorUpgrades, ...GrandmaUpgrades, ...FarmUpgrades, ...MineUpgrades, ...FactoryUpgrades, ...BankUpgrades, ...TempleUpgrades, ...WizardTowerUpgrades, ...ShipmentUpgrades, ...AlchemyLabUpgrades, ...PortalUpgrades, ...TimeMachineUpgrades, ...AntimatterCondenserUpgrades, ...PrismUpgrades, ...ChancemakerUpgrades, ...FractalEngineUpgrades, ...JavascriptConsoleUpgrades, ...IdleverseUpgrades, ...CortexBakerUpgrades, ...YouUpgrades, ...ClickingUpgrades]

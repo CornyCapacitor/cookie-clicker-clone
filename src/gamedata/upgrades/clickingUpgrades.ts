@@ -1,0 +1,242 @@
+export const ClickingUpgrades = [
+  {
+    name: "Plastic mouse",
+    description: "Clicking gains +1% of your CpS",
+    price: 50e3,
+    image: "clicking/plain_clicking.webp",
+    modifying: {
+      other: "Clicking",
+    },
+    modifyingValue: 1.0,
+    unlockCondition: {
+      other: "Clicking",
+      amount: 1e3,
+    },
+    tier: "plain",
+    owned: false,
+  },
+  {
+    name: "Iron mouse",
+    description: "Clicking gains +1% of your CpS",
+    price: 5e6,
+    image: "clicking/beryllium_clicking.webp",
+    modifying: {
+      other: "Clicking",
+    },
+    modifyingValue: 1.0,
+    unlockCondition: {
+      other: "Clicking",
+      amount: 100e3,
+    },
+    tier: "beryllium",
+    owned: false,
+  },
+  {
+    name: "Titanium mouse",
+    description: "Clicking gains +1% of your CpS",
+    price: 500e6,
+    image: "clicking/blueberyllium_clicking.webp",
+    modifying: {
+      other: "Clicking",
+    },
+    modifyingValue: 1.0,
+    unlockCondition: {
+      other: "Clicking",
+      amount: 10e6,
+    },
+    tier: "blueberyllium",
+    owned: false,
+  },
+  {
+    name: "Adamantium mouse",
+    description: "Clicking gains +1% of your CpS",
+    price: 50e9,
+    image: "clicking/chalcedhoney_clicking.webp",
+    modifying: {
+      other: "Clicking",
+    },
+    modifyingValue: 1.0,
+    unlockCondition: {
+      other: "Clicking",
+      amount: 1e9,
+    },
+    tier: "chalcedhoney",
+    owned: false,
+  },
+  {
+    name: "Unobtainium mouse",
+    description: "Clicking gains +1% of your CpS",
+    price: 5e12,
+    image: "clicking/buttergold_clicking.webp",
+    modifying: {
+      other: "Clicking",
+    },
+    modifyingValue: 1.0,
+    unlockCondition: {
+      other: "Clicking",
+      amount: 100e9,
+    },
+    tier: "buttergold",
+    owned: false,
+  },
+  {
+    name: "Eludium mouse",
+    description: "Clicking gains +1% of your CpS",
+    price: 500e12,
+    image: "clicking/sugarmuck_clicking.webp",
+    modifying: {
+      other: "Clicking",
+    },
+    modifyingValue: 1.0,
+    unlockCondition: {
+      other: "Clicking",
+      amount: 10e12,
+    },
+    tier: "sugarmuck",
+    owned: false,
+  },
+  {
+    name: "Wishalloy mouse",
+    description: "Clicking gains +1% of your CpS",
+    price: 50e15,
+    image: "clicking/jetmint_clicking.webp",
+    modifying: {
+      other: "Clicking",
+    },
+    modifyingValue: 1.0,
+    unlockCondition: {
+      other: "Clicking",
+      amount: 1e15,
+    },
+    tier: "jetmint",
+    owned: false,
+  },
+  {
+    name: "Fantasteel mouse",
+    description: "Clicking gains +1% of your CpS",
+    price: 5e18,
+    image: "clicking/cherrysilver_clicking.webp",
+    modifying: {
+      other: "Clicking",
+    },
+    modifyingValue: 1.0,
+    unlockCondition: {
+      other: "Clicking",
+      amount: 100e15,
+    },
+    tier: "cherrysilver",
+    owned: false,
+  },
+  {
+    name: "Nevercrack mouse",
+    description: "Clicking gains +1% of your CpS",
+    price: 500e18,
+    image: "clicking/hazelrald_clicking.webp",
+    modifying: {
+      other: "Clicking",
+    },
+    modifyingValue: 1.0,
+    unlockCondition: {
+      other: "Clicking",
+      amount: 10e18,
+    },
+    tier: "hazelrald",
+    owned: false,
+  },
+  {
+    name: "Armythril mouse",
+    description: "Clicking gains +1% of your CpS",
+    price: 50e21,
+    image: "clicking/mooncandy_clicking.webp",
+    modifying: {
+      other: "Clicking",
+    },
+    modifyingValue: 1.0,
+    unlockCondition: {
+      other: "Clicking",
+      amount: 1e21,
+    },
+    tier: "mooncandy",
+    owned: false,
+  },
+  {
+    name: "Technoobsidian mouse",
+    description: "Clicking gains +1% of your CpS",
+    price: 5e24,
+    image: "clicking/astrofudge_clicking.webp",
+    modifying: {
+      other: "Clicking",
+    },
+    modifyingValue: 1.0,
+    unlockCondition: {
+      other: "Clicking",
+      amount: 100e21,
+    },
+    tier: "astrofudge",
+    owned: false,
+  },
+  {
+    name: "Plasmarble mouse",
+    description: "Clicking gains +1% of your CpS",
+    price: 500e24,
+    image: "clicking/alabascream_clicking.webp",
+    modifying: {
+      other: "Clicking",
+    },
+    modifyingValue: 1.0,
+    unlockCondition: {
+      other: "Clicking",
+      amount: 10e24,
+    },
+    tier: "alabascream",
+    owned: false,
+  },
+  {
+    name: "Miraculite mouse",
+    description: "Clicking gains +1% of your CpS",
+    price: 50e27,
+    image: "clicking/iridyum_clicking.webp",
+    modifying: {
+      other: "Clicking",
+    },
+    modifyingValue: 1.0,
+    unlockCondition: {
+      other: "Clicking",
+      amount: 100e27,
+    },
+    tier: "iridyum",
+    owned: false,
+  },
+  {
+    name: "Aetherice mouse",
+    description: "Clicking gains +1% of your CpS",
+    price: 5e30,
+    image: "clicking/glucosmium_clicking.webp",
+    modifying: {
+      other: "Clicking",
+    },
+    modifyingValue: 1.0,
+    unlockCondition: {
+      other: "Clicking",
+      amount: 100e27,
+    },
+    tier: "glucosmium",
+    owned: false,
+  },
+  {
+    name: "Omniplast mouse",
+    description: "Clicking gains +1% of your CpS",
+    price: 500e30,
+    image: "clicking/glimmeringue_clicking.webp",
+    modifying: {
+      other: "Clicking",
+    },
+    modifyingValue: 1.0,
+    unlockCondition: {
+      other: "Clicking",
+      amount: 10e30,
+    },
+    tier: "glimmeringue",
+    owned: false,
+  },
+]
