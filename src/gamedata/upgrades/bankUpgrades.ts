@@ -3,7 +3,7 @@ export const BankUpgrades = [
     name: "Taller tellers",
     description: "Banks are twice as efficient.",
     price: 14e6,
-    image: "bank/plain_bank.webp",
+    image: "plain_bank.webp",
     modifying: {
       building: "Bank",
     },
@@ -19,7 +19,7 @@ export const BankUpgrades = [
     name: "Scissor-resistant credit cards",
     description: "Banks are twice as efficient.",
     price: 70e6,
-    image: "beryllium_.webp",
+    image: "beryllium_bank.webp",
     modifying: {
       building: "Bank",
     },
@@ -35,7 +35,7 @@ export const BankUpgrades = [
     name: "Acid-proof vaults",
     description: "Banks are twice as efficient.",
     price: 700e6,
-    image: "blueberyllium_.webp",
+    image: "blueberyllium_bank.webp",
     modifying: {
       building: "Bank",
     },
@@ -51,7 +51,7 @@ export const BankUpgrades = [
     name: "Chocolate coins",
     description: "Banks are twice as efficient.",
     price: 70e9,
-    image: "chalcedhoney_.webp",
+    image: "chalcedhoney_bank.webp",
     modifying: {
       building: "Bank",
     },
@@ -67,7 +67,7 @@ export const BankUpgrades = [
     name: "Exponential interest rates",
     description: "Banks are twice as efficient.",
     price: 7e12,
-    image: "buttergold_.webp",
+    image: "buttergold_bank.webp",
     modifying: {
       building: "Bank",
     },
@@ -83,7 +83,7 @@ export const BankUpgrades = [
     name: "Financial zen",
     description: "Banks are twice as efficient.",
     price: 700e12,
-    image: "sugarmuck_.webp",
+    image: "sugarmuck_bank.webp",
     modifying: {
       building: "Bank",
     },
@@ -99,7 +99,7 @@ export const BankUpgrades = [
     name: "Way of the wallet",
     description: "Banks are twice as efficient.",
     price: 700e15,
-    image: "jetmint_.webp",
+    image: "jetmint_bank.webp",
     modifying: {
       building: "Bank",
     },
@@ -115,7 +115,7 @@ export const BankUpgrades = [
     name: "The stuff rationale",
     description: "Banks are twice as efficient.",
     price: 700e18,
-    image: "cherrysilver_.webp",
+    image: "cherrysilver_bank.webp",
     modifying: {
       building: "Bank",
     },
@@ -131,7 +131,7 @@ export const BankUpgrades = [
     name: "Edible money",
     description: "Banks are twice as efficient.",
     price: 700e21,
-    image: "hazelrald_.webp",
+    image: "hazelrald_bank.webp",
     modifying: {
       building: "Bank",
     },
@@ -147,7 +147,7 @@ export const BankUpgrades = [
     name: "Grand supercycle",
     description: "Banks are twice as efficient.",
     price: 700e24,
-    image: "mooncandy_.webp",
+    image: "mooncandy_bank.webp",
     modifying: {
       building: "Bank",
     },
@@ -163,7 +163,7 @@ export const BankUpgrades = [
     name: "Rules of acquisition",
     description: "Banks are twice as efficient.",
     price: 7e30,
-    image: "astrofudge_.webp",
+    image: "astrofudge_bank.webp",
     modifying: {
       building: "Bank",
     },
@@ -179,7 +179,7 @@ export const BankUpgrades = [
     name: "Altruistic loop",
     description: "Banks are twice as efficient.",
     price: 70e33,
-    image: "alabascream_.webp",
+    image: "alabascream_bank.webp",
     modifying: {
       building: "Bank",
     },
@@ -195,7 +195,7 @@ export const BankUpgrades = [
     name: "Diminishing tax returns",
     description: "Banks are twice as efficient.",
     price: 700e36,
-    image: "iridyum_.webp",
+    image: "iridyum_bank.webp",
     modifying: {
       building: "Bank",
     },
@@ -211,7 +211,7 @@ export const BankUpgrades = [
     name: "Cookie Points",
     description: "Banks are twice as efficient.",
     price: 7e42,
-    image: "glucosmium_.webp",
+    image: "glucosmium_bank.webp",
     modifying: {
       building: "Bank",
     },
@@ -227,7 +227,7 @@ export const BankUpgrades = [
     name: "The big shortcake",
     description: "Banks are twice as efficient.",
     price: 70e45,
-    image: "glimmeringue_.webp",
+    image: "glimmeringue_bank.webp",
     modifying: {
       building: "Bank",
     },

@@ -19,7 +19,7 @@ export const FactoryUpgrades = [
     name: "Child labor",
     description: "Factories are twice as efficient.",
     price: 6.5e6,
-    image: "beryllium_.webp",
+    image: "beryllium_factory.webp",
     modifying: {
       building: "Factory",
     },
@@ -35,7 +35,7 @@ export const FactoryUpgrades = [
     name: "Sweatshop",
     description: "Factories are twice as efficient.",
     price: 65e6,
-    image: "blueberyllium_.webp",
+    image: "blueberyllium_factory.webp",
     modifying: {
       building: "Factory",
     },
@@ -51,7 +51,7 @@ export const FactoryUpgrades = [
     name: "Radium reactors",
     description: "Factories are twice as efficient.",
     price: 6.5e9,
-    image: "chalcedhoney_.webp",
+    image: "chalcedhoney_factory.webp",
     modifying: {
       building: "Factory",
     },
@@ -67,7 +67,7 @@ export const FactoryUpgrades = [
     name: "Recombobulators",
     description: "Factories are twice as efficient.",
     price: 650e9,
-    image: "buttergold_.webp",
+    image: "buttergold_factory.webp",
     modifying: {
       building: "Factory",
     },
@@ -83,7 +83,7 @@ export const FactoryUpgrades = [
     name: "Deep-bake process",
     description: "Factories are twice as efficient.",
     price: 65e12,
-    image: "sugarmuck_.webp",
+    image: "sugarmuck_factory.webp",
     modifying: {
       building: "Factory",
     },
@@ -99,7 +99,7 @@ export const FactoryUpgrades = [
     name: "Cyborg workforce",
     description: "Factories are twice as efficient.",
     price: 65e15,
-    image: "jetmint_.webp",
+    image: "jetmint_factory.webp",
     modifying: {
       building: "Factory",
     },
@@ -115,7 +115,7 @@ export const FactoryUpgrades = [
     name: "78-hour days",
     description: "Factories are twice as efficient.",
     price: 65e18,
-    image: "cherrysilver_.webp",
+    image: "cherrysilver_factory.webp",
     modifying: {
       building: "Factory",
     },
@@ -131,7 +131,7 @@ export const FactoryUpgrades = [
     name: "Machine learning",
     description: "Factories are twice as efficient.",
     price: 65e21,
-    image: "hazelrald_.webp",
+    image: "hazelrald_factory.webp",
     modifying: {
       building: "Factory",
     },
@@ -147,7 +147,7 @@ export const FactoryUpgrades = [
     name: "Brownie point system",
     description: "Factories are twice as efficient.",
     price: 65e24,
-    image: "mooncandy_.webp",
+    image: "mooncandy_factory.webp",
     modifying: {
       building: "Factory",
     },
@@ -163,7 +163,7 @@ export const FactoryUpgrades = [
     name: '"Volunteer" interns',
     description: "Factories are twice as efficient.",
     price: 650e27,
-    image: "astrofudge_.webp",
+    image: "astrofudge_factory.webp",
     modifying: {
       building: "Factory",
     },
@@ -179,7 +179,7 @@ export const FactoryUpgrades = [
     name: "Behavioral refarming",
     description: "Factories are twice as efficient.",
     price: 6.5e33,
-    image: "alabascream_.webp",
+    image: "alabascream_factory.webp",
     modifying: {
       building: "Factory",
     },
@@ -195,7 +195,7 @@ export const FactoryUpgrades = [
     name: "The infinity engine",
     description: "Factories are twice as efficient.",
     price: 65e36,
-    image: "iridyum_.webp",
+    image: "iridyum_factory.webp",
     modifying: {
       building: "Factory",
     },
@@ -211,7 +211,7 @@ export const FactoryUpgrades = [
     name: "N-dimensional assembly lines",
     description: "Factories are twice as efficient.",
     price: 650e39,
-    image: "glucosmium_.webp",
+    image: "glucosmium_factory.webp",
     modifying: {
       building: "Factory",
     },
@@ -227,7 +227,7 @@ export const FactoryUpgrades = [
     name: "Universal automation",
     description: "Factories are twice as efficient.",
     price: 6.5e45,
-    image: "glimmeringue_.webp",
+    image: "glimmeringue_factory.webp",
     modifying: {
       building: "Factory",
     },

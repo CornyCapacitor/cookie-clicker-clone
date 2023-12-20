@@ -3,7 +3,7 @@ export const PortalUpgrades = [
     name: "Ancient tablet",
     description: "Portals are twice as efficient.",
     price: 10e12,
-    image: "portal/plain_portal.webp",
+    image: "plain_portal.webp",
     modifying: {
       building: "Portal",
     },
@@ -19,7 +19,7 @@ export const PortalUpgrades = [
     name: "Insane oatling workers",
     description: "Portals are twice as efficient.",
     price: 50e12,
-    image: "beryllium_.webp",
+    image: "beryllium_portal.webp",
     modifying: {
       building: "Portal",
     },
@@ -35,7 +35,7 @@ export const PortalUpgrades = [
     name: "Soul bond",
     description: "Portals are twice as efficient.",
     price: 500e12,
-    image: "blueberyllium_.webp",
+    image: "blueberyllium_portal.webp",
     modifying: {
       building: "Portal",
     },
@@ -51,7 +51,7 @@ export const PortalUpgrades = [
     name: "Sanity dance",
     description: "Portals are twice as efficient.",
     price: 50e15,
-    image: "chalcedhoney_.webp",
+    image: "chalcedhoney_portal.webp",
     modifying: {
       building: "Portal",
     },
@@ -67,7 +67,7 @@ export const PortalUpgrades = [
     name: "Brane transplant",
     description: "Portals are twice as efficient.",
     price: 5e18,
-    image: "buttergold_.webp",
+    image: "buttergold_portal.webp",
     modifying: {
       building: "Portal",
     },
@@ -83,7 +83,7 @@ export const PortalUpgrades = [
     name: "Deity-sized portals",
     description: "Portals are twice as efficient.",
     price: 500e18,
-    image: "sugarmuck_.webp",
+    image: "sugarmuck_portal.webp",
     modifying: {
       building: "Portal",
     },
@@ -99,7 +99,7 @@ export const PortalUpgrades = [
     name: "End of times back-up plan",
     description: "Portals are twice as efficient.",
     price: 500e21,
-    image: "jetmint_.webp",
+    image: "jetmint_portal.webp",
     modifying: {
       building: "Portal",
     },
@@ -115,7 +115,7 @@ export const PortalUpgrades = [
     name: "Maddening chants",
     description: "Portals are twice as efficient.",
     price: 500e24,
-    image: "cherrysilver_.webp",
+    image: "cherrysilver_portal.webp",
     modifying: {
       building: "Portal",
     },
@@ -131,7 +131,7 @@ export const PortalUpgrades = [
     name: "The real world",
     description: "Portals are twice as efficient.",
     price: 500e27,
-    image: "hazelrald_.webp",
+    image: "hazelrald_portal.webp",
     modifying: {
       building: "Portal",
     },
@@ -147,7 +147,7 @@ export const PortalUpgrades = [
     name: "Dimensional garbage gulper",
     description: "Portals are twice as efficient.",
     price: 500e30,
-    image: "mooncandy_.webp",
+    image: "mooncandy_portal.webp",
     modifying: {
       building: "Portal",
     },
@@ -163,7 +163,7 @@ export const PortalUpgrades = [
     name: "Embedded microportals",
     description: "Portals are twice as efficient.",
     price: 5e36,
-    image: "astrofudge_.webp",
+    image: "astrofudge_portal.webp",
     modifying: {
       building: "Portal",
     },
@@ -179,7 +179,7 @@ export const PortalUpgrades = [
     name: "His advent",
     description: "Portals are twice as efficient.",
     price: 50e39,
-    image: "alabascream_.webp",
+    image: "alabascream_portal.webp",
     modifying: {
       building: "Portal",
     },
@@ -195,7 +195,7 @@ export const PortalUpgrades = [
     name: "Domestic rifts",
     description: "Portals are twice as efficient.",
     price: 500e42,
-    image: "iridyum_.webp",
+    image: "iridyum_portal.webp",
     modifying: {
       building: "Portal",
     },
@@ -211,7 +211,7 @@ export const PortalUpgrades = [
     name: "Portal guns",
     description: "Portals are twice as efficient.",
     price: 5e48,
-    image: "glucosmium_.webp",
+    image: "glucosmium_portal.webp",
     modifying: {
       building: "Portal",
     },
@@ -227,7 +227,7 @@ export const PortalUpgrades = [
     name: "A way home",
     description: "Portals are twice as efficient.",
     price: 50e51,
-    image: "glimmeringue_.webp",
+    image: "glimmeringue_portal.webp",
     modifying: {
       building: "Portal",
     },

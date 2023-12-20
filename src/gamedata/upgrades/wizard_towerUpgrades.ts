@@ -3,7 +3,7 @@ export const WizardTowerUpgrades = [
     name: "Pointier hats",
     description: "Wizard towers are twice as efficient.",
     price: 3.3e9,
-    image: "wizard_tower/plain_wizard_tower.webp",
+    image: "plain_wizard_tower.webp",
     modifying: {
       building: "Wizard Tower",
     },
@@ -19,7 +19,7 @@ export const WizardTowerUpgrades = [
     name: "Beardlier beards",
     description: "Wizard towers are twice as efficient.",
     price: 16.5e9,
-    image: "beryllium_.webp",
+    image: "beryllium_wizard_tower.webp",
     modifying: {
       building: "Wizard Tower",
     },
@@ -35,7 +35,7 @@ export const WizardTowerUpgrades = [
     name: "Ancient grimoires",
     description: "Wizard towers are twice as efficient.",
     price: 165e9,
-    image: "blueberyllium_.webp",
+    image: "blueberyllium_wizard_tower.webp",
     modifying: {
       building: "Wizard Tower",
     },
@@ -51,7 +51,7 @@ export const WizardTowerUpgrades = [
     name: "Kitchen curses",
     description: "Wizard towers are twice as efficient.",
     price: 16.5e12,
-    image: "chalcedhoney_.webp",
+    image: "chalcedhoney_wizard_tower.webp",
     modifying: {
       building: "Wizard Tower",
     },
@@ -67,7 +67,7 @@ export const WizardTowerUpgrades = [
     name: "School of discovery",
     description: "Wizard towers are twice as efficient.",
     price: 1.65e15,
-    image: "buttergold_.webp",
+    image: "buttergold_wizard_tower.webp",
     modifying: {
       building: "Wizard Tower",
     },
@@ -83,7 +83,7 @@ export const WizardTowerUpgrades = [
     name: "Dark formulas",
     description: "Wizard towers are twice as efficient.",
     price: 165e15,
-    image: "sugarmuck_.webp",
+    image: "sugarmuck_wizard_tower.webp",
     modifying: {
       building: "Wizard Tower",
     },
@@ -99,7 +99,7 @@ export const WizardTowerUpgrades = [
     name: "Cookiemancy",
     description: "Wizard towers are twice as efficient.",
     price: 165e18,
-    image: "jetmint_.webp",
+    image: "jetmint_wizard_tower.webp",
     modifying: {
       building: "Wizard Tower",
     },
@@ -115,7 +115,7 @@ export const WizardTowerUpgrades = [
     name: "Rabbit trick",
     description: "Wizard towers are twice as efficient.",
     price: 165e21,
-    image: "cherrysilver_.webp",
+    image: "cherrysilver_wizard_tower.webp",
     modifying: {
       building: "Wizard Tower",
     },
@@ -131,7 +131,7 @@ export const WizardTowerUpgrades = [
     name: "Deluxe tailored wands",
     description: "Wizard towers are twice as efficient.",
     price: 165e24,
-    image: "hazelrald_.webp",
+    image: "hazelrald_wizard_tower.webp",
     modifying: {
       building: "Wizard Tower",
     },
@@ -147,7 +147,7 @@ export const WizardTowerUpgrades = [
     name: "Immobile spellcasting",
     description: "Wizard towers are twice as efficient.",
     price: 165e27,
-    image: "mooncandy_.webp",
+    image: "mooncandy_wizard_tower.webp",
     modifying: {
       building: "Wizard Tower",
     },
@@ -163,7 +163,7 @@ export const WizardTowerUpgrades = [
     name: "Electricity",
     description: "Wizard towers are twice as efficient.",
     price: 1.65e33,
-    image: "astrofudge_.webp",
+    image: "astrofudge_wizard_tower.webp",
     modifying: {
       building: "Wizard Tower",
     },
@@ -179,7 +179,7 @@ export const WizardTowerUpgrades = [
     name: "Spelling bees",
     description: "Wizard towers are twice as efficient.",
     price: 16.5e36,
-    image: "alabascream_.webp",
+    image: "alabascream_wizard_tower.webp",
     modifying: {
       building: "Wizard Tower",
     },
@@ -195,7 +195,7 @@ export const WizardTowerUpgrades = [
     name: "Wizard basements",
     description: "Wizard towers are twice as efficient.",
     price: 165e39,
-    image: "iridyum_.webp",
+    image: "iridyum_wizard_tower.webp",
     modifying: {
       building: "Wizard Tower",
     },
@@ -211,7 +211,7 @@ export const WizardTowerUpgrades = [
     name: "Magical realism",
     description: "Wizard towers are twice as efficient.",
     price: 1.65e45,
-    image: "glucosmium_.webp",
+    image: "glucosmium_wizard_tower.webp",
     modifying: {
       building: "Wizard Tower",
     },
@@ -227,7 +227,7 @@ export const WizardTowerUpgrades = [
     name: "Polymorphism",
     description: "Wizard towers are twice as efficient.",
     price: 16.5e48,
-    image: "glimmeringue_.webp",
+    image: "glimmeringue_wizard_tower.webp",
     modifying: {
       building: "Wizard Tower",
     },

@@ -3,7 +3,7 @@ export const TempleUpgrades = [
     name: "Golden idols",
     description: "Temples are twice as efficient.",
     price: 200e6,
-    image: "temple/plain_temple.webp",
+    image: "plain_temple.webp",
     modifying: {
       building: "Temple",
     },
@@ -19,7 +19,7 @@ export const TempleUpgrades = [
     name: "Sacrifices",
     description: "Temples are twice as efficient.",
     price: 1e9,
-    image: "beryllium_.webp",
+    image: "beryllium_temple.webp",
     modifying: {
       building: "Temple",
     },
@@ -35,7 +35,7 @@ export const TempleUpgrades = [
     name: "Delicious blessing",
     description: "Temples are twice as efficient.",
     price: 10e9,
-    image: "blueberyllium_.webp",
+    image: "blueberyllium_temple.webp",
     modifying: {
       building: "Temple",
     },
@@ -51,7 +51,7 @@ export const TempleUpgrades = [
     name: "Sun festival",
     description: "Temples are twice as efficient.",
     price: 1e12,
-    image: "chalcedhoney_.webp",
+    image: "chalcedhoney_temple.webp",
     modifying: {
       building: "Temple",
     },
@@ -67,7 +67,7 @@ export const TempleUpgrades = [
     name: "Enlarged pantheon",
     description: "Temples are twice as efficient.",
     price: 100e12,
-    image: "buttergold_.webp",
+    image: "buttergold_temple.webp",
     modifying: {
       building: "Temple",
     },
@@ -83,7 +83,7 @@ export const TempleUpgrades = [
     name: "Great Baker in the sky",
     description: "Temples are twice as efficient.",
     price: 10e15,
-    image: "sugarmuck_.webp",
+    image: "sugarmuck_temple.webp",
     modifying: {
       building: "Temple",
     },
@@ -99,7 +99,7 @@ export const TempleUpgrades = [
     name: "Creation myth",
     description: "Temples are twice as efficient.",
     price: 10e18,
-    image: "jetmint_.webp",
+    image: "jetmint_temple.webp",
     modifying: {
       building: "Temple",
     },
@@ -115,7 +115,7 @@ export const TempleUpgrades = [
     name: "Theocracy",
     description: "Temples are twice as efficient.",
     price: 10e21,
-    image: "cherrysilver_.webp",
+    image: "cherrysilver_temple.webp",
     modifying: {
       building: "Temple",
     },
@@ -131,7 +131,7 @@ export const TempleUpgrades = [
     name: "Sick rap prayers",
     description: "Temples are twice as efficient.",
     price: 10e24,
-    image: "hazelrald_.webp",
+    image: "hazelrald_temple.webp",
     modifying: {
       building: "Temple",
     },
@@ -147,7 +147,7 @@ export const TempleUpgrades = [
     name: "Psalm-reading",
     description: "Temples are twice as efficient.",
     price: 10e27,
-    image: "mooncandy_.webp",
+    image: "mooncandy_temple.webp",
     modifying: {
       building: "Temple",
     },
@@ -163,7 +163,7 @@ export const TempleUpgrades = [
     name: "War of the gods",
     description: "Temples are twice as efficient.",
     price: 100e30,
-    image: "astrofudge_.webp",
+    image: "astrofudge_temple.webp",
     modifying: {
       building: "Temple",
     },
@@ -179,7 +179,7 @@ export const TempleUpgrades = [
     name: "A novel idea",
     description: "Temples are twice as efficient.",
     price: 1e36,
-    image: "alabascream_.webp",
+    image: "alabascream_temple.webp",
     modifying: {
       building: "Temple",
     },
@@ -195,7 +195,7 @@ export const TempleUpgrades = [
     name: "Apparitions",
     description: "Temples are twice as efficient.",
     price: 10e39,
-    image: "iridyum_.webp",
+    image: "iridyum_temple.webp",
     modifying: {
       building: "Temple",
     },
@@ -211,7 +211,7 @@ export const TempleUpgrades = [
     name: "Negatheism",
     description: "Temples are twice as efficient.",
     price: 100e42,
-    image: "glucosmium_.webp",
+    image: "glucosmium_temple.webp",
     modifying: {
       building: "Temple",
     },
@@ -227,7 +227,7 @@ export const TempleUpgrades = [
     name: "Temple traps",
     description: "Temples are twice as efficient.",
     price: 1e48,
-    image: "glimmeringue_.webp",
+    image: "glimmeringue_temple.webp",
     modifying: {
       building: "Temple",
     },

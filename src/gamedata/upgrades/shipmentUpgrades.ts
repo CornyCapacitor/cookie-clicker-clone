@@ -3,7 +3,7 @@ export const ShipmentUpgrades = [
     name: "Vanilla nebulae",
     description: "Shipments are twice as efficient.",
     price: 51e9,
-    image: "shipment/plain_shipment.webp",
+    image: "plain_shipment.webp",
     modifying: {
       building: "Shipment",
     },
@@ -19,7 +19,7 @@ export const ShipmentUpgrades = [
     name: "Wormholes",
     description: "Shipments are twice as efficient.",
     price: 255e9,
-    image: "beryllium_.webp",
+    image: "beryllium_shipment.webp",
     modifying: {
       building: "Shipment",
     },
@@ -35,7 +35,7 @@ export const ShipmentUpgrades = [
     name: "Frequent flyer",
     description: "Shipments are twice as efficient.",
     price: 2.55e12,
-    image: "blueberyllium_.webp",
+    image: "blueberyllium_shipment.webp",
     modifying: {
       building: "Shipment",
     },
@@ -51,7 +51,7 @@ export const ShipmentUpgrades = [
     name: "Warp drive",
     description: "Shipments are twice as efficient.",
     price: 255e12,
-    image: "chalcedhoney_.webp",
+    image: "chalcedhoney_shipment.webp",
     modifying: {
       building: "Shipment",
     },
@@ -67,7 +67,7 @@ export const ShipmentUpgrades = [
     name: "Chocolate monoliths",
     description: "Shipments are twice as efficient.",
     price: 25.5e15,
-    image: "buttergold_.webp",
+    image: "buttergold_shipment.webp",
     modifying: {
       building: "Shipment",
     },
@@ -83,7 +83,7 @@ export const ShipmentUpgrades = [
     name: "Generation ship",
     description: "Shipments are twice as efficient.",
     price: 2.55e18,
-    image: "sugarmuck_.webp",
+    image: "sugarmuck_shipment.webp",
     modifying: {
       building: "Shipment",
     },
@@ -99,7 +99,7 @@ export const ShipmentUpgrades = [
     name: "Dysok sphere",
     description: "Shipments are twice as efficient.",
     price: 2.55e21,
-    image: "jetmint_.webp",
+    image: "jetmint_shipment.webp",
     modifying: {
       building: "Shipment",
     },
@@ -115,7 +115,7 @@ export const ShipmentUpgrades = [
     name: "The final frontier",
     description: "Shipments are twice as efficient.",
     price: 2.55e24,
-    image: "cherrysilver_.webp",
+    image: "cherrysilver_shipment.webp",
     modifying: {
       building: "Shipment",
     },
@@ -131,7 +131,7 @@ export const ShipmentUpgrades = [
     name: "Autopilot",
     description: "Shipments are twice as efficient.",
     price: 2.55e27,
-    image: "hazelrald_.webp",
+    image: "hazelrald_shipment.webp",
     modifying: {
       building: "Shipment",
     },
@@ -147,7 +147,7 @@ export const ShipmentUpgrades = [
     name: "Restaurants at the end of the universe",
     description: "Shipments are twice as efficient.",
     price: 2.55e30,
-    image: "mooncandy_.webp",
+    image: "mooncandy_shipment.webp",
     modifying: {
       building: "Shipment",
     },
@@ -163,7 +163,7 @@ export const ShipmentUpgrades = [
     name: "Universal alphabet",
     description: "Shipments are twice as efficient.",
     price: 25.5e33,
-    image: "astrofudge_.webp",
+    image: "astrofudge_shipment.webp",
     modifying: {
       building: "Shipment",
     },
@@ -179,7 +179,7 @@ export const ShipmentUpgrades = [
     name: "Toroid universe",
     description: "Shipments are twice as efficient.",
     price: 255e36,
-    image: "alabascream_.webp",
+    image: "alabascream_shipment.webp",
     modifying: {
       building: "Shipment",
     },
@@ -195,7 +195,7 @@ export const ShipmentUpgrades = [
     name: "Prime directive",
     description: "Shipments are twice as efficient.",
     price: 2.55e42,
-    image: "iridyum_.webp",
+    image: "iridyum_shipment.webp",
     modifying: {
       building: "Shipment",
     },
@@ -211,7 +211,7 @@ export const ShipmentUpgrades = [
     name: "Cosmic foreground radiation",
     description: "Shipments are twice as efficient.",
     price: 25.5e45,
-    image: "glucosmium_.webp",
+    image: "glucosmium_shipment.webp",
     modifying: {
       building: "Shipment",
     },
@@ -227,7 +227,7 @@ export const ShipmentUpgrades = [
     name: "At your doorstep in 30 minutes or your money back",
     description: "Shipments are twice as efficient.",
     price: 255e48,
-    image: "glimmeringue_.webp",
+    image: "glimmeringue_shipment.webp",
     modifying: {
       building: "Shipment",
     },
