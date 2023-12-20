@@ -12,7 +12,7 @@
   max-height: 100vh;
   max-width: 100vw;
   overflow: hidden;
-  background-image: url(/background-2.jpg);
+  background-image: url(/public/background-2.jpg);
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   background-repeat: repeat;
 }
