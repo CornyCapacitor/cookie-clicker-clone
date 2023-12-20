@@ -59,6 +59,8 @@ function App() {
   // Cookies states
   const [cookiesBaked, setCookiesBaked] = useState<number>(0);
   const [, setCookiesBakedString] = useState<string>("0");
+  const [handMadeCookies, setHandMadeCookies] = useState<number>(0);
+  const [, setHandMadeCookiesString] = useState<string>("0");
   const [cookiesInBank, setCookiesInBank] = useState<number>(0);
   const [cookiesInBankString, setCookiesInBankString] = useState<string>("0");
   const [refreshRate] = useState<number>(100);
@@ -74,14 +76,16 @@ function App() {
   const [thousandFingersEnabled, setThousandFingersEnabled] = useState<boolean>(false);
   const [thousandFingersValue, setThousandFingersValue] = useState<number>(0);
   const [thousandFingersMultiplier, setThousandFingersMultiplier] = useState<number>(1);
+  const [clickingUpgradesMultiplier, setClickingUpgradesMultiplier] = useState<number>(0);
   const [clickMessages, setClickMessages] = useState<ClickMessage[]>([])
 
   // Clicking the BIG COOKIE
   const bigCookieClick = (event: { pageX: number; pageY: number }) => {
     // Add cookies to the bank
-    const clickValue = 1 * cookieClickMultiplier + thousandFingersValue * thousandFingersMultiplier
+    const clickValue = (1 * cookieClickMultiplier) + (thousandFingersValue * thousandFingersMultiplier) + (cps * clickingUpgradesMultiplier / 100)
     setCookiesInBank(cookiesInBank + clickValue);
-    setCookiesBaked(cookiesBaked + clickValue)
+    setCookiesBaked(cookiesBaked + clickValue);
+    setHandMadeCookies(handMadeCookies + clickValue);
 
     // Coordinates of click
     const { pageX, pageY } = event
@@ -248,6 +252,8 @@ function App() {
       } else {
         setThousandFingersMultiplier(thousandFingersMultiplier * upgrades[upgradeIndex].modifyingValue)
       }
+    } else if (modifying.other === "Clicking") {
+      setClickingUpgradesMultiplier(clickingUpgradesMultiplier + 1);
     }
 
     const Toast = Swal.mixin({
@@ -360,7 +366,8 @@ function App() {
     setCpsString(formatNumber(cps, 2))
     setCookiesInBankString(formatNumber(cookiesInBank, 0))
     setCookiesBakedString(formatNumber(cookiesBaked, 0))
-  }, [cps, cookiesInBank, cookiesBaked])
+    setHandMadeCookiesString(formatNumber(handMadeCookies, 0))
+  }, [cps, cookiesInBank, cookiesBaked, handMadeCookies])
 
   // // Available upgrades sorting by price
   useEffect(() => {
