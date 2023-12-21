@@ -3,11 +3,14 @@ import Swal from 'sweetalert2'
 import { Building } from './components/Building.tsx'
 import { formatNumber } from './components/FormatNumber.ts'
 import { Milk } from './components/Milk.tsx'
+import { Stats } from './components/Stats.tsx'
 import { Upgrade } from './components/Upgrade.tsx'
 import { BuildingData } from './gamedata/BuildingData.ts'
 import { UpgradesData } from './gamedata/UpgradesData.ts'
 
 import './App.css'
+import { Info } from './components/Info.tsx'
+import { Options } from './components/Options.tsx'
 
 type Building = {
   name: string,
@@ -54,6 +57,13 @@ type GoldenCookieMessage = ClickMessage & {
 }
 
 function App() {
+  // UI states
+  const [selectedSection, setSelectedSection] = useState<string | null>(null);
+  const [runDate] = useState(new Date());
+
+  // Stats states
+  const [buildingsTotal, setBuildingsTotal] = useState<number>(0);
+
   // Arrays
   const [buildings, setBuildings] = useState<Building[]>(BuildingData);
   const [upgrades, setUpgrades] = useState<Upgrade[]>(UpgradesData);
@@ -61,9 +71,7 @@ function App() {
 
   // Cookies states
   const [cookiesBaked, setCookiesBaked] = useState<number>(0);
-  const [cookiesBakedString, setCookiesBakedString] = useState<string>("0");
   const [handMadeCookies, setHandMadeCookies] = useState<number>(0);
-  const [handMadeCookiesString, setHandMadeCookiesString] = useState<string>("0");
   const [cookiesInBank, setCookiesInBank] = useState<number>(0);
   const [cookiesInBankString, setCookiesInBankString] = useState<string>("0");
   const [refreshRate] = useState<number>(100);
@@ -75,7 +83,9 @@ function App() {
   const [cpsModifier] = useState<number>(1);
 
   // Click states & functions
+  const [cookiesPerClick, setCookiesPerClick] = useState<number>(1);
   const [cookieClickMultiplier, setCookieClickMultiplier] = useState<number>(1);
+  const [totalClicks, setTotalClicks] = useState<number>(0);
   const [thousandFingersEnabled, setThousandFingersEnabled] = useState<boolean>(false);
   const [thousandFingersValue, setThousandFingersValue] = useState<number>(0);
   const [thousandFingersMultiplier, setThousandFingersMultiplier] = useState<number>(1);
@@ -85,10 +95,11 @@ function App() {
   // Clicking the BIG COOKIE
   const bigCookieClick = (event: { pageX: number; pageY: number }) => {
     // Add cookies to the bank
-    const clickValue = (1 * cookieClickMultiplier) + (thousandFingersValue * thousandFingersMultiplier) + (cps * clickingUpgradesMultiplier / 100)
-    setCookiesInBank(cookiesInBank + clickValue);
-    setCookiesBaked(cookiesBaked + clickValue);
-    setHandMadeCookies(handMadeCookies + clickValue);
+    const clickValue = cookiesPerClick
+    setCookiesInBank(p => p + clickValue);
+    setCookiesBaked(p => p + clickValue);
+    setHandMadeCookies(p => p + clickValue);
+    setTotalClicks(p => p + 1)
 
     // Coordinates of click
     const { pageX, pageY } = event
@@ -111,6 +122,7 @@ function App() {
   const [goldenCookie, setGoldenCookie] = useState<{ position: { pageX: number, pageY: number } } | null>(null);
   const [goldenCookieMessage, setGoldenCookieMessage] = useState<GoldenCookieMessage | null>(null)
   const [goldenCookieTimeout, setGoldenCookieTimeout] = useState<number | null>(null)
+  const [totalGoldenCookieClicks, setTotalGoldenCookieClicks] = useState<number>(0);
 
   // Show golden cookie
   const showGoldenCookie = () => {
@@ -142,6 +154,7 @@ function App() {
   const goldenCookieClick = (event: { pageX: number; pageY: number }) => {
     // Hide golden cookie
     setGoldenCookie(null);
+    setTotalGoldenCookieClicks(p => p + 1);
 
     // Clear the timeout
     if (goldenCookieTimeout !== null) {
@@ -301,6 +314,15 @@ function App() {
     }
   }
 
+  // Selecting header section
+  const sectionSelector = (section: string) => {
+    if (selectedSection === section) {
+      setSelectedSection(null);
+    } else {
+      setSelectedSection(section);
+    }
+  }
+
   // Cps functionality
   const addCookies = useCallback(() => {
     setCookiesInBank(cookies => cookies + cps / refreshRate);
@@ -374,8 +396,6 @@ function App() {
   useEffect(() => {
     setCpsString(formatNumber(cps, 2))
     setCookiesInBankString(formatNumber(cookiesInBank, 0))
-    setCookiesBakedString(formatNumber(cookiesBaked, 0))
-    setHandMadeCookiesString(formatNumber(handMadeCookies, 0))
   }, [cps, cookiesInBank, cookiesBaked, handMadeCookies])
 
   // Available upgrades sorting by price
@@ -391,17 +411,37 @@ function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  const addBuildings = () => {
-    const updatedBuildings = buildings.map((building) => {
-      return { ...building, owned: 700 }
-    })
+  // Calculating total buildings
+  useEffect(() => {
+    const calculateTotalOwned = () => {
+      return buildings.reduce((total, building) => total + building.owned, 0)
+    }
+    setBuildingsTotal(calculateTotalOwned)
+  }, [buildings])
 
-    setBuildings(updatedBuildings)
-  }
+  // Calculating cookie click value
+  useEffect(() => {
+    const clickValue = (1 * cookieClickMultiplier) + (thousandFingersValue * thousandFingersMultiplier) + (cps * clickingUpgradesMultiplier / 100)
+
+    setCookiesPerClick(clickValue)
+  }, [clickingUpgradesMultiplier, cookieClickMultiplier, cps, thousandFingersMultiplier, thousandFingersValue])
+
+  const handleBuildingsTo700Click = () => {
+    // Create a new array with updated 'owned' property for all buildings
+    const updatedBuildings = buildings.map((building) => ({
+      ...building,
+      owned: 700,
+    }));
+
+    // Update the state with the new array
+    setBuildings(updatedBuildings);
+  };
 
   return (
     <div className="app">
       <section className="section-left">
+        <button onClick={() => setCookiesInBank(p => p + 1e42)}>Cheat 1e42 cookies</button>
+        <button onClick={handleBuildingsTo700Click}>Buildings to 700</button>
         <header>Player's Bakery</header>
         <div className="cookies-production-info">
           <span>{`${cookiesInBankString} cookies`}</span>
@@ -420,23 +460,18 @@ function App() {
       <section className="section-middle">
         <div className="header">
           <section className="header-left header-section">
-            <button className="header-button">Options</button>
-            <button className="header-button">Stats</button>
+            <button className="header-button" onClick={() => sectionSelector("options")}>Options</button>
+            <button className="header-button" onClick={() => sectionSelector("stats")}>Stats</button>
           </section>
           <section className="header-middle header-section">
             <header>Welcome to Cookie Clicker clone by Mateusz Minder!</header>
           </section>
           <section className="header-right header-section">
-            <button className="header-button">Info</button>
-            <button className="header-button">Restart</button>
+            <button className="header-button" onClick={() => sectionSelector("info")}>Info</button>
+            <button className="header-button" onClick={() => window.location.reload()}>Restart</button>
           </section>
         </div>
-        <button className="header-button" onClick={() => setCookiesInBank(p => p + 1e30)}>Cheat {1e30} cookies</button>
-        <button className="header-button" onClick={() => showGoldenCookie()}>Show golden cookie</button>
-        <button className="header-button" onClick={() => addBuildings()}>Add 700 buildings for ecah building</button>
-        <button className="header-button" onClick={() => setHandMadeCookies(p => p + 999)}>Cheat 999 hand made cookies</button>
-        <span>Baked cookies: {cookiesBakedString}</span>
-        <span>Hand made cookies: {handMadeCookiesString}</span>
+        {selectedSection === "options" ? <Options /> : selectedSection === "stats" ? <Stats cookiesInBank={cookiesInBank} cookiesBaked={cookiesBaked} handMadeCookies={handMadeCookies} runDate={runDate} cps={cps} rawCps={cpsBase} buildingsTotal={buildingsTotal} cookiesPerClick={cookiesPerClick} totalClicks={totalClicks} totalGoldenCookieClicks={totalGoldenCookieClicks} upgrades={upgrades} /> : selectedSection === "info" && <Info />}
       </section>
       <section className="section-right">
         <header className="store-header">Store</header>

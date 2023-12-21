@@ -3,7 +3,7 @@ export const CortexBakerUpgrades = [
     name: "Principled neural shackles",
     description: "Cortex bakers are twice as efficient.",
     price: 19e24,
-    image: "plain_cortex_baker.webp",
+    image: "cortex_baker/plain_cortex_baker.webp",
     modifying: {
       building: "Cortex Baker",
     },
@@ -19,7 +19,7 @@ export const CortexBakerUpgrades = [
     name: "Obey",
     description: "Cortex bakers are twice as efficient.",
     price: 95e24,
-    image: "beryllium_cortex_baker.webp",
+    image: "cortex_baker/beryllium_cortex_baker.webp",
     modifying: {
       building: "Cortex Baker",
     },
@@ -35,7 +35,7 @@ export const CortexBakerUpgrades = [
     name: "A sprinkle of irrationality",
     description: "Cortex bakers are twice as efficient.",
     price: 950e24,
-    image: "blueberyllium_cortex_baker.webp",
+    image: "cortex_baker/blueberyllium_cortex_baker.webp",
     modifying: {
       building: "Cortex Baker",
     },
@@ -51,7 +51,7 @@ export const CortexBakerUpgrades = [
     name: "Front and back hemispheres",
     description: "Cortex bakers are twice as efficient.",
     price: 95e27,
-    image: "chalcedhoney_cortex_baker.webp",
+    image: "cortex_baker/chalcedhoney_cortex_baker.webp",
     modifying: {
       building: "Cortex Baker",
     },
@@ -67,7 +67,7 @@ export const CortexBakerUpgrades = [
     name: "Neural networking",
     description: "Cortex bakers are twice as efficient.",
     price: 9.5e30,
-    image: "buttergold_cortex_baker.webp",
+    image: "cortex_baker/buttergold_cortex_baker.webp",
     modifying: {
       building: "Cortex Baker",
     },
@@ -83,7 +83,7 @@ export const CortexBakerUpgrades = [
     name: "Cosmic brainstorms",
     description: "Cortex bakers are twice as efficient.",
     price: 950e30,
-    image: "sugarmuck_cortex_baker.webp",
+    image: "cortex_baker/sugarmuck_cortex_baker.webp",
     modifying: {
       building: "Cortex Baker",
     },
@@ -99,7 +99,7 @@ export const CortexBakerUpgrades = [
     name: "Megatherapy",
     description: "Cortex bakers are twice as efficient.",
     price: 950e33,
-    image: "jetmint_cortex_baker.webp",
+    image: "cortex_baker/jetmint_cortex_baker.webp",
     modifying: {
       building: "Cortex Baker",
     },
@@ -115,7 +115,7 @@ export const CortexBakerUpgrades = [
     name: "Synaptic lubricant",
     description: "Cortex bakers are twice as efficient.",
     price: 950e36,
-    image: "cherrysilver_cortex_baker.webp",
+    image: "cortex_baker/cherrysilver_cortex_baker.webp",
     modifying: {
       building: "Cortex Baker",
     },
@@ -131,7 +131,7 @@ export const CortexBakerUpgrades = [
     name: "Psychokinesis",
     description: "Cortex bakers are twice as efficient.",
     price: 950e39,
-    image: "hazelrald_cortex_baker.webp",
+    image: "cortex_baker/hazelrald_cortex_baker.webp",
     modifying: {
       building: "Cortex Baker",
     },
@@ -147,7 +147,7 @@ export const CortexBakerUpgrades = [
     name: "Spines",
     description: "Cortex bakers are twice as efficient.",
     price: 950e42,
-    image: "mooncandy_cortex_baker.webp",
+    image: "cortex_baker/mooncandy_cortex_baker.webp",
     modifying: {
       building: "Cortex Baker",
     },
@@ -163,7 +163,7 @@ export const CortexBakerUpgrades = [
     name: "Neuraforming",
     description: "Cortex bakers are twice as efficient.",
     price: 9.5e48,
-    image: "astrofudge_cortex_baker.webp",
+    image: "cortex_baker/astrofudge_cortex_baker.webp",
     modifying: {
       building: "Cortex Baker",
     },
@@ -179,7 +179,7 @@ export const CortexBakerUpgrades = [
     name: "Epistemological trickery",
     description: "Cortex bakers are twice as efficient.",
     price: 95e51,
-    image: "alabascream_cortex_baker.webp",
+    image: "cortex_baker/alabascream_cortex_baker.webp",
     modifying: {
       building: "Cortex Baker",
     },
@@ -195,7 +195,7 @@ export const CortexBakerUpgrades = [
     name: "Every possible idea",
     description: "Cortex bakers are twice as efficient.",
     price: 950e54,
-    image: "iridyum_cortex_baker.webp",
+    image: "cortex_baker/iridyum_cortex_baker.webp",
     modifying: {
       building: "Cortex Baker",
     },
@@ -211,7 +211,7 @@ export const CortexBakerUpgrades = [
     name: "The land of dreams",
     description: "Cortex bakers are twice as efficient.",
     price: 9.5e60,
-    image: "glucosmium_cortex_baker.webp",
+    image: "cortex_baker/glucosmium_cortex_baker.webp",
     modifying: {
       building: "Cortex Baker",
     },
@@ -227,7 +227,7 @@ export const CortexBakerUpgrades = [
     name: "Intellectual property theft",
     description: "Cortex bakers are twice as efficient.",
     price: 95e63,
-    image: "glimmeringue_cortex_baker.webp",
+    image: "cortex_baker/glimmeringue_cortex_baker.webp",
     modifying: {
       building: "Cortex Baker",
     },

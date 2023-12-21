@@ -10,13 +10,14 @@ type TooltipProps = {
   description: string,
   price: number,
   image: string,
+  top: number,
+  right: number,
 }
 
 type BuildingProps = TooltipProps & {
   owned: number
   buildingCps: number,
   modifier: number,
-  y: number,
 }
 
 type UpgradeProps = TooltipProps & {
@@ -24,7 +25,7 @@ type UpgradeProps = TooltipProps & {
   building?: string,
 }
 
-export const BuildingTooltip = ({ cookiesInBank, cps, name, description, price, owned, buildingCps, modifier, y }: BuildingProps) => {
+export const BuildingTooltip = ({ cookiesInBank, cps, name, description, price, owned, buildingCps, modifier, top, right }: BuildingProps) => {
   const [bankWorth, setBankWorth] = useState<string>("");
   const [timeWorth, setTimeWorth] = useState<string>("");
   const [affordable, setAffordable] = useState<boolean>(false);
@@ -91,7 +92,7 @@ export const BuildingTooltip = ({ cookiesInBank, cps, name, description, price, 
   }, [price])
 
   return (
-    <div className="tooltip" style={{ top: y }}>
+    <div className="tooltip" style={{ top: top, right: right }}>
       <section className="upper-section">
         <div className="left">
           <img className="tooltip-image" src={tooltipImageSrc} />
@@ -122,7 +123,7 @@ export const BuildingTooltip = ({ cookiesInBank, cps, name, description, price, 
   )
 }
 
-export const UpgradeTooltip = ({ cookiesInBank, cps, name, building, description, price, image, tier }: UpgradeProps) => {
+export const UpgradeTooltip = ({ cookiesInBank, cps, name, building, description, price, image, tier, top, right }: UpgradeProps) => {
   const [bankWorth, setBankWorth] = useState<string>("");
   const [timeWorth, setTimeWorth] = useState<string>("");
   const [affordable, setAffordable] = useState<boolean>(false);
@@ -234,7 +235,7 @@ export const UpgradeTooltip = ({ cookiesInBank, cps, name, building, description
   }, [tier])
 
   return (
-    <div style={{ top: "90px" }} className="tooltip">
+    <div style={{ top: top, right: right }} className="tooltip">
       <section className="upper-section">
         <div className="left">
           <img className="tooltip-image" src={`/upgrades/${upgradeImageSrc}`} />

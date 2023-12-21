@@ -3,7 +3,7 @@ export const FarmUpgrades = [
     name: "Cheap hoes",
     description: "Farms are twice as efficient.",
     price: 11e3,
-    image: "plain_farm.webp",
+    image: "farm/plain_farm.webp",
     modifying: {
       building: "Farm",
     },
@@ -19,7 +19,7 @@ export const FarmUpgrades = [
     name: "Fertilizer",
     description: "Farms are twice as efficient.",
     price: 55e3,
-    image: "beryllium_farm.webp",
+    image: "farm/beryllium_farm.webp",
     modifying: {
       building: "Farm",
     },
@@ -35,7 +35,7 @@ export const FarmUpgrades = [
     name: "Cookie trees",
     description: "Farms are twice as efficient.",
     price: 550e3,
-    image: "blueberyllium_farm.webp",
+    image: "farm/blueberyllium_farm.webp",
     modifying: {
       building: "Farm",
     },
@@ -51,7 +51,7 @@ export const FarmUpgrades = [
     name: "Genetically-modified cookies",
     description: "Farms are twice as efficient.",
     price: 55e6,
-    image: "chalcedhoney_farm.webp",
+    image: "farm/chalcedhoney_farm.webp",
     modifying: {
       building: "Farm",
     },
@@ -67,7 +67,7 @@ export const FarmUpgrades = [
     name: "Gingerbread scarecrows",
     description: "Farms are twice as efficient.",
     price: 5.5e9,
-    image: "buttergold_farm.webp",
+    image: "farm/buttergold_farm.webp",
     modifying: {
       building: "Farm",
     },
@@ -83,7 +83,7 @@ export const FarmUpgrades = [
     name: "Pulsar sprinklers",
     description: "Farms are twice as efficient.",
     price: 550e9,
-    image: "sugarmuck_farm.webp",
+    image: "farm/sugarmuck_farm.webp",
     modifying: {
       building: "Farm",
     },
@@ -99,7 +99,7 @@ export const FarmUpgrades = [
     name: "Fudge fungus",
     description: "Farms are twice as efficient.",
     price: 550e12,
-    image: "jetmint_farm.webp",
+    image: "farm/jetmint_farm.webp",
     modifying: {
       building: "Farm",
     },
@@ -115,7 +115,7 @@ export const FarmUpgrades = [
     name: "Wheat triffids",
     description: "Farms are twice as efficient.",
     price: 550e15,
-    image: "cherrysilver_farm.webp",
+    image: "farm/cherrysilver_farm.webp",
     modifying: {
       building: "Farm",
     },
@@ -131,7 +131,7 @@ export const FarmUpgrades = [
     name: "Humane pesticides",
     description: "Farms are twice as efficient.",
     price: 550e18,
-    image: "hazelrald_farm.webp",
+    image: "farm/hazelrald_farm.webp",
     modifying: {
       building: "Farm",
     },
@@ -147,7 +147,7 @@ export const FarmUpgrades = [
     name: "Barnstars",
     description: "Farms are twice as efficient.",
     price: 550e21,
-    image: "mooncandy_farm.webp",
+    image: "farm/mooncandy_farm.webp",
     modifying: {
       building: "Farm",
     },
@@ -163,7 +163,7 @@ export const FarmUpgrades = [
     name: "Lindworms",
     description: "Farms are twice as efficient.",
     price: 5.5e27,
-    image: "astrofudge_farm.webp",
+    image: "farm/astrofudge_farm.webp",
     modifying: {
       building: "Farm",
     },
@@ -179,7 +179,7 @@ export const FarmUpgrades = [
     name: "Global seed vault",
     description: "Farms are twice as efficient.",
     price: 55e30,
-    image: "alabascream_farm.webp",
+    image: "farm/alabascream_farm.webp",
     modifying: {
       building: "Farm",
     },
@@ -195,7 +195,7 @@ export const FarmUpgrades = [
     name: "Reverse-veganism",
     description: "Farms are twice as efficient.",
     price: 550e33,
-    image: "iridyum_farm.webp",
+    image: "farm/iridyum_farm.webp",
     modifying: {
       building: "Farm",
     },
@@ -211,7 +211,7 @@ export const FarmUpgrades = [
     name: "Cookie mulch",
     description: "Farms are twice as efficient.",
     price: 5.5e39,
-    image: "glucosmium_farm.webp",
+    image: "farm/glucosmium_farm.webp",
     modifying: {
       building: "Farm",
     },
@@ -227,7 +227,7 @@ export const FarmUpgrades = [
     name: "Self-driving tractors",
     description: "Farms are twice as efficient.",
     price: 55e42,
-    image: "glimmeringue_farm.webp",
+    image: "farm/glimmeringue_farm.webp",
     modifying: {
       building: "Farm",
     },

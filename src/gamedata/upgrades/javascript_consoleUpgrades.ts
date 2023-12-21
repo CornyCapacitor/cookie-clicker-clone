@@ -3,7 +3,7 @@ export const JavascriptConsoleUpgrades = [
     name: "The JavaScript console for dummies",
     description: "Javascript consoles are twice as efficient.",
     price: 710e18,
-    image: "plain_javascript_console.webp",
+    image: "javascript_console/plain_javascript_console.webp",
     modifying: {
       building: "Javascript Console",
     },
@@ -19,7 +19,7 @@ export const JavascriptConsoleUpgrades = [
     name: "64bit arrays",
     description: "Javascript consoles are twice as efficient.",
     price: 3.55e21,
-    image: "beryllium_javascript_console.webp",
+    image: "javascript_console/beryllium_javascript_console.webp",
     modifying: {
       building: "Javascript Console",
     },
@@ -35,7 +35,7 @@ export const JavascriptConsoleUpgrades = [
     name: "Stack overflow",
     description: "Javascript consoles are twice as efficient.",
     price: 35.5e21,
-    image: "blueberyllium_javascript_console.webp",
+    image: "javascript_console/blueberyllium_javascript_console.webp",
     modifying: {
       building: "Javascript Console",
     },
@@ -51,7 +51,7 @@ export const JavascriptConsoleUpgrades = [
     name: "Enterprise compiler",
     description: "Javascript consoles are twice as efficient.",
     price: 3.55e24,
-    image: "chalcedhoney_javascript_console.webp",
+    image: "javascript_console/chalcedhoney_javascript_console.webp",
     modifying: {
       building: "Javascript Console",
     },
@@ -67,7 +67,7 @@ export const JavascriptConsoleUpgrades = [
     name: "Syntactic sugar",
     description: "Javascript consoles are twice as efficient.",
     price: 355e24,
-    image: "buttergold_javascript_console.webp",
+    image: "javascript_console/buttergold_javascript_console.webp",
     modifying: {
       building: "Javascript Console",
     },
@@ -83,7 +83,7 @@ export const JavascriptConsoleUpgrades = [
     name: "A nice cup of coffee",
     description: "Javascript consoles are twice as efficient.",
     price: 35.5e27,
-    image: "sugarmuck_javascript_console.webp",
+    image: "javascript_console/sugarmuck_javascript_console.webp",
     modifying: {
       building: "Javascript Console",
     },
@@ -99,7 +99,7 @@ export const JavascriptConsoleUpgrades = [
     name: "Just-in-time baking",
     description: "Javascript consoles are twice as efficient.",
     price: 35.5e30,
-    image: "jetmint_javascript_console.webp",
+    image: "javascript_console/jetmint_javascript_console.webp",
     modifying: {
       building: "Javascript Console",
     },
@@ -115,7 +115,7 @@ export const JavascriptConsoleUpgrades = [
     name: "cookies++",
     description: "Javascript consoles are twice as efficient.",
     price: 35.5e33,
-    image: "cherrysilver_javascript_console.webp",
+    image: "javascript_console/cherrysilver_javascript_console.webp",
     modifying: {
       building: "Javascript Console",
     },
@@ -131,7 +131,7 @@ export const JavascriptConsoleUpgrades = [
     name: "Software updates",
     description: "Javascript consoles are twice as efficient.",
     price: 35.5e36,
-    image: "hazelrald_javascript_console.webp",
+    image: "javascript_console/hazelrald_javascript_console.webp",
     modifying: {
       building: "Javascript Console",
     },
@@ -147,7 +147,7 @@ export const JavascriptConsoleUpgrades = [
     name: "Game.Loop",
     description: "Javascript consoles are twice as efficient.",
     price: 35.5e39,
-    image: "mooncandy_javascript_console.webp",
+    image: "javascript_console/mooncandy_javascript_console.webp",
     modifying: {
       building: "Javascript Console",
     },
@@ -163,7 +163,7 @@ export const JavascriptConsoleUpgrades = [
     name: "eval()",
     description: "Javascript consoles are twice as efficient.",
     price: 355e42,
-    image: "astrofudge_javascript_console.webp",
+    image: "javascript_console/astrofudge_javascript_console.webp",
     modifying: {
       building: "Javascript Console",
     },
@@ -179,7 +179,7 @@ export const JavascriptConsoleUpgrades = [
     name: "Your biggest fans",
     description: "Javascript consoles are twice as efficient.",
     price: 3.55e48,
-    image: "alabascream_javascript_console.webp",
+    image: "javascript_console/alabascream_javascript_console.webp",
     modifying: {
       building: "Javascript Console",
     },
@@ -195,7 +195,7 @@ export const JavascriptConsoleUpgrades = [
     name: "Hacker shades",
     description: "Javascript consoles are twice as efficient.",
     price: 35.5e51,
-    image: "iridyum_javascript_console.webp",
+    image: "javascript_console/iridyum_javascript_console.webp",
     modifying: {
       building: "Javascript Console",
     },
@@ -211,7 +211,7 @@ export const JavascriptConsoleUpgrades = [
     name: "PHP containment vats",
     description: "Javascript consoles are twice as efficient.",
     price: 355e54,
-    image: "glucosmium_javascript_console.webp",
+    image: "javascript_console/glucosmium_javascript_console.webp",
     modifying: {
       building: "Javascript Console",
     },
@@ -227,7 +227,7 @@ export const JavascriptConsoleUpgrades = [
     name: "Simulation failsafes",
     description: "Javascript consoles are twice as efficient.",
     price: 3.55e60,
-    image: "glimmeringue_javascript_console.webp",
+    image: "javascript_console/glimmeringue_javascript_console.webp",
     modifying: {
       building: "Javascript Console",
     },

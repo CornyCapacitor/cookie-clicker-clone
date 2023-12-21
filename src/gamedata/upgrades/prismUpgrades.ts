@@ -3,7 +3,7 @@ export const PrismUpgrades = [
     name: "Gem polish",
     description: "Prisms are twice as efficient.",
     price: 21e15,
-    image: "plain_prism.webp",
+    image: "prism/plain_prism.webp",
     modifying: {
       building: "Prism",
     },
@@ -19,7 +19,7 @@ export const PrismUpgrades = [
     name: "9th color",
     description: "Prisms are twice as efficient.",
     price: 105e15,
-    image: "beryllium_prism.webp",
+    image: "prism/beryllium_prism.webp",
     modifying: {
       building: "Prism",
     },
@@ -35,7 +35,7 @@ export const PrismUpgrades = [
     name: "Chocolate light",
     description: "Prisms are twice as efficient.",
     price: 1.05e18,
-    image: "blueberyllium_prism.webp",
+    image: "prism/blueberyllium_prism.webp",
     modifying: {
       building: "Prism",
     },
@@ -51,7 +51,7 @@ export const PrismUpgrades = [
     name: "Grainbow",
     description: "Prisms are twice as efficient.",
     price: 105e18,
-    image: "chalcedhoney_prism.webp",
+    image: "prism/chalcedhoney_prism.webp",
     modifying: {
       building: "Prism",
     },
@@ -67,7 +67,7 @@ export const PrismUpgrades = [
     name: "Pure cosmic light",
     description: "Prisms are twice as efficient.",
     price: 10.5e21,
-    image: "buttergold_prism.webp",
+    image: "prism/buttergold_prism.webp",
     modifying: {
       building: "Prism",
     },
@@ -83,7 +83,7 @@ export const PrismUpgrades = [
     name: "Glow-in-the-dark",
     description: "Prisms are twice as efficient.",
     price: 1.05e24,
-    image: "sugarmuck_prism.webp",
+    image: "prism/sugarmuck_prism.webp",
     modifying: {
       building: "Prism",
     },
@@ -99,7 +99,7 @@ export const PrismUpgrades = [
     name: "Lux sanctorum",
     description: "Prisms are twice as efficient.",
     price: 1.05e27,
-    image: "jetmint_prism.webp",
+    image: "prism/jetmint_prism.webp",
     modifying: {
       building: "Prism",
     },
@@ -115,7 +115,7 @@ export const PrismUpgrades = [
     name: "Reverse shadows",
     description: "Prisms are twice as efficient.",
     price: 1.05e30,
-    image: "cherrysilver_prism.webp",
+    image: "prism/cherrysilver_prism.webp",
     modifying: {
       building: "Prism",
     },
@@ -131,7 +131,7 @@ export const PrismUpgrades = [
     name: "Crystal mirrors",
     description: "Prisms are twice as efficient.",
     price: 1.05e33,
-    image: "hazelrald_prism.webp",
+    image: "prism/hazelrald_prism.webp",
     modifying: {
       building: "Prism",
     },
@@ -147,7 +147,7 @@ export const PrismUpgrades = [
     name: "Reverse theory of light",
     description: "Prisms are twice as efficient.",
     price: 1.05e36,
-    image: "mooncandy_prism.webp",
+    image: "prism/mooncandy_prism.webp",
     modifying: {
       building: "Prism",
     },
@@ -163,7 +163,7 @@ export const PrismUpgrades = [
     name: "Light capture measures",
     description: "Prisms are twice as efficient.",
     price: 10.5e39,
-    image: "astrofudge_prism.webp",
+    image: "prism/astrofudge_prism.webp",
     modifying: {
       building: "Prism",
     },
@@ -179,7 +179,7 @@ export const PrismUpgrades = [
     name: "Light speed limit",
     description: "Prisms are twice as efficient.",
     price: 105e42,
-    image: "alabascream_prism.webp",
+    image: "prism/alabascream_prism.webp",
     modifying: {
       building: "Prism",
     },
@@ -195,7 +195,7 @@ export const PrismUpgrades = [
     name: "Occam's laser",
     description: "Prisms are twice as efficient.",
     price: 1.05e48,
-    image: "iridyum_prism.webp",
+    image: "prism/iridyum_prism.webp",
     modifying: {
       building: "Prism",
     },
@@ -211,7 +211,7 @@ export const PrismUpgrades = [
     name: "Hyperblack paint",
     description: "Prisms are twice as efficient.",
     price: 10.5e51,
-    image: "glucosmium_prism.webp",
+    image: "prism/glucosmium_prism.webp",
     modifying: {
       building: "Prism",
     },
@@ -227,7 +227,7 @@ export const PrismUpgrades = [
     name: "Lab goggles but like cool shades",
     description: "Prisms are twice as efficient.",
     price: 105e54,
-    image: "glimmeringue_prism.webp",
+    image: "prism/glimmeringue_prism.webp",
     modifying: {
       building: "Prism",
     },

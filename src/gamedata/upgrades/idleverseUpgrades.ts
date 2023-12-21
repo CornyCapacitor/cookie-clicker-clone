@@ -3,7 +3,7 @@ export const IdleverseUpgrades = [
     name: "Manifest destiny",
     description: "Idleverses are twice as efficient.",
     price: 120e21,
-    image: "plain_idleverse.webp",
+    image: "idleverse/plain_idleverse.webp",
     modifying: {
       building: "Idleverse",
     },
@@ -19,7 +19,7 @@ export const IdleverseUpgrades = [
     name: "The multiverse in a nutshell",
     description: "Idleverses are twice as efficient.",
     price: 600e21,
-    image: "beryllium_idleverse.webp",
+    image: "idleverse/beryllium_idleverse.webp",
     modifying: {
       building: "Idleverse",
     },
@@ -35,7 +35,7 @@ export const IdleverseUpgrades = [
     name: "All-conversion",
     description: "Idleverses are twice as efficient.",
     price: 6e24,
-    image: "blueberyllium_idleverse.webp",
+    image: "idleverse/blueberyllium_idleverse.webp",
     modifying: {
       building: "Idleverse",
     },
@@ -51,7 +51,7 @@ export const IdleverseUpgrades = [
     name: "Multiverse agents",
     description: "Idleverses are twice as efficient.",
     price: 600e24,
-    image: "chalcedhoney_idleverse.webp",
+    image: "idleverse/chalcedhoney_idleverse.webp",
     modifying: {
       building: "Idleverse",
     },
@@ -67,7 +67,7 @@ export const IdleverseUpgrades = [
     name: "Escape plan",
     description: "Idleverses are twice as efficient.",
     price: 60e27,
-    image: "buttergold_idleverse.webp",
+    image: "idleverse/buttergold_idleverse.webp",
     modifying: {
       building: "Idleverse",
     },
@@ -83,7 +83,7 @@ export const IdleverseUpgrades = [
     name: "Game design",
     description: "Idleverses are twice as efficient.",
     price: 6e30,
-    image: "sugarmuck_idleverse.webp",
+    image: "idleverse/sugarmuck_idleverse.webp",
     modifying: {
       building: "Idleverse",
     },
@@ -99,7 +99,7 @@ export const IdleverseUpgrades = [
     name: "Sandbox universes",
     description: "Idleverses are twice as efficient.",
     price: 6e33,
-    image: "jetmint_idleverse.webp",
+    image: "idleverse/jetmint_idleverse.webp",
     modifying: {
       building: "Idleverse",
     },
@@ -115,7 +115,7 @@ export const IdleverseUpgrades = [
     name: "Multiverse wars",
     description: "Idleverses are twice as efficient.",
     price: 6e36,
-    image: "cherrysilver_idleverse.webp",
+    image: "idleverse/cherrysilver_idleverse.webp",
     modifying: {
       building: "Idleverse",
     },
@@ -131,7 +131,7 @@ export const IdleverseUpgrades = [
     name: "Mobile ports",
     description: "Idleverses are twice as efficient.",
     price: 6e39,
-    image: "hazelrald_idleverse.webp",
+    image: "idleverse/hazelrald_idleverse.webp",
     modifying: {
       building: "Idleverse",
     },
@@ -147,7 +147,7 @@ export const IdleverseUpgrades = [
     name: "Encapsulated realities",
     description: "Idleverses are twice as efficient.",
     price: 6e42,
-    image: "mooncandy_idleverse.webp",
+    image: "idleverse/mooncandy_idleverse.webp",
     modifying: {
       building: "Idleverse",
     },
@@ -163,7 +163,7 @@ export const IdleverseUpgrades = [
     name: "Extrinsic clicking",
     description: "Idleverses are twice as efficient.",
     price: 60e45,
-    image: "astrofudge_idleverse.webp",
+    image: "idleverse/astrofudge_idleverse.webp",
     modifying: {
       building: "Idleverse",
     },
@@ -179,7 +179,7 @@ export const IdleverseUpgrades = [
     name: "Universal idling",
     description: "Idleverses are twice as efficient.",
     price: 600e48,
-    image: "alabascream_idleverse.webp",
+    image: "idleverse/alabascream_idleverse.webp",
     modifying: {
       building: "Idleverse",
     },
@@ -195,7 +195,7 @@ export const IdleverseUpgrades = [
     name: "Break the fifth wall",
     description: "Idleverses are twice as efficient.",
     price: 6e54,
-    image: "iridyum_idleverse.webp",
+    image: "idleverse/iridyum_idleverse.webp",
     modifying: {
       building: "Idleverse",
     },
@@ -211,7 +211,7 @@ export const IdleverseUpgrades = [
     name: "Opposite universe",
     description: "Idleverses are twice as efficient.",
     price: 60e57,
-    image: "glucosmium_idleverse.webp",
+    image: "idleverse/glucosmium_idleverse.webp",
     modifying: {
       building: "Idleverse",
     },
@@ -227,7 +227,7 @@ export const IdleverseUpgrades = [
     name: "The other routes to Rome",
     description: "Idleverses are twice as efficient.",
     price: 600e60,
-    image: "glimmeringue_idleverse.webp",
+    image: "idleverse/glimmeringue_idleverse.webp",
     modifying: {
       building: "Idleverse",
     },

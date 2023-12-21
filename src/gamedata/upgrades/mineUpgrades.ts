@@ -3,7 +3,7 @@ export const MineUpgrades = [
     name: "Sugar gas",
     description: "Mines are twice as efficient.",
     price: 120e3,
-    image: "plain_mine.webp",
+    image: "mine/plain_mine.webp",
     modifying: {
       building: "Mine",
     },
@@ -19,7 +19,7 @@ export const MineUpgrades = [
     name: "Megadrill",
     description: "Mines are twice as efficient.",
     price: 600e3,
-    image: "beryllium_mine.webp",
+    image: "mine/beryllium_mine.webp",
     modifying: {
       building: "Mine",
     },
@@ -35,7 +35,7 @@ export const MineUpgrades = [
     name: "Ultradrill",
     description: "Mines are twice as efficient.",
     price: 6e6,
-    image: "blueberyllium_mine.webp",
+    image: "mine/blueberyllium_mine.webp",
     modifying: {
       building: "Mine",
     },
@@ -51,7 +51,7 @@ export const MineUpgrades = [
     name: "Ultimadrill",
     description: "Mines are twice as efficient.",
     price: 600e6,
-    image: "chalcedhoney_mine.webp",
+    image: "mine/chalcedhoney_mine.webp",
     modifying: {
       building: "Mine",
     },
@@ -67,7 +67,7 @@ export const MineUpgrades = [
     name: "H-bomb mining",
     description: "Mines are twice as efficient.",
     price: 60e9,
-    image: "buttergold_mine.webp",
+    image: "mine/buttergold_mine.webp",
     modifying: {
       building: "Mine",
     },
@@ -83,7 +83,7 @@ export const MineUpgrades = [
     name: "Coreforge",
     description: "Mines are twice as efficient.",
     price: 6e12,
-    image: "sugarmuck_mine.webp",
+    image: "mine/sugarmuck_mine.webp",
     modifying: {
       building: "Mine",
     },
@@ -99,7 +99,7 @@ export const MineUpgrades = [
     name: "Planetsplitters",
     description: "Mines are twice as efficient.",
     price: 6e15,
-    image: "jetmint_mine.webp",
+    image: "mine/jetmint_mine.webp",
     modifying: {
       building: "Mine",
     },
@@ -115,7 +115,7 @@ export const MineUpgrades = [
     name: "Canola oil wells",
     description: "Mines are twice as efficient.",
     price: 6e18,
-    image: "cherrysilver_mine.webp",
+    image: "mine/cherrysilver_mine.webp",
     modifying: {
       building: "Mine",
     },
@@ -131,7 +131,7 @@ export const MineUpgrades = [
     name: "Mole people",
     description: "Mines are twice as efficient.",
     price: 6e21,
-    image: "hazelrald_mine.webp",
+    image: "mine/hazelrald_mine.webp",
     modifying: {
       building: "Mine",
     },
@@ -147,7 +147,7 @@ export const MineUpgrades = [
     name: "Mine canaries",
     description: "Mines are twice as efficient.",
     price: 6e24,
-    image: "mooncandy_mine.webp",
+    image: "mine/mooncandy_mine.webp",
     modifying: {
       building: "Mine",
     },
@@ -163,7 +163,7 @@ export const MineUpgrades = [
     name: "Bore again",
     description: "Mines are twice as efficient.",
     price: 60e27,
-    image: "astrofudge_mine.webp",
+    image: "mine/astrofudge_mine.webp",
     modifying: {
       building: "Mine",
     },
@@ -179,7 +179,7 @@ export const MineUpgrades = [
     name: "Air mining",
     description: "Mines are twice as efficient.",
     price: 600e30,
-    image: "alabascream_mine.webp",
+    image: "mine/alabascream_mine.webp",
     modifying: {
       building: "Mine",
     },
@@ -195,7 +195,7 @@ export const MineUpgrades = [
     name: "Caramel alloys",
     description: "Mines are twice as efficient.",
     price: 6e36,
-    image: "iridyum_mine.webp",
+    image: "mine/iridyum_mine.webp",
     modifying: {
       building: "Mine",
     },
@@ -211,7 +211,7 @@ export const MineUpgrades = [
     name: "Delicious mineralogy",
     description: "Mines are twice as efficient.",
     price: 60e39,
-    image: "glucosmium_mine.webp",
+    image: "mine/glucosmium_mine.webp",
     modifying: {
       building: "Mine",
     },
@@ -227,7 +227,7 @@ export const MineUpgrades = [
     name: "Mineshaft supports",
     description: "Mines are twice as efficient.",
     price: 600e42,
-    image: "glimmeringue_mine.webp",
+    image: "mine/glimmeringue_mine.webp",
     modifying: {
       building: "Mine",
     },

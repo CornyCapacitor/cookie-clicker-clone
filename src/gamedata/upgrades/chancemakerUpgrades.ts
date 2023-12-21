@@ -3,7 +3,7 @@ export const ChancemakerUpgrades = [
     name: "Your lucky cookie",
     description: "Chancemakers are twice as efficient.",
     price: 260e15,
-    image: "plain_chancemaker.webp",
+    image: "chancemaker/plain_chancemaker.webp",
     modifying: {
       building: "Chancemaker",
     },
@@ -19,7 +19,7 @@ export const ChancemakerUpgrades = [
     name: '"All bets are Off" magic coin',
     description: "Chancemakers are twice as efficient.",
     price: 1.3e18,
-    image: "beryllium_chancemaker.webp",
+    image: "chancemaker/beryllium_chancemaker.webp",
     modifying: {
       building: "Chancemaker",
     },
@@ -35,7 +35,7 @@ export const ChancemakerUpgrades = [
     name: "Winning lottery ticket",
     description: "Chancemakers are twice as efficient.",
     price: 13e18,
-    image: "blueberyllium_chancemaker.webp",
+    image: "chancemaker/blueberyllium_chancemaker.webp",
     modifying: {
       building: "Chancemaker",
     },
@@ -51,7 +51,7 @@ export const ChancemakerUpgrades = [
     name: "Four-leaf clover field",
     description: "Chancemakers are twice as efficient.",
     price: 1.3e21,
-    image: "chalcedhoney_chancemaker.webp",
+    image: "chancemaker/chalcedhoney_chancemaker.webp",
     modifying: {
       building: "Chancemaker",
     },
@@ -67,7 +67,7 @@ export const ChancemakerUpgrades = [
     name: "A recipe book about books",
     description: "Chancemakers are twice as efficient.",
     price: 130e21,
-    image: "buttergold_chancemaker.webp",
+    image: "chancemaker/buttergold_chancemaker.webp",
     modifying: {
       building: "Chancemaker",
     },
@@ -83,7 +83,7 @@ export const ChancemakerUpgrades = [
     name: "Leprechaun village",
     description: "Chancemakers are twice as efficient.",
     price: 13e24,
-    image: "sugarmuck_chancemaker.webp",
+    image: "chancemaker/sugarmuck_chancemaker.webp",
     modifying: {
       building: "Chancemaker",
     },
@@ -99,7 +99,7 @@ export const ChancemakerUpgrades = [
     name: "Improbability drive",
     description: "Chancemakers are twice as efficient.",
     price: 13e27,
-    image: "jetmint_chancemaker.webp",
+    image: "chancemaker/jetmint_chancemaker.webp",
     modifying: {
       building: "Chancemaker",
     },
@@ -115,7 +115,7 @@ export const ChancemakerUpgrades = [
     name: "Antisuperstistronics",
     description: "Chancemakers are twice as efficient.",
     price: 13e30,
-    image: "cherrysilver_chancemaker.webp",
+    image: "chancemaker/cherrysilver_chancemaker.webp",
     modifying: {
       building: "Chancemaker",
     },
@@ -131,7 +131,7 @@ export const ChancemakerUpgrades = [
     name: "Bunnypedes",
     description: "Chancemakers are twice as efficient.",
     price: 13e33,
-    image: "hazelrald_chancemaker.webp",
+    image: "chancemaker/hazelrald_chancemaker.webp",
     modifying: {
       building: "Chancemaker",
     },
@@ -147,7 +147,7 @@ export const ChancemakerUpgrades = [
     name: "Revised probabilistics",
     description: "Chancemakers are twice as efficient.",
     price: 13e36,
-    image: "mooncandy_chancemaker.webp",
+    image: "chancemaker/mooncandy_chancemaker.webp",
     modifying: {
       building: "Chancemaker",
     },
@@ -163,7 +163,7 @@ export const ChancemakerUpgrades = [
     name: "0-sided dice",
     description: "Chancemakers are twice as efficient.",
     price: 130e39,
-    image: "astrofudge_chancemaker.webp",
+    image: "chancemaker/astrofudge_chancemaker.webp",
     modifying: {
       building: "Chancemaker",
     },
@@ -179,7 +179,7 @@ export const ChancemakerUpgrades = [
     name: "A touch of determinism",
     description: "Chancemakers are twice as efficient.",
     price: 1.3e45,
-    image: "alabascream_chancemaker.webp",
+    image: "chancemaker/alabascream_chancemaker.webp",
     modifying: {
       building: "Chancemaker",
     },
@@ -195,7 +195,7 @@ export const ChancemakerUpgrades = [
     name: "On a streak",
     description: "Chancemakers are twice as efficient.",
     price: 13e48,
-    image: "iridyum_chancemaker.webp",
+    image: "chancemaker/iridyum_chancemaker.webp",
     modifying: {
       building: "Chancemaker",
     },
@@ -211,7 +211,7 @@ export const ChancemakerUpgrades = [
     name: "Silver lining maximization",
     description: "Chancemakers are twice as efficient.",
     price: 130e51,
-    image: "glucosmium_chancemaker.webp",
+    image: "chancemaker/glucosmium_chancemaker.webp",
     modifying: {
       building: "Chancemaker",
     },
@@ -227,7 +227,7 @@ export const ChancemakerUpgrades = [
     name: "Gambler's fallacy fallacy",
     description: "Chancemakers are twice as efficient.",
     price: 1.3e57,
-    image: "glimmeringue_chancemaker.webp",
+    image: "chancemaker/glimmeringue_chancemaker.webp",
     modifying: {
       building: "Chancemaker",
     },

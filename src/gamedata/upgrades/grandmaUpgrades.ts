@@ -3,7 +3,7 @@ export const GrandmaUpgrades = [
     name: "Forwards from grandma",
     description: "Grandmas are twice as efficient.",
     price: 1e3,
-    image: "plain_grandma.webp",
+    image: "grandma/plain_grandma.webp",
     modifying: {
       building: "Grandma",
     },
@@ -19,7 +19,7 @@ export const GrandmaUpgrades = [
     name: "Steel-plated rolling pins",
     description: "Grandmas are twice as efficient.",
     price: 5e3,
-    image: "beryllium_grandma.webp",
+    image: "grandma/beryllium_grandma.webp",
     modifying: {
       building: "Grandma",
     },
@@ -35,7 +35,7 @@ export const GrandmaUpgrades = [
     name: "Lubricated dentures",
     description: "Grandmas are twice as efficient.",
     price: 5e4,
-    image: "blueberyllium_grandma.webp",
+    image: "grandma/blueberyllium_grandma.webp",
     modifying: {
       building: "Grandma",
     },
@@ -51,7 +51,7 @@ export const GrandmaUpgrades = [
     name: "Prune juice",
     description: "Grandmas are twice as efficient.",
     price: 5e6,
-    image: "chalcedhoney_grandma.webp",
+    image: "grandma/chalcedhoney_grandma.webp",
     modifying: {
       building: "Grandma",
     },
@@ -67,7 +67,7 @@ export const GrandmaUpgrades = [
     name: "Double tick glasses",
     description: "Grandmas are twice as efficient.",
     price: 5e8,
-    image: "buttergold_grandma.webp",
+    image: "grandma/buttergold_grandma.webp",
     modifying: {
       building: "Grandma",
     },
@@ -83,7 +83,7 @@ export const GrandmaUpgrades = [
     name: "Aging agents",
     description: "Grandmas are twice as efficient.",
     price: 5e10,
-    image: "sugarmuck_grandma.webp",
+    image: "grandma/sugarmuck_grandma.webp",
     modifying: {
       building: "Grandma",
     },
@@ -99,7 +99,7 @@ export const GrandmaUpgrades = [
     name: "Xtreme walkers",
     description: "Grandmas are twice as efficient.",
     price: 5e13,
-    image: "jetmint_grandma.webp",
+    image: "grandma/jetmint_grandma.webp",
     modifying: {
       building: "Grandma",
     },
@@ -115,7 +115,7 @@ export const GrandmaUpgrades = [
     name: "The Unbridling",
     description: "Grandmas are twice as efficient.",
     price: 5e16,
-    image: "cherrysilver_grandma.webp",
+    image: "grandma/cherrysilver_grandma.webp",
     modifying: {
       building: "Grandma",
     },
@@ -131,7 +131,7 @@ export const GrandmaUpgrades = [
     name: "Reverse dementia",
     description: "Grandmas are twice as efficient.",
     price: 5e19,
-    image: "hazelrald_grandma.webp",
+    image: "grandma/hazelrald_grandma.webp",
     modifying: {
       building: "Grandma",
     },
@@ -147,7 +147,7 @@ export const GrandmaUpgrades = [
     name: "Timeproof hair dyes",
     description: "Grandmas are twice as efficient.",
     price: 5e22,
-    image: "mooncandy_grandma.webp",
+    image: "grandma/mooncandy_grandma.webp",
     modifying: {
       building: "Grandma",
     },
@@ -163,7 +163,7 @@ export const GrandmaUpgrades = [
     name: "Good manners",
     description: "Grandmas are twice as efficient.",
     price: 5e26,
-    image: "astrofudge_grandma.webp",
+    image: "grandma/astrofudge_grandma.webp",
     modifying: {
       building: "Grandma",
     },
@@ -179,7 +179,7 @@ export const GrandmaUpgrades = [
     name: "Generation degeneration",
     description: "Grandmas are twice as efficient.",
     price: 5e30,
-    image: "alabascream_grandma.webp",
+    image: "grandma/alabascream_grandma.webp",
     modifying: {
       building: "Grandma",
     },
@@ -195,7 +195,7 @@ export const GrandmaUpgrades = [
     name: "Visits",
     description: "Grandmas are twice as efficient.",
     price: 5e34,
-    image: "iridyum_grandma.webp",
+    image: "grandma/iridyum_grandma.webp",
     modifying: {
       building: "Grandma",
     },
@@ -211,7 +211,7 @@ export const GrandmaUpgrades = [
     name: "Kitchen cabinets",
     description: "Grandmas are twice as efficient.",
     price: 5e38,
-    image: "glucosmium_grandma.webp",
+    image: "grandma/glucosmium_grandma.webp",
     modifying: {
       building: "Grandma",
     },
@@ -227,7 +227,7 @@ export const GrandmaUpgrades = [
     name: "Foam-tipped canes",
     description: "Grandmas are twice as efficient.",
     price: 5e42,
-    image: "glimmeringue_grandma.webp",
+    image: "grandma/glimmeringue_grandma.webp",
     modifying: {
       building: "Grandma",
     },

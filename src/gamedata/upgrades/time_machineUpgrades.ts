@@ -3,7 +3,7 @@ export const TimeMachineUpgrades = [
     name: "Flux capacitors",
     description: "Time machines are twice as efficient.",
     price: 140e12,
-    image: "plain_time_machine.webp",
+    image: "time_machine/plain_time_machine.webp",
     modifying: {
       building: "Time Machine",
     },
@@ -19,7 +19,7 @@ export const TimeMachineUpgrades = [
     name: "Time paradox resolverFlux capacitors",
     description: "Time machines are twice as efficient.",
     price: 700e12,
-    image: "beryllium_time_machine.webp",
+    image: "time_machine/beryllium_time_machine.webp",
     modifying: {
       building: "Time Machine",
     },
@@ -35,7 +35,7 @@ export const TimeMachineUpgrades = [
     name: "Quantum cocundrum",
     description: "Time machines are twice as efficient.",
     price: 7e15,
-    image: "blueberyllium_time_machine.webp",
+    image: "time_machine/blueberyllium_time_machine.webp",
     modifying: {
       building: "Time Machine",
     },
@@ -51,7 +51,7 @@ export const TimeMachineUpgrades = [
     name: "Casuality enforcer",
     description: "Time machines are twice as efficient.",
     price: 700e15,
-    image: "chalcedhoney_time_machine.webp",
+    image: "time_machine/chalcedhoney_time_machine.webp",
     modifying: {
       building: "Time Machine",
     },
@@ -67,7 +67,7 @@ export const TimeMachineUpgrades = [
     name: "Yestermorrow comparators",
     description: "Time machines are twice as efficient.",
     price: 70e18,
-    image: "buttergold_time_machine.webp",
+    image: "time_machine/buttergold_time_machine.webp",
     modifying: {
       building: "Time Machine",
     },
@@ -83,7 +83,7 @@ export const TimeMachineUpgrades = [
     name: "Far future enactment",
     description: "Time machines are twice as efficient.",
     price: 7e21,
-    image: "sugarmuck_time_machine.webp",
+    image: "time_machine/sugarmuck_time_machine.webp",
     modifying: {
       building: "Time Machine",
     },
@@ -99,7 +99,7 @@ export const TimeMachineUpgrades = [
     name: "Great loop hypothesis",
     description: "Time machines are twice as efficient.",
     price: 7e24,
-    image: "jetmint_time_machine.webp",
+    image: "time_machine/jetmint_time_machine.webp",
     modifying: {
       building: "Time Machine",
     },
@@ -115,7 +115,7 @@ export const TimeMachineUpgrades = [
     name: "Cookietopian moments of maybe",
     description: "Time machines are twice as efficient.",
     price: 7e27,
-    image: "cherrysilver_time_machine.webp",
+    image: "time_machine/cherrysilver_time_machine.webp",
     modifying: {
       building: "Time Machine",
     },
@@ -131,7 +131,7 @@ export const TimeMachineUpgrades = [
     name: "Second seconds",
     description: "Time machines are twice as efficient.",
     price: 7e30,
-    image: "hazelrald_time_machine.webp",
+    image: "time_machine/hazelrald_time_machine.webp",
     modifying: {
       building: "Time Machine",
     },
@@ -147,7 +147,7 @@ export const TimeMachineUpgrades = [
     name: "Additional clock hands",
     description: "Time machines are twice as efficient.",
     price: 7e33,
-    image: "mooncandy_time_machine.webp",
+    image: "time_machine/mooncandy_time_machine.webp",
     modifying: {
       building: "Time Machine",
     },
@@ -163,7 +163,7 @@ export const TimeMachineUpgrades = [
     name: "Nostalgia",
     description: "Time machines are twice as efficient.",
     price: 70e36,
-    image: "astrofudge_time_machine.webp",
+    image: "time_machine/astrofudge_time_machine.webp",
     modifying: {
       building: "Time Machine",
     },
@@ -179,7 +179,7 @@ export const TimeMachineUpgrades = [
     name: "Split seconds",
     description: "Time machines are twice as efficient.",
     price: 700e39,
-    image: "alabascream_time_machine.webp",
+    image: "time_machine/alabascream_time_machine.webp",
     modifying: {
       building: "Time Machine",
     },
@@ -195,7 +195,7 @@ export const TimeMachineUpgrades = [
     name: "Patience abolished",
     description: "Time machines are twice as efficient.",
     price: 7e45,
-    image: "iridyum_time_machine.webp",
+    image: "time_machine/iridyum_time_machine.webp",
     modifying: {
       building: "Time Machine",
     },
@@ -211,7 +211,7 @@ export const TimeMachineUpgrades = [
     name: "Timeproof upholstery",
     description: "Time machines are twice as efficient.",
     price: 70e48,
-    image: "glucosmium_time_machine.webp",
+    image: "time_machine/glucosmium_time_machine.webp",
     modifying: {
       building: "Time Machine",
     },
@@ -227,7 +227,7 @@ export const TimeMachineUpgrades = [
     name: "Rectifying a mistake",
     description: "Time machines are twice as efficient.",
     price: 700e51,
-    image: "glimmeringue_time_machine.webp",
+    image: "time_machine/glimmeringue_time_machine.webp",
     modifying: {
       building: "Time Machine",
     },

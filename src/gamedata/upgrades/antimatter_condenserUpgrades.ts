@@ -3,7 +3,7 @@ export const AntimatterCondenserUpgrades = [
     name: "Sugar bosons",
     description: "Antimatter condensers are twice as efficient.",
     price: 1.7e15,
-    image: "plain_antimatter_condenser.webp",
+    image: "antimatter_condenser/plain_antimatter_condenser.webp",
     modifying: {
       building: "Antimatter Condenser",
     },
@@ -19,7 +19,7 @@ export const AntimatterCondenserUpgrades = [
     name: "String theory",
     description: "Antimatter condensers are twice as efficient.",
     price: 8.5e15,
-    image: "beryllium_antimatter_condenser.webp",
+    image: "antimatter_condenser/beryllium_antimatter_condenser.webp",
     modifying: {
       building: "Antimatter Condenser",
     },
@@ -35,7 +35,7 @@ export const AntimatterCondenserUpgrades = [
     name: "Large macaron collider",
     description: "Antimatter condensers are twice as efficient.",
     price: 85e15,
-    image: "blueberyllium_antimatter_condenser.webp",
+    image: "antimatter_condenser/blueberyllium_antimatter_condenser.webp",
     modifying: {
       building: "Antimatter Condenser",
     },
@@ -51,7 +51,7 @@ export const AntimatterCondenserUpgrades = [
     name: "Big bang bake",
     description: "Antimatter condensers are twice as efficient.",
     price: 8.5e18,
-    image: "chalcedhoney_antimatter_condenser.webp",
+    image: "antimatter_condenser/chalcedhoney_antimatter_condenser.webp",
     modifying: {
       building: "Antimatter Condenser",
     },
@@ -67,7 +67,7 @@ export const AntimatterCondenserUpgrades = [
     name: "Reverse cyclotrons",
     description: "Antimatter condensers are twice as efficient.",
     price: 850e18,
-    image: "buttergold_antimatter_condenser.webp",
+    image: "antimatter_condenser/buttergold_antimatter_condenser.webp",
     modifying: {
       building: "Antimatter Condenser",
     },
@@ -83,7 +83,7 @@ export const AntimatterCondenserUpgrades = [
     name: "Nanocosmics",
     description: "Antimatter condensers are twice as efficient.",
     price: 85e21,
-    image: "sugarmuck_antimatter_condenser.webp",
+    image: "antimatter_condenser/sugarmuck_antimatter_condenser.webp",
     modifying: {
       building: "Antimatter Condenser",
     },
@@ -99,7 +99,7 @@ export const AntimatterCondenserUpgrades = [
     name: "The Pulse",
     description: "Antimatter condensers are twice as efficient.",
     price: 85e24,
-    image: "jetmint_antimatter_condenser.webp",
+    image: "antimatter_condenser/jetmint_antimatter_condenser.webp",
     modifying: {
       building: "Antimatter Condenser",
     },
@@ -115,7 +115,7 @@ export const AntimatterCondenserUpgrades = [
     name: "Some other super-tiny fundamental particle? Probably?",
     description: "Antimatter condensers are twice as efficient.",
     price: 85e27,
-    image: "cherrysilver_antimatter_condenser.webp",
+    image: "antimatter_condenser/cherrysilver_antimatter_condenser.webp",
     modifying: {
       building: "Antimatter Condenser",
     },
@@ -131,7 +131,7 @@ export const AntimatterCondenserUpgrades = [
     name: "Quantum comb",
     description: "Antimatter condensers are twice as efficient.",
     price: 85e30,
-    image: "hazelrald_antimatter_condenser.webp",
+    image: "antimatter_condenser/hazelrald_antimatter_condenser.webp",
     modifying: {
       building: "Antimatter Condenser",
     },
@@ -147,7 +147,7 @@ export const AntimatterCondenserUpgrades = [
     name: "Baking Nobel prize",
     description: "Antimatter condensers are twice as efficient.",
     price: 85e33,
-    image: "mooncandy_antimatter_condenser.webp",
+    image: "antimatter_condenser/mooncandy_antimatter_condenser.webp",
     modifying: {
       building: "Antimatter Condenser",
     },
@@ -163,7 +163,7 @@ export const AntimatterCondenserUpgrades = [
     name: "The definite molecule",
     description: "Antimatter condensers are twice as efficient.",
     price: 850e36,
-    image: "astrofudge_antimatter_condenser.webp",
+    image: "antimatter_condenser/astrofudge_antimatter_condenser.webp",
     modifying: {
       building: "Antimatter Condenser",
     },
@@ -179,7 +179,7 @@ export const AntimatterCondenserUpgrades = [
     name: "Flavor itself",
     description: "Antimatter condensers are twice as efficient.",
     price: 8.5e42,
-    image: "alabascream_antimatter_condenser.webp",
+    image: "antimatter_condenser/alabascream_antimatter_condenser.webp",
     modifying: {
       building: "Antimatter Condenser",
     },
@@ -195,7 +195,7 @@ export const AntimatterCondenserUpgrades = [
     name: "Delicious pull",
     description: "Antimatter condensers are twice as efficient.",
     price: 85e45,
-    image: "iridyum_antimatter_condenser.webp",
+    image: "antimatter_condenser/iridyum_antimatter_condenser.webp",
     modifying: {
       building: "Antimatter Condenser",
     },
@@ -211,7 +211,7 @@ export const AntimatterCondenserUpgrades = [
     name: "Employee minification",
     description: "Antimatter condensers are twice as efficient.",
     price: 850e48,
-    image: "glucosmium_antimatter_condenser.webp",
+    image: "antimatter_condenser/glucosmium_antimatter_condenser.webp",
     modifying: {
       building: "Antimatter Condenser",
     },
@@ -227,7 +227,7 @@ export const AntimatterCondenserUpgrades = [
     name: "Candied atoms",
     description: "Antimatter condensers are twice as efficient.",
     price: 8.5e54,
-    image: "glimmeringue_antimatter_condenser.webp",
+    image: "antimatter_condenser/glimmeringue_antimatter_condenser.webp",
     modifying: {
       building: "Antimatter Condenser",
     },

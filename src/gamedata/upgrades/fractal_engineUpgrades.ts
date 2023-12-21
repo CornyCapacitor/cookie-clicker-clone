@@ -3,7 +3,7 @@ export const FractalEngineUpgrades = [
     name: "Metabakeries",
     description: "Fractal engines twice as efficient.",
     price: 3.1e18,
-    image: "plain_fractal_engine.webp",
+    image: "fractal_engine/plain_fractal_engine.webp",
     modifying: {
       building: "Fractal Engine",
     },
@@ -19,7 +19,7 @@ export const FractalEngineUpgrades = [
     name: "Mendelbrown sugar",
     description: "Fractal engines twice as efficient.",
     price: 15.5e18,
-    image: "beryllium_fractal_engine.webp",
+    image: "fractal_engine/beryllium_fractal_engine.webp",
     modifying: {
       building: "Fractal Engine",
     },
@@ -35,7 +35,7 @@ export const FractalEngineUpgrades = [
     name: "Fractoids",
     description: "Fractal engines twice as efficient.",
     price: 155e18,
-    image: "blueberyllium_fractal_engine.webp",
+    image: "fractal_engine/blueberyllium_fractal_engine.webp",
     modifying: {
       building: "Fractal Engine",
     },
@@ -51,7 +51,7 @@ export const FractalEngineUpgrades = [
     name: "Nested universe theory",
     description: "Fractal engines twice as efficient.",
     price: 15.5e21,
-    image: "chalcedhoney_fractal_engine.webp",
+    image: "fractal_engine/chalcedhoney_fractal_engine.webp",
     modifying: {
       building: "Fractal Engine",
     },
@@ -67,7 +67,7 @@ export const FractalEngineUpgrades = [
     name: "Menger sponge cake",
     description: "Fractal engines twice as efficient.",
     price: 1.55e24,
-    image: "buttergold_fractal_engine.webp",
+    image: "fractal_engine/buttergold_fractal_engine.webp",
     modifying: {
       building: "Fractal Engine",
     },
@@ -83,7 +83,7 @@ export const FractalEngineUpgrades = [
     name: "One particularly good-humored cow",
     description: "Fractal engines twice as efficient.",
     price: 155e24,
-    image: "sugarmuck_fractal_engine.webp",
+    image: "fractal_engine/sugarmuck_fractal_engine.webp",
     modifying: {
       building: "Fractal Engine",
     },
@@ -99,7 +99,7 @@ export const FractalEngineUpgrades = [
     name: "Chocolate ouroboros",
     description: "Fractal engines twice as efficient.",
     price: 155e27,
-    image: "jetmint_fractal_engine.webp",
+    image: "fractal_engine/jetmint_fractal_engine.webp",
     modifying: {
       building: "Fractal Engine",
     },
@@ -115,7 +115,7 @@ export const FractalEngineUpgrades = [
     name: "Nested",
     description: "Fractal engines twice as efficient.",
     price: 155e30,
-    image: "cherrysilver_fractal_engine.webp",
+    image: "fractal_engine/cherrysilver_fractal_engine.webp",
     modifying: {
       building: "Fractal Engine",
     },
@@ -131,7 +131,7 @@ export const FractalEngineUpgrades = [
     name: "Space-filling fibers",
     description: "Fractal engines twice as efficient.",
     price: 155e33,
-    image: "hazelrald_fractal_engine.webp",
+    image: "fractal_engine/hazelrald_fractal_engine.webp",
     modifying: {
       building: "Fractal Engine",
     },
@@ -147,7 +147,7 @@ export const FractalEngineUpgrades = [
     name: "Endless book of prose",
     description: "Fractal engines twice as efficient.",
     price: 155e36,
-    image: "mooncandy_fractal_engine.webp",
+    image: "fractal_engine/mooncandy_fractal_engine.webp",
     modifying: {
       building: "Fractal Engine",
     },
@@ -163,7 +163,7 @@ export const FractalEngineUpgrades = [
     name: "The set of all sets",
     description: "Fractal engines twice as efficient.",
     price: 1.55e42,
-    image: "astrofudge_fractal_engine.webp",
+    image: "fractal_engine/astrofudge_fractal_engine.webp",
     modifying: {
       building: "Fractal Engine",
     },
@@ -179,7 +179,7 @@ export const FractalEngineUpgrades = [
     name: "This upgrade",
     description: "Fractal engines twice as efficient.",
     price: 15e45,
-    image: "alabascream_fractal_engine.webp",
+    image: "fractal_engine/alabascream_fractal_engine.webp",
     modifying: {
       building: "Fractal Engine",
     },
@@ -195,7 +195,7 @@ export const FractalEngineUpgrades = [
     name: "A box",
     description: "Fractal engines twice as efficient.",
     price: 155e48,
-    image: "iridyum_fractal_engine.webp",
+    image: "fractal_engine/iridyum_fractal_engine.webp",
     modifying: {
       building: "Fractal Engine",
     },
@@ -211,7 +211,7 @@ export const FractalEngineUpgrades = [
     name: "Multiscale profiling",
     description: "Fractal engines twice as efficient.",
     price: 1.55e54,
-    image: "glucosmium_fractal_engine.webp",
+    image: "fractal_engine/glucosmium_fractal_engine.webp",
     modifying: {
       building: "Fractal Engine",
     },
@@ -227,7 +227,7 @@ export const FractalEngineUpgrades = [
     name: "The more they stay the same",
     description: "Fractal engines twice as efficient.",
     price: 15.5e57,
-    image: "glimmeringue_fractal_engine.webp",
+    image: "fractal_engine/glimmeringue_fractal_engine.webp",
     modifying: {
       building: "Fractal Engine",
     },

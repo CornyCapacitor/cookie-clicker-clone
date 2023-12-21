@@ -3,7 +3,7 @@ export const YouUpgrades = [
     name: "Cloning vats",
     description: "You are twice as efficient.",
     price: 5.4e27,
-    image: "plain_you.webp",
+    image: "you/plain_you.webp",
     modifying: {
       building: "You",
     },
@@ -19,7 +19,7 @@ export const YouUpgrades = [
     name: "Energized nutrients",
     description: "You are twice as efficient.",
     price: 27e27,
-    image: "beryllium_you.webp",
+    image: "you/beryllium_you.webp",
     modifying: {
       building: "You",
     },
@@ -35,7 +35,7 @@ export const YouUpgrades = [
     name: "Stunt doubles",
     description: "You are twice as efficient.",
     price: 270e27,
-    image: "blueberyllium_you.webp",
+    image: "you/blueberyllium_you.webp",
     modifying: {
       building: "You",
     },
@@ -51,7 +51,7 @@ export const YouUpgrades = [
     name: "Clone recycling plant",
     description: "You are twice as efficient.",
     price: 27e30,
-    image: "chalcedhoney_you.webp",
+    image: "you/chalcedhoney_you.webp",
     modifying: {
       building: "You",
     },
@@ -67,7 +67,7 @@ export const YouUpgrades = [
     name: "Free-range clones",
     description: "You are twice as efficient.",
     price: 2.7e33,
-    image: "buttergold_you.webp",
+    image: "you/buttergold_you.webp",
     modifying: {
       building: "You",
     },
@@ -83,7 +83,7 @@ export const YouUpgrades = [
     name: "Genetic tailoring",
     description: "You are twice as efficient.",
     price: 270e33,
-    image: "sugarmuck_you.webp",
+    image: "you/sugarmuck_you.webp",
     modifying: {
       building: "You",
     },
@@ -99,7 +99,7 @@ export const YouUpgrades = [
     name: "Power in diversity",
     description: "You are twice as efficient.",
     price: 270e36,
-    image: "jetmint_you.webp",
+    image: "you/jetmint_you.webp",
     modifying: {
       building: "You",
     },
@@ -115,7 +115,7 @@ export const YouUpgrades = [
     name: "Self-betterment",
     description: "You are twice as efficient.",
     price: 270e39,
-    image: "cherrysilver_you.webp",
+    image: "you/cherrysilver_you.webp",
     modifying: {
       building: "You",
     },
@@ -131,7 +131,7 @@ export const YouUpgrades = [
     name: "Source control",
     description: "You are twice as efficient.",
     price: 270e42,
-    image: "hazelrald_you.webp",
+    image: "you/hazelrald_you.webp",
     modifying: {
       building: "You",
     },
@@ -147,7 +147,7 @@ export const YouUpgrades = [
     name: "United workforce",
     description: "You are twice as efficient.",
     price: 270e45,
-    image: "mooncandy_you.webp",
+    image: "you/mooncandy_you.webp",
     modifying: {
       building: "You",
     },
@@ -163,7 +163,7 @@ export const YouUpgrades = [
     name: "Safety patrols",
     description: "You are twice as efficient.",
     price: 2.7e51,
-    image: "astrofudge_you.webp",
+    image: "you/astrofudge_you.webp",
     modifying: {
       building: "You",
     },
@@ -179,7 +179,7 @@ export const YouUpgrades = [
     name: "Clone rights",
     description: "You are twice as efficient.",
     price: 27e54,
-    image: "alabascream_you.webp",
+    image: "you/alabascream_you.webp",
     modifying: {
       building: "You",
     },
@@ -195,7 +195,7 @@ export const YouUpgrades = [
     name: "One big family",
     description: "You are twice as efficient.",
     price: 270e57,
-    image: "iridyum_you.webp",
+    image: "you/iridyum_you.webp",
     modifying: {
       building: "You",
     },
@@ -211,7 +211,7 @@ export const YouUpgrades = [
     name: "Fine-tuned body plans",
     description: "You are twice as efficient.",
     price: 2.7e63,
-    image: "glucosmium_you.webp",
+    image: "you/glucosmium_you.webp",
     modifying: {
       building: "You",
     },
@@ -227,7 +227,7 @@ export const YouUpgrades = [
     name: "Reading your clones bedtime stories",
     description: "You are twice as efficient.",
     price: 27e66,
-    image: "glimmeringue_you.webp",
+    image: "you/glimmeringue_you.webp",
     modifying: {
       building: "You",
     },

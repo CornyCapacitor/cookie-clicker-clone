@@ -21,7 +21,7 @@ export const Building = ({ cookiesInBank, cps, name, description, price, image, 
   const [priceString, setPriceString] = useState<string>("");
   const [affordable, setAffordable] = useState<boolean | undefined>(undefined);
   const [isTooltipVisible, setIsTooltipVisible] = useState<boolean>(false);
-  const [y, setY] = useState<number>(0);
+  const [top, setTop] = useState<number>(0);
 
   const divRef = useRef<HTMLDivElement | null>(null)
 
@@ -31,7 +31,7 @@ export const Building = ({ cookiesInBank, cps, name, description, price, image, 
     if (divRef.current) {
       const divPosition = divRef.current.getBoundingClientRect();
       const newY = divPosition.top;
-      setY(newY)
+      setTop(newY)
     }
   }
 
@@ -70,7 +70,7 @@ export const Building = ({ cookiesInBank, cps, name, description, price, image, 
         <span className="building-owned">{owned}</span>
       </div>
       {isTooltipVisible && (affordable || (isTooltipVisible && owned >= 1)) && (
-        <BuildingTooltip cookiesInBank={cookiesInBank} cps={cps} name={name} description={description} price={price} image={image} owned={owned} buildingCps={buildingCps} modifier={modifier} y={y}></BuildingTooltip>
+        <BuildingTooltip cookiesInBank={cookiesInBank} cps={cps} name={name} description={description} price={price} image={image} owned={owned} buildingCps={buildingCps} modifier={modifier} top={top} right={318}></BuildingTooltip>
       )}
     </>
   )

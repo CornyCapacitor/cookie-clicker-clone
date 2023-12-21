@@ -3,7 +3,7 @@ export const AlchemyLabUpgrades = [
     name: "Antimony",
     description: "Alchemy labs are twice as efficient.",
     price: 750e9,
-    image: "plain_alchemy_lab.webp",
+    image: "alchemy_lab/plain_alchemy_lab.webp",
     modifying: {
       building: "Alchemy Lab",
     },
@@ -19,7 +19,7 @@ export const AlchemyLabUpgrades = [
     name: "Essence of dough",
     description: "Alchemy labs are twice as efficient.",
     price: 3.75e12,
-    image: "beryllium_alchemy_lab.webp",
+    image: "alchemy_lab/beryllium_alchemy_lab.webp",
     modifying: {
       building: "Alchemy Lab",
     },
@@ -35,7 +35,7 @@ export const AlchemyLabUpgrades = [
     name: "True chocolate",
     description: "Alchemy labs are twice as efficient.",
     price: 37.5e12,
-    image: "blueberyllium_alchemy_lab.webp",
+    image: "alchemy_lab/blueberyllium_alchemy_lab.webp",
     modifying: {
       building: "Alchemy Lab",
     },
@@ -51,7 +51,7 @@ export const AlchemyLabUpgrades = [
     name: "Ambrosia",
     description: "Alchemy labs are twice as efficient.",
     price: 3.75e15,
-    image: "chalcedhoney_alchemy_lab.webp",
+    image: "alchemy_lab/chalcedhoney_alchemy_lab.webp",
     modifying: {
       building: "Alchemy Lab",
     },
@@ -67,7 +67,7 @@ export const AlchemyLabUpgrades = [
     name: "Aqua crustulae",
     description: "Alchemy labs are twice as efficient.",
     price: 375e15,
-    image: "buttergold_alchemy_lab.webp",
+    image: "alchemy_lab/buttergold_alchemy_lab.webp",
     modifying: {
       building: "Alchemy Lab",
     },
@@ -83,7 +83,7 @@ export const AlchemyLabUpgrades = [
     name: "Origin crucible",
     description: "Alchemy labs are twice as efficient.",
     price: 37.5e18,
-    image: "sugarmuck_alchemy_lab.webp",
+    image: "alchemy_lab/sugarmuck_alchemy_lab.webp",
     modifying: {
       building: "Alchemy Lab",
     },
@@ -99,7 +99,7 @@ export const AlchemyLabUpgrades = [
     name: "Theory of atomic fluidity",
     description: "Alchemy labs are twice as efficient.",
     price: 37.5e21,
-    image: "jetmint_alchemy_lab.webp",
+    image: "alchemy_lab/jetmint_alchemy_lab.webp",
     modifying: {
       building: "Alchemy Lab",
     },
@@ -115,7 +115,7 @@ export const AlchemyLabUpgrades = [
     name: "Beige goo",
     description: "Alchemy labs are twice as efficient.",
     price: 37.5e24,
-    image: "cherrysilver_alchemy_lab.webp",
+    image: "alchemy_lab/cherrysilver_alchemy_lab.webp",
     modifying: {
       building: "Alchemy Lab",
     },
@@ -131,7 +131,7 @@ export const AlchemyLabUpgrades = [
     name: "The advent of chemistry",
     description: "Alchemy labs are twice as efficient.",
     price: 37.5e27,
-    image: "hazelrald_alchemy_lab.webp",
+    image: "alchemy_lab/hazelrald_alchemy_lab.webp",
     modifying: {
       building: "Alchemy Lab",
     },
@@ -147,7 +147,7 @@ export const AlchemyLabUpgrades = [
     name: "On second thought",
     description: "Alchemy labs are twice as efficient.",
     price: 37.5e30,
-    image: "mooncandy_alchemy_lab.webp",
+    image: "alchemy_lab/mooncandy_alchemy_lab.webp",
     modifying: {
       building: "Alchemy Lab",
     },
@@ -163,7 +163,7 @@ export const AlchemyLabUpgrades = [
     name: "Public betterment",
     description: "Alchemy labs are twice as efficient.",
     price: 375e33,
-    image: "astrofudge_alchemy_lab.webp",
+    image: "alchemy_lab/astrofudge_alchemy_lab.webp",
     modifying: {
       building: "Alchemy Lab",
     },
@@ -179,7 +179,7 @@ export const AlchemyLabUpgrades = [
     name: "Hermetic reconciliation",
     description: "Alchemy labs are twice as efficient.",
     price: 3.75e39,
-    image: "alabascream_alchemy_lab.webp",
+    image: "alchemy_lab/alabascream_alchemy_lab.webp",
     modifying: {
       building: "Alchemy Lab",
     },
@@ -195,7 +195,7 @@ export const AlchemyLabUpgrades = [
     name: "Chomatic cycling",
     description: "Alchemy labs are twice as efficient.",
     price: 37.5e42,
-    image: "iridyum_alchemy_lab.webp",
+    image: "alchemy_lab/iridyum_alchemy_lab.webp",
     modifying: {
       building: "Alchemy Lab",
     },
@@ -211,7 +211,7 @@ export const AlchemyLabUpgrades = [
     name: "Arcanized glassware",
     description: "Alchemy labs are twice as efficient.",
     price: 375e45,
-    image: "glucosmium_alchemy_lab.webp",
+    image: "alchemy_lab/glucosmium_alchemy_lab.webp",
     modifying: {
       building: "Alchemy Lab",
     },
@@ -227,7 +227,7 @@ export const AlchemyLabUpgrades = [
     name: "The dose makes the poison",
     description: "Alchemy labs are twice as efficient.",
     price: 3.75e51,
-    image: "glimmeringue_alchemy_lab.webp",
+    image: "alchemy_lab/glimmeringue_alchemy_lab.webp",
     modifying: {
       building: "Alchemy Lab",
     },
