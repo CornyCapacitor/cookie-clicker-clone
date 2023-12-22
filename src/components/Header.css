@@ -98,3 +98,27 @@
   align-self: center;
   height: 20px;
 }
+
+.icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50px;
+  background-color: white;
+  border: solid 3px white;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: 0.3s;
+  }
+}
+
+.icons-section {
+  display: flex;
+  flex-direction: row !important;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  padding: 0 !important;
+}

@@ -33,7 +33,7 @@ export const Options = ({ changeVolume, volume, changeRefreshRate, refreshRate, 
         <section className="section-section">
           <div className="volume">
             <span className="volume-header">Volume:</span>
-            {[0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0].map((value) => (
+            {[0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0].map((value) => (
               <div key={value} className="single-radio">
                 <input
                   className="single-radio-radio"
