@@ -53,7 +53,7 @@ export const Stats = ({ cookiesInBank, cookiesBaked, handMadeCookies, runDate, c
           <div>Raw cookies per second: <span className="highlighted">{formatNumber(rawCps, 2)}</span></div>
           <div>Cookies per click: <span className="highlighted">{formatNumber(cookiesPerClick, 2)}</span></div>
           <div>Cookie clicks: <span className="highlighted">{formatNumber(totalClicks, 0)}</span></div>
-          <div>Hand-made cookies: <span className="highlighted">{handMadeCookies}</span></div>
+          <div>Hand-made cookies: <span className="highlighted">{formatNumber(handMadeCookies, 0)}</span></div>
           <div>Golden cookie clicks: <span className="highlighted">{totalGoldenCookieClicks}</span></div>
           <br />
           <div>Running version: <span className="highlighted">1.0</span></div>
@@ -63,7 +63,7 @@ export const Stats = ({ cookiesInBank, cookiesBaked, handMadeCookies, runDate, c
       <section className="section">
         <header>Upgrades</header>
         <section className="section-section">
-          <div>Upgrades unlocked: { }</div>
+          <div>Upgrades unlocked: {`${ownedUpgrades.length} / ${upgrades.length}`} ({`${(ownedUpgrades.length / upgrades.length * 100).toFixed(2)}%`})</div>
           <div className="header-upgrades">
             {ownedUpgrades.map((upgrade) => (
               <UpgradeImage cookiesInBank={cookiesInBank} cps={cps} name={upgrade.name} description={upgrade.description} price={upgrade.price} image={upgrade.image} tier={upgrade.tier} />

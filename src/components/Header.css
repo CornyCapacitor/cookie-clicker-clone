@@ -7,6 +7,7 @@
   overflow-x: hidden;
   padding-bottom: 100px;
   background-color: rgb(39, 39, 39);
+  text-align: start;
 }
 
 .main header {
@@ -18,6 +19,7 @@
   border: 1px solid transparent;
   border-image: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3), transparent);
   border-image-slice: 1;
+  text-align: center;
 }
 
 .section {
@@ -62,4 +64,37 @@
 .header-upgrades {
   display: flex;
   flex-wrap: wrap;
+}
+
+.volume,
+.refresh {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.volume-header {
+  margin-right: 20px;
+}
+
+.single-radio {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+}
+
+.single-radio-radio {
+  width: 40px;
+  align-self: center;
+  height: 20px;
+}
+
+.single-radio-label {
+  width: 40px;
+  align-self: center;
+  height: 20px;
 }

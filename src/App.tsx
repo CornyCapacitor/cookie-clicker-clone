@@ -60,6 +60,8 @@ function App() {
   // UI states
   const [selectedSection, setSelectedSection] = useState<string | null>(null);
   const [runDate] = useState(new Date());
+  const [volume, setVolume] = useState<number>(1);
+  const [refreshRate, setRefreshRate] = useState<number>(100);
 
   // Stats states
   const [buildingsTotal, setBuildingsTotal] = useState<number>(0);
@@ -74,7 +76,6 @@ function App() {
   const [handMadeCookies, setHandMadeCookies] = useState<number>(0);
   const [cookiesInBank, setCookiesInBank] = useState<number>(0);
   const [cookiesInBankString, setCookiesInBankString] = useState<string>("0");
-  const [refreshRate] = useState<number>(100);
 
   // Cps states
   const [cpsBase, setCpsBase] = useState<number>(0.000001);
@@ -114,8 +115,9 @@ function App() {
     }, 3000)
 
     // It's here cause it was laggin when out of the scope of invoking that sound
-    const cookieClickSound = new Audio(`/sounds/clickb${Math.floor(Math.random() * 7) + 1}.mp3`)
-    cookieClickSound.play()
+    const cookieClickSound = new Audio(`/sounds/clickb${Math.floor(Math.random() * 7) + 1}.mp3`);
+    cookieClickSound.volume = volume;
+    cookieClickSound.play();
   }
 
   // Golden cookie states & functions
@@ -146,7 +148,7 @@ function App() {
     setGoldenCookieTimeout(goldenTimeout)
 
     const chimeSound = new Audio('/sounds/chime.mp3');
-    chimeSound.volume = 0.2;
+    chimeSound.volume = volume;
     chimeSound.play();
   }
 
@@ -191,6 +193,7 @@ function App() {
     }, 3000)
 
     const shimmerClickSound = new Audio('/sounds/shimmerClick.mp3')
+    shimmerClickSound.volume = volume;
     shimmerClickSound.play()
   }
 
@@ -230,14 +233,16 @@ function App() {
         title: `Bought 1 ${name}!`
       })
       const randomSoundNumber = Math.floor(Math.random() * 4 + 1)
-      const buyClick = new Audio(`/sounds/buy${randomSoundNumber}.mp3`)
-      buyClick.play()
+      const buyClick = new Audio(`/sounds/buy${randomSoundNumber}.mp3`);
+      buyClick.volume = volume;
+      buyClick.play();
     } else {
       Toast.fire({
         icon: "error",
         title: "Not enough cookies!"
       })
       const buyClick = new Audio(`/sounds/clickOff1.mp3`)
+      buyClick.volume = volume;
       buyClick.play()
     }
   }
@@ -302,7 +307,8 @@ function App() {
         title: `Bought ${name} upgrade!`
       })
       const randomSoundNumber = Math.floor(Math.random() * 4 + 1)
-      const buyClick = new Audio(`/sounds/buy${randomSoundNumber}.mp3`)
+      const buyClick = new Audio(`/sounds/buy${randomSoundNumber}.mp3`);
+      buyClick.volume = volume;
       buyClick.play()
     } else {
       Toast.fire({
@@ -310,6 +316,7 @@ function App() {
         title: "Not enough cookies!"
       })
       const buyClick = new Audio(`/sounds/clickOff1.mp3`)
+      buyClick.volume = volume;
       buyClick.play()
     }
   }
@@ -426,22 +433,44 @@ function App() {
     setCookiesPerClick(clickValue)
   }, [clickingUpgradesMultiplier, cookieClickMultiplier, cps, thousandFingersMultiplier, thousandFingersValue])
 
-  const handleBuildingsTo700Click = () => {
-    // Create a new array with updated 'owned' property for all buildings
-    const updatedBuildings = buildings.map((building) => ({
-      ...building,
-      owned: 700,
-    }));
+  const cheatBuildings = (value: number): void => {
+    const updatedBuildings = buildings.map((building) => {
+      let updatedPrice = building.price;
+      let updatedOwned = building.owned
 
-    // Update the state with the new array
+      for (let i = 0; i < value; i++) {
+        updatedPrice = Math.floor(1 + updatedPrice * 1.15);
+        updatedOwned += 1;
+      }
+
+      updatedPrice = Math.floor(updatedPrice)
+
+      return {
+        ...building,
+        owned: updatedOwned,
+        price: updatedPrice,
+      };
+    });
+
     setBuildings(updatedBuildings);
   };
+
+  const cheatCookies = (value: number) => {
+    setCookiesInBank(p => p + value)
+    setCookiesBaked(p => p + value)
+  }
+
+  const changeVolume = (value: number) => {
+    setVolume(value)
+  }
+
+  const changeRefreshRate = (value: number) => {
+    setRefreshRate(value)
+  }
 
   return (
     <div className="app">
       <section className="section-left">
-        <button onClick={() => setCookiesInBank(p => p + 1e42)}>Cheat 1e42 cookies</button>
-        <button onClick={handleBuildingsTo700Click}>Buildings to 700</button>
         <header>Player's Bakery</header>
         <div className="cookies-production-info">
           <span>{`${cookiesInBankString} cookies`}</span>
@@ -471,7 +500,7 @@ function App() {
             <button className="header-button" onClick={() => window.location.reload()}>Restart</button>
           </section>
         </div>
-        {selectedSection === "options" ? <Options /> : selectedSection === "stats" ? <Stats cookiesInBank={cookiesInBank} cookiesBaked={cookiesBaked} handMadeCookies={handMadeCookies} runDate={runDate} cps={cps} rawCps={cpsBase} buildingsTotal={buildingsTotal} cookiesPerClick={cookiesPerClick} totalClicks={totalClicks} totalGoldenCookieClicks={totalGoldenCookieClicks} upgrades={upgrades} /> : selectedSection === "info" && <Info />}
+        {selectedSection === "options" ? <Options changeVolume={changeVolume} volume={volume} refreshRate={refreshRate} changeRefreshRate={changeRefreshRate} cheatCookies={cheatCookies} cheatBuildings={cheatBuildings} /> : selectedSection === "stats" ? <Stats cookiesInBank={cookiesInBank} cookiesBaked={cookiesBaked} handMadeCookies={handMadeCookies} runDate={runDate} cps={cps} rawCps={cpsBase} buildingsTotal={buildingsTotal} cookiesPerClick={cookiesPerClick} totalClicks={totalClicks} totalGoldenCookieClicks={totalGoldenCookieClicks} upgrades={upgrades} /> : selectedSection === "info" && <Info />}
       </section>
       <section className="section-right">
         <header className="store-header">Store</header>
