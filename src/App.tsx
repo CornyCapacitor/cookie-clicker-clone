@@ -2,15 +2,16 @@ import { useCallback, useEffect, useState } from 'react'
 import Swal from 'sweetalert2'
 import { Building } from './components/Building.tsx'
 import { formatNumber } from './components/FormatNumber.ts'
+import { Info } from './components/Info.tsx'
 import { Milk } from './components/Milk.tsx'
+import { Options } from './components/Options.tsx'
 import { Stats } from './components/Stats.tsx'
 import { Upgrade } from './components/Upgrade.tsx'
 import { BuildingData } from './gamedata/BuildingData.ts'
+import { MessagesData } from './gamedata/MessagesData.ts'
 import { UpgradesData } from './gamedata/UpgradesData.ts'
 
 import './App.css'
-import { Info } from './components/Info.tsx'
-import { Options } from './components/Options.tsx'
 
 type Building = {
   name: string,
@@ -50,31 +51,15 @@ type GoldenCookieMessage = ClickMessage & {
   value: number,
 }
 
+type Message = string
+
 function App() {
   // UI states
   const [selectedSection, setSelectedSection] = useState<string | null>(null);
   const [runDate] = useState(new Date());
   const [volume, setVolume] = useState<number>(1);
   const [refreshRate, setRefreshRate] = useState<number>(100);
-  const [messages] = useState<string[]>([
-    'Welcome to Cookie Clicker clone by Mateusz Minder!',
-    'Click those cookies and have fun!',
-    'Earn more cookies to unlock upgrades!',
-    'The more cookies, the merrier!',
-    'Cookies make the world a better place.',
-    'Bake cookies, not war!',
-    'Discover the magic of cookie baking!',
-    'Cookies are the answer to everything.',
-    'Unleash your cookie-clicking skills!',
-    'Feel the power of a million cookies!',
-    'Cookie Clicker: Where dreams are made of cookies.',
-    'Cookies are the currency of happiness.',
-    'Cookie Clicker: The sweetest addiction!',
-    'One cookie at a time, change the world!',
-    'Cookies make your troubles crumble away.',
-    'May your cookie jar always be full!',
-    'Cookie Clicker: Where cookies never run out!'
-  ])
+  const [messages] = useState<Message[]>(MessagesData)
   const [currentMessage, setCurrentMessage] = useState<string>(messages[0]);
 
   // Stats states
@@ -484,11 +469,12 @@ function App() {
 
   // Change the header message
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentMessage(messages[Math.floor(Math.random() * 17)]);
+    const interval = setInterval(() => {
+      setCurrentMessage(messages[Math.floor(Math.random() * messages.length)]);
+      console.log(Math.floor(Math.random() * messages.length))
     }, 10000);
 
-    return () => clearInterval(intervalId);
+    return () => clearInterval(interval);
   }, [messages]);
 
   return (
