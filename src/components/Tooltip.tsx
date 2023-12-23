@@ -26,7 +26,7 @@ type UpgradeProps = TooltipProps & {
 
 export const BuildingTooltip = ({ cookiesInBank, cps, name, description, price, owned, buildingCps, modifier, top, right }: BuildingProps) => {
 
-  // Handling the upgrade image source
+  // Handling the building image source
   const getBuildingImage = (name: string) => {
     const imageName = name.toLowerCase().replace(/\s/g, '_');
     return `/upgrades/${imageName}/plain_${imageName}.webp`;
@@ -34,7 +34,7 @@ export const BuildingTooltip = ({ cookiesInBank, cps, name, description, price, 
 
   const tooltipImageSrc = getBuildingImage(name)
 
-  // Checking if upgrade's affordable
+  // Checking if building's affordable
   const affordable = cookiesInBank >= price
 
   // Setting single building cps

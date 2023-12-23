@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { formatNumber } from './FormatNumber';
 import { BuildingTooltip } from './Tooltip';
 
@@ -18,8 +18,6 @@ type BuildingProps = {
 }
 
 export const Building = ({ cookiesInBank, cps, name, description, price, image, owned, buildingCps, modifier, buyBuilding }: BuildingProps) => {
-  const [priceString, setPriceString] = useState<string>("");
-  const [affordable, setAffordable] = useState<boolean | undefined>(undefined);
   const [isTooltipVisible, setIsTooltipVisible] = useState<boolean>(false);
   const [top, setTop] = useState<number>(0);
 
@@ -40,19 +38,8 @@ export const Building = ({ cookiesInBank, cps, name, description, price, image, 
     buyBuilding(name);
   }
 
-  // Handler for price string
-  useEffect(() => {
-    setPriceString(formatNumber(price, 0))
-  }, [price])
-
-  // Checking if building is affordable
-  useEffect(() => {
-    if (cookiesInBank >= price) {
-      setAffordable(true);
-    } else if (cookiesInBank < price) {
-      setAffordable(false);
-    }
-  }, [cookiesInBank, price])
+  // Checking if building's affordable
+  const affordable = cookiesInBank >= price
 
   return (
     <>
@@ -63,7 +50,7 @@ export const Building = ({ cookiesInBank, cps, name, description, price, image, 
             <span className="building-name">{name === "Antimatter Condenser" ? "Antim. Condenser" : name}</span>
             <div className="building-price-container">
               <img className="building-cookie" src="/big-cookie.svg" />
-              <span className="building-price" style={{ color: `${affordable ? "#00ff00" : "#ff0000"}` }}>{priceString}</span>
+              <span className="building-price" style={{ color: `${affordable ? "#00ff00" : "#ff0000"}` }}>{formatNumber(price, 0)}</span>
             </div>
           </div>
         </div>
