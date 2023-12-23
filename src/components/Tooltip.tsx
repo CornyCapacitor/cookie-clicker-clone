@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import { formatNumber } from './FormatNumber'
 
 import './Tooltip.css'
@@ -26,11 +25,6 @@ type UpgradeProps = TooltipProps & {
 }
 
 export const BuildingTooltip = ({ cookiesInBank, cps, name, description, price, owned, buildingCps, modifier, top, right }: BuildingProps) => {
-  const [bankWorth, setBankWorth] = useState<string>("");
-  const [timeWorth, setTimeWorth] = useState<string>("");
-  const [affordable, setAffordable] = useState<boolean>(false);
-  const [singleBuildingCps, setSingleBuildingCps] = useState<number>(buildingCps * modifier)
-  const [ownedBuildingsCps, setOwnedBuildingsCps] = useState<number>(singleBuildingCps * owned)
 
   // Handling the upgrade image source
   const getBuildingImage = (name: string) => {
@@ -40,56 +34,38 @@ export const BuildingTooltip = ({ cookiesInBank, cps, name, description, price, 
 
   const tooltipImageSrc = getBuildingImage(name)
 
-  // Checking if building is affordable
-  useEffect(() => {
-    if (cookiesInBank >= price) {
-      setAffordable(true);
-    } else if (cookiesInBank < price) {
-      setAffordable(false);
-    }
-  }, [cookiesInBank, price])
+  // Checking if upgrade's affordable
+  const affordable = cookiesInBank >= price
 
   // Setting single building cps
-  useEffect(() => {
-    setSingleBuildingCps(buildingCps * modifier)
-  }, [buildingCps, modifier])
+  const singleBuildingCps = buildingCps * modifier
 
   // Setting owned building cps
-  useEffect(() => {
-    setOwnedBuildingsCps(singleBuildingCps * owned)
-  }, [singleBuildingCps, owned])
+  const ownedBuildingsCps = singleBuildingCps * owned
 
   // Setting bank worth
-  useEffect(() => {
-    const calculatedWorth = (price / cookiesInBank) * 100;
-    const formattedWorth = calculatedWorth.toFixed(2) + "%";
-
-    setBankWorth(formattedWorth)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [price])
+  const bankWorth = ((price / cookiesInBank) * 100).toFixed(2) + "%"
 
   // Setting time worth
-  useEffect(() => {
+  const calculateWorth = (price: number, cps: number) => {
     const calculatedWorth = price / cps
     const seconds = calculatedWorth > 0 ? calculatedWorth : 0;
-    let timeDuration;
     if (seconds < 60) {
-      timeDuration = `${Math.floor(seconds)} seconds`;
+      return `${Math.floor(seconds)} seconds`;
     } else if (seconds < 3600) {
-      timeDuration = `${Math.floor(seconds / 60)} minutes`;
+      return `${Math.floor(seconds / 60)} minutes`;
     } else if (seconds < 86400) {
-      timeDuration = `${Math.floor(seconds / 3600)} hours`;
+      return `${Math.floor(seconds / 3600)} hours`;
     } else if (seconds < 2628000) {
-      timeDuration = `${Math.floor(seconds / 86400)} days`;
+      return `${Math.floor(seconds / 86400)} days`;
     } else if (seconds < 31536000) {
-      timeDuration = `${Math.floor(seconds / 2628000)} months`;
+      return `${Math.floor(seconds / 2628000)} months`;
     } else {
-      timeDuration = `${Math.floor(seconds / 31536000)} years`;
+      return `${Math.floor(seconds / 31536000)} years`;
     }
+  }
 
-    setTimeWorth(timeDuration)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [price])
+  const timeWorth = calculateWorth(price, cps)
 
   return (
     <div className="tooltip" style={{ top: top, right: right }}>
@@ -124,121 +100,89 @@ export const BuildingTooltip = ({ cookiesInBank, cps, name, description, price, 
 }
 
 export const UpgradeTooltip = ({ cookiesInBank, cps, name, building, description, price, image, tier, top, right }: UpgradeProps) => {
-  const [bankWorth, setBankWorth] = useState<string>("");
-  const [timeWorth, setTimeWorth] = useState<string>("");
-  const [affordable, setAffordable] = useState<boolean>(false);
-  const [tierTheme, setTierTheme] = useState<string>("");
-  const [upgradeImageSrc, setUpgradeImageSrc] = useState<string>(image);
 
   // Handling the upgrade image source
-  useEffect(() => {
-    if (building) {
-      const buildingName = building.toLowerCase().replace(/\s/g, '_');
-      setUpgradeImageSrc(`${buildingName}/${tier}_${buildingName}.webp`)
-    }
-  }, [name, building, tier])
+  let tooltipImageSrc = image
 
-  // Checking if building is affordable
-  useEffect(() => {
-    if (cookiesInBank >= price) {
-      setAffordable(true);
-    } else if (cookiesInBank < price) {
-      setAffordable(false);
-    }
-  }, [cookiesInBank, price])
+  const getBuildingImage = (building: string, tier: string) => {
+    const buildingName = building.toLowerCase().replace(/\s/g, '_');
+    return `${buildingName}/${tier}_${buildingName}.webp`
+  }
+
+  if (building) {
+    tooltipImageSrc = getBuildingImage(building, tier)
+  }
+
+  // Checking if upgrade's affordable
+  const affordable = cookiesInBank >= price
 
   // Setting bank worth
-  useEffect(() => {
-    const calculatedWorth = (price / cookiesInBank) * 100;
-    const formattedWorth = calculatedWorth.toFixed(2) + "%";
-
-    setBankWorth(formattedWorth)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [price])
+  const bankWorth = ((price / cookiesInBank) * 100).toFixed(2) + "%"
 
   // Setting time worth
-  useEffect(() => {
+  const calculateWorth = (price: number, cps: number) => {
     const calculatedWorth = price / cps
     const seconds = calculatedWorth > 0 ? calculatedWorth : 0;
-    let timeDuration;
     if (seconds < 60) {
-      timeDuration = `${Math.floor(seconds)} seconds`;
+      return `${Math.floor(seconds)} seconds`;
     } else if (seconds < 3600) {
-      timeDuration = `${Math.floor(seconds / 60)} minutes`;
+      return `${Math.floor(seconds / 60)} minutes`;
     } else if (seconds < 86400) {
-      timeDuration = `${Math.floor(seconds / 3600)} hours`;
+      return `${Math.floor(seconds / 3600)} hours`;
     } else if (seconds < 2628000) {
-      timeDuration = `${Math.floor(seconds / 86400)} days`;
+      return `${Math.floor(seconds / 86400)} days`;
     } else if (seconds < 31536000) {
-      timeDuration = `${Math.floor(seconds / 2628000)} months`;
+      return `${Math.floor(seconds / 2628000)} months`;
     } else {
-      timeDuration = `${Math.floor(seconds / 31536000)} years`;
+      return `${Math.floor(seconds / 31536000)} years`;
     }
+  }
 
-    setTimeWorth(timeDuration)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [price])
+  const timeWorth = calculateWorth(price, cps)
 
   // Setting tier theme
-  useEffect(() => {
-    let theme: string;
-
+  const themeSelector = (tier: string) => {
     switch (tier) {
       case "beryllium":
-        theme = "#cc3fc7";
-        break;
+        return "#cc3fc7";
       case "blueberyllium":
-        theme = "#099ad9";
-        break;
+        return "#099ad9";
       case "chalcedhoney":
-        theme = "#d98609";
-        break;
+        return "#d98609";
       case "buttergold":
-        theme = "#d9ac09";
-        break;
+        return "#d9ac09";
       case "sugarmuck":
-        theme = "#4a9e88";
-        break;
+        return "#4a9e88";
       case "jetmint":
-        theme = "#06c449";
-        break;
+        return "#06c449";
       case "cherrysilver":
-        theme = "#b50707";
-        break;
+        return "#b50707";
       case "hazelrald":
-        theme = "#127d01";
-        break;
+        return "#127d01";
       case "mooncandy":
-        theme = "#0269d6";
-        break;
+        return "#0269d6";
       case "astrofudge":
-        theme = "#851313";
-        break;
+        return "#851313";
       case "alabascream":
-        theme = "#fff9c2";
-        break;
+        return "#fff9c2";
       case "iridyum":
-        theme = "#2b2b2b";
-        break;
+        return "#2b2b2b";
       case "glucosmium":
-        theme = "#00a2ff";
-        break;
+        return "#00a2ff";
       case "glimmeringue":
-        theme = "#fff86e";
-        break;
+        return "#fff86e";
       default:
-        theme = "";
-        break;
+        return "";
     }
+  }
 
-    setTierTheme(theme)
-  }, [tier])
+  const tierTheme = themeSelector(tier)
 
   return (
     <div style={{ top: top, right: right }} className="tooltip">
       <section className="upper-section">
         <div className="left">
-          <img className="tooltip-image" src={`/upgrades/${upgradeImageSrc}`} />
+          <img className="tooltip-image" src={`/upgrades/${tooltipImageSrc}`} />
           <div className="tooltip-info">
             <span className="tooltip-name">{name}</span>
             <span className="tooltip-owned" style={{ marginBottom: "7px", backgroundColor: `${tierTheme}` }}>Tier: {tier}</span>
