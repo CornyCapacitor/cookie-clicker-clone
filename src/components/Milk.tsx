@@ -1,11 +1,6 @@
 import './Milk.css'
 
-type MilkProps = {
-  color: string,
-}
-
-export const Milk = ({ color }: MilkProps) => {
-  color
+export const Milk = () => {
 
   return (
     <div className="milk">

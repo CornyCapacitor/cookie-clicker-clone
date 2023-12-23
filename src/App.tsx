@@ -22,12 +22,6 @@ type Building = {
   modifier: number,
 }
 
-// type Achievement = {
-//   name: string,
-//   requirement: string,
-//   achieved: boolean,
-// }
-
 type BuildingUpgradeCondition = { building: string, amount: number };
 type OtherUpgradeCondition = { other: string, amount: number };
 
@@ -62,6 +56,26 @@ function App() {
   const [runDate] = useState(new Date());
   const [volume, setVolume] = useState<number>(1);
   const [refreshRate, setRefreshRate] = useState<number>(100);
+  const [messages] = useState<string[]>([
+    'Welcome to Cookie Clicker clone by Mateusz Minder!',
+    'Click those cookies and have fun!',
+    'Earn more cookies to unlock upgrades!',
+    'The more cookies, the merrier!',
+    'Cookies make the world a better place.',
+    'Bake cookies, not war!',
+    'Discover the magic of cookie baking!',
+    'Cookies are the answer to everything.',
+    'Unleash your cookie-clicking skills!',
+    'Feel the power of a million cookies!',
+    'Cookie Clicker: Where dreams are made of cookies.',
+    'Cookies are the currency of happiness.',
+    'Cookie Clicker: The sweetest addiction!',
+    'One cookie at a time, change the world!',
+    'Cookies make your troubles crumble away.',
+    'May your cookie jar always be full!',
+    'Cookie Clicker: Where cookies never run out!'
+  ])
+  const [currentMessage, setCurrentMessage] = useState<string>(messages[0]);
 
   // Stats states
   const [buildingsTotal, setBuildingsTotal] = useState<number>(0);
@@ -468,6 +482,15 @@ function App() {
     setRefreshRate(value)
   }
 
+  // Change the header message
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentMessage(messages[Math.floor(Math.random() * 17)]);
+    }, 10000);
+
+    return () => clearInterval(intervalId);
+  }, [messages]);
+
   return (
     <div className="app">
       <section className="section-left">
@@ -484,7 +507,7 @@ function App() {
             <div style={{ top: message.position.top, left: message.position.left }} className="click-message" key={message.id}>+{formatNumber(Number(message.text), 2)}</div>
           ))}
         </div>
-        <Milk color="white" />
+        <Milk />
       </section>
       <section className="section-middle">
         <div className="header">
@@ -493,7 +516,9 @@ function App() {
             <button className="header-button" onClick={() => sectionSelector("stats")}>Stats</button>
           </section>
           <section className="header-middle header-section">
-            <header>Welcome to Cookie Clicker clone by Mateusz Minder!</header>
+            <header>
+              {currentMessage}
+            </header>
           </section>
           <section className="header-right header-section">
             <button className="header-button" onClick={() => sectionSelector("info")}>Info</button>

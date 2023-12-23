@@ -97,9 +97,11 @@
 .header {
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 100px;
   border-bottom: 10px solid #965425;
   box-shadow: inset 0 0 20px 15px rgba(0, 0, 0, 0.5);
+  background-color: rgb(39, 39, 39)
 }
 
 .header-left {
@@ -111,9 +113,29 @@
 }
 
 .header-middle header {
-  margin-top: 10px;
-  font-size: 18px;
-  font-weight: 500;
+  animation: message 10s linear infinite;
+}
+
+@keyframes message {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  15% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  85% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
 }
 
 .header-right {
